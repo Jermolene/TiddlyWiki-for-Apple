@@ -10,12 +10,11 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            WebView(url: URL(string: "http://localhost:8080")!)
-                .edgesIgnoringSafeArea(.all)
+            Text("Welcome to TiddlyWiki")
             Image(systemName: "globe")
                 .imageScale(.large)
                 .foregroundStyle(.tint)
-            Text("This is SwiftUI text!")
+            WebView(url: URL(string: "http://localhost:8080")!)
         }
         .padding()
     }
