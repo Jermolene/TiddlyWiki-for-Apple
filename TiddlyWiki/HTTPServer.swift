@@ -57,7 +57,7 @@ class HTTPServer {
     }
     
     private func respond(to connection: NWConnection, request: String) {
-        let httpResponse = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<h1>Hello, World!</h1>"
+        let httpResponse = "HTTP/1.1 200 OK\r\nContent-Type: text/html; charset=UTF-8\r\n\r\n<h1>Hello, this is a a minimal possible webpage!</h1>"
         let data = httpResponse.data(using: .utf8)!
         connection.send(content: data, completion: .contentProcessed({ sendError in
             if let sendError = sendError {
