@@ -14,6 +14,7 @@
 		151E518B2BED1CD800FBEAED /* TiddlyWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E518A2BED1CD800FBEAED /* TiddlyWikiTests.swift */; };
 		151E51952BED1CD800FBEAED /* TiddlyWikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */; };
 		151E51972BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */; };
+		151E51A42BED1E4700FBEAED /* HTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51A32BED1E4700FBEAED /* HTTPServer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		151E51902BED1CD800FBEAED /* TiddlyWikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiddlyWikiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITests.swift; sourceTree = "<group>"; };
 		151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		151E51A32BED1E4700FBEAED /* HTTPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPServer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */,
 				151E517B2BED1CD700FBEAED /* ContentView.swift */,
+				151E51A32BED1E4700FBEAED /* HTTPServer.swift */,
 				151E517D2BED1CD700FBEAED /* Assets.xcassets */,
 				151E517F2BED1CD700FBEAED /* Preview Content */,
 			);
@@ -259,6 +262,7 @@
 			files = (
 				151E517C2BED1CD700FBEAED /* ContentView.swift in Sources */,
 				151E517A2BED1CD700FBEAED /* TiddlyWikiApp.swift in Sources */,
+				151E51A42BED1E4700FBEAED /* HTTPServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

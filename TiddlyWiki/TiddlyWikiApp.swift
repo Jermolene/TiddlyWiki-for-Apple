@@ -9,6 +9,14 @@ import SwiftUI
 
 @main
 struct TiddlyWikiApp: App {
+    var httpServer = HTTPServer(port: 8080)
+    init() {
+        do {
+            try httpServer.start()
+        } catch {
+            print("Failed to start the server: \(error)")
+        }
+    }
     var body: some Scene {
         WindowGroup {
             ContentView()
