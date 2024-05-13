@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1502216A2BED6E7F008363E0 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 150221692BED6E7F008363E0 /* Swifter */; };
 		151E517A2BED1CD700FBEAED /* TiddlyWikiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */; };
 		151E517C2BED1CD700FBEAED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E517B2BED1CD700FBEAED /* ContentView.swift */; };
 		151E517E2BED1CD700FBEAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151E517D2BED1CD700FBEAED /* Assets.xcassets */; };
@@ -14,7 +15,6 @@
 		151E518B2BED1CD800FBEAED /* TiddlyWikiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E518A2BED1CD800FBEAED /* TiddlyWikiTests.swift */; };
 		151E51952BED1CD800FBEAED /* TiddlyWikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */; };
 		151E51972BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */; };
-		151E51A42BED1E4700FBEAED /* HTTPServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51A32BED1E4700FBEAED /* HTTPServer.swift */; };
 		151E51A62BED205500FBEAED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51A52BED205500FBEAED /* WebView.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,7 +46,6 @@
 		151E51902BED1CD800FBEAED /* TiddlyWikiUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TiddlyWikiUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITests.swift; sourceTree = "<group>"; };
 		151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		151E51A32BED1E4700FBEAED /* HTTPServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPServer.swift; sourceTree = "<group>"; };
 		151E51A52BED205500FBEAED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +54,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1502216A2BED6E7F008363E0 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,7 +101,6 @@
 				151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */,
 				151E517B2BED1CD700FBEAED /* ContentView.swift */,
 				151E51A52BED205500FBEAED /* WebView.swift */,
-				151E51A32BED1E4700FBEAED /* HTTPServer.swift */,
 				151E517D2BED1CD700FBEAED /* Assets.xcassets */,
 				151E517F2BED1CD700FBEAED /* Preview Content */,
 			);
@@ -149,6 +148,9 @@
 			dependencies = (
 			);
 			name = TiddlyWiki;
+			packageProductDependencies = (
+				150221692BED6E7F008363E0 /* Swifter */,
+			);
 			productName = TiddlyWiki;
 			productReference = 151E51762BED1CD700FBEAED /* TiddlyWiki.app */;
 			productType = "com.apple.product-type.application";
@@ -221,6 +223,9 @@
 				Base,
 			);
 			mainGroup = 151E516D2BED1CD700FBEAED;
+			packageReferences = (
+				150221682BED6E7F008363E0 /* XCRemoteSwiftPackageReference "swifter" */,
+			);
 			productRefGroup = 151E51772BED1CD700FBEAED /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -266,7 +271,6 @@
 				151E517C2BED1CD700FBEAED /* ContentView.swift in Sources */,
 				151E51A62BED205500FBEAED /* WebView.swift in Sources */,
 				151E517A2BED1CD700FBEAED /* TiddlyWikiApp.swift in Sources */,
-				151E51A42BED1E4700FBEAED /* HTTPServer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,6 +600,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		150221682BED6E7F008363E0 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter/";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		150221692BED6E7F008363E0 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 150221682BED6E7F008363E0 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 151E516E2BED1CD700FBEAED /* Project object */;
 }
