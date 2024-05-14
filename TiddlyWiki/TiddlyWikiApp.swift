@@ -10,12 +10,23 @@ import Swifter
 
 @main
 struct TiddlyWikiApp: App {
+    let fileContents: String
     let server = HttpServer()
-
+ 
     init() {
-        server["/"] = { request in
-            return .ok(.htmlBody("This is a web page served from \(request.path)"))
+        // Initialize fileContents with a default value
+        if let fileURL = Bundle.main.url(forResource: "index", withExtension: "html"),
+           let fileContents = try? String(contentsOf: fileURL) {
+            self.fileContents = fileContents
+        } else {
+            self.fileContents = "Error loading file"
         }
+
+        // Configure the server after fileContents has been initialized
+        server["/"] = { [fileContents] request in
+            return .ok(.htmlBody(fileContents))
+        }
+
         do {
             try server.start(8080)  // Specifying a port is usually a good practice
             print("Server started on port 8080")
