@@ -16,16 +16,26 @@ struct TiddlyWikiApp: App {
     init() {
         // Initialize fileContents with a default value
         if let fileURL = Bundle.main.url(forResource: "index", withExtension: "html"),
-           let fileContents = try? String(contentsOf: fileURL) {
+            let fileContents = try? String(contentsOf: fileURL) {
             self.fileContents = fileContents
         } else {
             self.fileContents = "Error loading file"
         }
-
+        // Use a constant to capture fileContents
+        let fileContents = self.fileContents
         // Configure the server after fileContents has been initialized
         server["/"] = { [fileContents] request in
             print("Request: \(request.method) \(request.path) headers: \(request.headers) query: \(request.queryParams)")
-            return .ok(.htmlBody(fileContents))
+            switch request.method {
+            case "HEAD":
+                return .ok(.text(""))
+            case "OPTIONS":
+                return .ok(.text(""))
+            case "GET":
+                return .ok(.htmlBody(fileContents))
+            default:
+                return .badRequest(.text("Method not recognised"))
+            }
         }
 
         do {
