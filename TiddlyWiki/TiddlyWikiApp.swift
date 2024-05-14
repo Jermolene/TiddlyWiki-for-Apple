@@ -24,6 +24,7 @@ struct TiddlyWikiApp: App {
 
         // Configure the server after fileContents has been initialized
         server["/"] = { [fileContents] request in
+            print("Request: \(request.method) \(request.path) headers: \(request.headers) query: \(request.queryParams)")
             return .ok(.htmlBody(fileContents))
         }
 
