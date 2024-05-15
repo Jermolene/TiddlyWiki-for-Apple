@@ -11,15 +11,34 @@ import WebKit
 
 struct WebView: UIViewRepresentable {
     let url: URL
+    @Binding var reloadTrigger: Bool
 
-    // Creates the WKWebView instance
-    func makeUIView(context: Context) -> WKWebView {
-        return WKWebView()
+    class Coordinator {
+        var parent: WebView
+
+        init(parent: WebView) {
+            self.parent = parent
+        }
+
+        func reload(_ webView: WKWebView) {
+            let request = URLRequest(url: parent.url)
+            webView.load(request)
+        }
     }
 
-    // Updates the WKWebView instance with new data
+    func makeCoordinator() -> Coordinator {
+        Coordinator(parent: self)
+    }
+
+    func makeUIView(context: Context) -> WKWebView {
+        let webView = WKWebView()
+        context.coordinator.reload(webView)
+        return webView
+    }
+
     func updateUIView(_ webView: WKWebView, context: Context) {
-        let request = URLRequest(url: url)
-        webView.load(request)
+        if reloadTrigger {
+            context.coordinator.reload(webView)
+        }
     }
 }

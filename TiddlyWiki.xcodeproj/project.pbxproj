@@ -16,6 +16,7 @@
 		151E51952BED1CD800FBEAED /* TiddlyWikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */; };
 		151E51972BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */; };
 		151E51A62BED205500FBEAED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51A52BED205500FBEAED /* WebView.swift */; };
+		151F72272BF4A3900091CA8D /* HTTPServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F72262BF4A3900091CA8D /* HTTPServerManager.swift */; };
 		15A6DD662BF357D000CC2262 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 15A6DD642BF357D000CC2262 /* index.html */; };
 		15A6DD672BF357D000CC2262 /* empty.html in Resources */ = {isa = PBXBuildFile; fileRef = 15A6DD652BF357D000CC2262 /* empty.html */; };
 /* End PBXBuildFile section */
@@ -49,6 +50,7 @@
 		151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITests.swift; sourceTree = "<group>"; };
 		151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		151E51A52BED205500FBEAED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
+		151F72262BF4A3900091CA8D /* HTTPServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServerManager.swift; sourceTree = "<group>"; };
 		15A6DD642BF357D000CC2262 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
 		15A6DD652BF357D000CC2262 /* empty.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = empty.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +109,7 @@
 				151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */,
 				151E517B2BED1CD700FBEAED /* ContentView.swift */,
 				151E51A52BED205500FBEAED /* WebView.swift */,
+				151F72262BF4A3900091CA8D /* HTTPServerManager.swift */,
 				151E517D2BED1CD700FBEAED /* Assets.xcassets */,
 				151E517F2BED1CD700FBEAED /* Preview Content */,
 			);
@@ -276,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				151F72272BF4A3900091CA8D /* HTTPServerManager.swift in Sources */,
 				151E517C2BED1CD700FBEAED /* ContentView.swift in Sources */,
 				151E51A62BED205500FBEAED /* WebView.swift in Sources */,
 				151E517A2BED1CD700FBEAED /* TiddlyWikiApp.swift in Sources */,
