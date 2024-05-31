@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1502216A2BED6E7F008363E0 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 150221692BED6E7F008363E0 /* Swifter */; };
 		1514D5DF2C0A76ED0037D462 /* nodejs-project in Resources */ = {isa = PBXBuildFile; fileRef = 1514D5DE2C0A76ED0037D462 /* nodejs-project */; };
 		1514D5E52C0A78680037D462 /* NodeMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1514D5E42C0A78680037D462 /* NodeMobile.xcframework */; };
 		1514D5E62C0A78680037D462 /* NodeMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1514D5E42C0A78680037D462 /* NodeMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -19,10 +18,7 @@
 		151E51952BED1CD800FBEAED /* TiddlyWikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */; };
 		151E51972BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */; };
 		151E51A62BED205500FBEAED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51A52BED205500FBEAED /* WebView.swift */; };
-		151F72272BF4A3900091CA8D /* HTTPServerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F72262BF4A3900091CA8D /* HTTPServerManager.swift */; };
 		15690D9A2C0A74AA00D18821 /* nodejs_ios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15690D992C0A74AA00D18821 /* nodejs_ios.swift */; };
-		15A6DD662BF357D000CC2262 /* index.html in Resources */ = {isa = PBXBuildFile; fileRef = 15A6DD642BF357D000CC2262 /* index.html */; };
-		15A6DD672BF357D000CC2262 /* empty.html in Resources */ = {isa = PBXBuildFile; fileRef = 15A6DD652BF357D000CC2262 /* empty.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,10 +66,7 @@
 		151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITests.swift; sourceTree = "<group>"; };
 		151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		151E51A52BED205500FBEAED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		151F72262BF4A3900091CA8D /* HTTPServerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPServerManager.swift; sourceTree = "<group>"; };
 		15690D992C0A74AA00D18821 /* nodejs_ios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = nodejs_ios.swift; path = "../../../../Library/Developer/Xcode/DerivedData/Example-ghjkgbycctkrkkgpcbybabxmucer/SourcePackages/checkouts/nodejs-ios/Sources/nodejs-ios/nodejs_ios.swift"; sourceTree = "<group>"; };
-		15A6DD642BF357D000CC2262 /* index.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = index.html; sourceTree = "<group>"; };
-		15A6DD652BF357D000CC2262 /* empty.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = empty.html; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,7 +74,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1502216A2BED6E7F008363E0 /* Swifter in Frameworks */,
 				1514D5E52C0A78680037D462 /* NodeMobile.xcframework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -128,13 +120,10 @@
 			isa = PBXGroup;
 			children = (
 				1514D5DE2C0A76ED0037D462 /* nodejs-project */,
-				15A6DD652BF357D000CC2262 /* empty.html */,
-				15A6DD642BF357D000CC2262 /* index.html */,
 				151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */,
 				151E517B2BED1CD700FBEAED /* ContentView.swift */,
 				15690D992C0A74AA00D18821 /* nodejs_ios.swift */,
 				151E51A52BED205500FBEAED /* WebView.swift */,
-				151F72262BF4A3900091CA8D /* HTTPServerManager.swift */,
 				151E517D2BED1CD700FBEAED /* Assets.xcassets */,
 				151E517F2BED1CD700FBEAED /* Preview Content */,
 			);
@@ -192,7 +181,6 @@
 			);
 			name = TiddlyWiki;
 			packageProductDependencies = (
-				150221692BED6E7F008363E0 /* Swifter */,
 			);
 			productName = TiddlyWiki;
 			productReference = 151E51762BED1CD700FBEAED /* TiddlyWiki.app */;
@@ -267,7 +255,6 @@
 			);
 			mainGroup = 151E516D2BED1CD700FBEAED;
 			packageReferences = (
-				150221682BED6E7F008363E0 /* XCRemoteSwiftPackageReference "swifter" */,
 			);
 			productRefGroup = 151E51772BED1CD700FBEAED /* Products */;
 			projectDirPath = "";
@@ -285,9 +272,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15A6DD672BF357D000CC2262 /* empty.html in Resources */,
 				1514D5DF2C0A76ED0037D462 /* nodejs-project in Resources */,
-				15A6DD662BF357D000CC2262 /* index.html in Resources */,
 				151E51812BED1CD700FBEAED /* Preview Assets.xcassets in Resources */,
 				151E517E2BED1CD700FBEAED /* Assets.xcassets in Resources */,
 			);
@@ -314,7 +299,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				151F72272BF4A3900091CA8D /* HTTPServerManager.swift in Sources */,
 				151E517C2BED1CD700FBEAED /* ContentView.swift in Sources */,
 				15690D9A2C0A74AA00D18821 /* nodejs_ios.swift in Sources */,
 				151E51A62BED205500FBEAED /* WebView.swift in Sources */,
@@ -652,25 +636,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		150221682BED6E7F008363E0 /* XCRemoteSwiftPackageReference "swifter" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/httpswift/swifter/";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		150221692BED6E7F008363E0 /* Swifter */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 150221682BED6E7F008363E0 /* XCRemoteSwiftPackageReference "swifter" */;
-			productName = Swifter;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 151E516E2BED1CD700FBEAED /* Project object */;
 }

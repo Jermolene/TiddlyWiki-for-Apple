@@ -30,7 +30,6 @@ struct ContentView: View {
                         .cornerRadius(8)
                 }
             }
-            WebView(url: URL(string: "http://localhost:8080")!, reloadTrigger: $reloadTrigger)
             WebView(url: URL(string: "http://localhost:3000")!, reloadTrigger: $reloadTrigger)
 
         }

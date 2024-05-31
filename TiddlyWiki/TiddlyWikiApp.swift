@@ -9,13 +9,11 @@ import SwiftUI
 
 @main
 struct TiddlyWikiApp: App {
-    @StateObject private var serverManager = HTTPServerManager()
     let nodeQueue = DispatchQueue(label: "node.js")
 
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(serverManager)
         }
     }
     
