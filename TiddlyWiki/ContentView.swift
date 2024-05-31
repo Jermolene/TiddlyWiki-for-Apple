@@ -31,6 +31,7 @@ struct ContentView: View {
                 }
             }
             WebView(url: URL(string: "http://localhost:8080")!, reloadTrigger: $reloadTrigger)
+            WebView(url: URL(string: "http://localhost:3000")!, reloadTrigger: $reloadTrigger)
 
         }
         .padding()
