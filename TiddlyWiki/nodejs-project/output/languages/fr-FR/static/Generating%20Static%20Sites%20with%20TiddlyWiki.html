@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Generating Static Sites with TiddlyWiki: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-TiddlyWiki%20on%20Node.js" data-tags="[[TiddlyWiki on Node.js]]" data-tiddler-title="Generating Static Sites with TiddlyWiki" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Generating Static Sites with TiddlyWiki</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 21 avril 2020 à 1h34</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="TiddlyWiki on Node.js"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">TiddlyWiki sur Node.js</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki5.html">TiddlyWiki5</a> can be used to generate static HTML representations of a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> that doesn't need <a class="tc-tiddlylink tc-tiddlylink-resolves" href="JavaScript.html">JavaScript</a>.
+This process requires that <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> be installed on Node.js on your local system. See <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Installing%2520TiddlyWiki%2520on%2520Node.js.html">Installing TiddlyWiki on Node.js</a> for 
+details.</p><p>There is much flexibility in how the static HTML is generated. The following scenarios are all illustrated on <a class="tc-tiddlylink-external" href="https://tiddlywiki.com" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com</a>.</p><h1 class="">Wiki Snapshots and Tiddler Snapshots</h1><p>You can explore a static representation of the main <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> site at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/static.html" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/static.html</a>. That file is a static snapshot of the current <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DefaultTiddlers.html">DefaultTiddlers</a>. Any tiddlers that it links to are referred to via URLs of the form <code>/static/HelloThere.html</code> that point to static snapshots of individual tiddlers. The tiddler HTML files reference a <code>static.css</code> stylesheet file.</p><p>The following commands are used to generate the sample static version of the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki5.html">TiddlyWiki5</a> site:</p><pre><code>tiddlywiki wikipath --rendertiddlers '[!is[system]]' $:/core/templates/static.tiddler.html static text/plain
+tiddlywiki wikipath --rendertiddler $:/core/templates/static.template.html static.html text/plain
+tiddlywiki wikipath --rendertiddler $:/core/templates/static.template.css static/static.css text/plain</code></pre><p>The first <a class="tc-tiddlylink tc-tiddlylink-resolves" href="RenderTiddlersCommand.html">RenderTiddlersCommand</a> generates the HTML representations of individual tiddlers, the second <a class="tc-tiddlylink tc-tiddlylink-resolves" href="RenderTiddlerCommand.html">RenderTiddlerCommand</a> saves the static version of the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DefaultTiddlers.html">DefaultTiddlers</a>, and the final <a class="tc-tiddlylink tc-tiddlylink-resolves" href="RenderTiddlerCommand.html">RenderTiddlerCommand</a> saves the stylesheet. (All the files are placed in the <code>output</code> folder of the wiki folder).</p><h1 class="">Wiki Snapshot with Internal Links</h1><p>It is also possible to produce a single HTML file that contains static representations of tiddlers, and uses standard HTML anchor links to jump between them.</p><p>For example: <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/alltiddlers.html" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/alltiddlers.html</a></p><p>The example is built by the following commands:</p><pre><code>--rendertiddler $:/core/templates/alltiddlers.template.html alltiddlers.html text/plain</code></pre></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

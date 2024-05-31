@@ -1,0 +1,243 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Introduction to Lists: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Learning" data-tags="Learning" data-tiddler-title="Introduction to Lists" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Introduction to Lists
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2017년 12월 12일 오후 5:51</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Learning
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Making lists of items plays a central role in working with <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a>. The following is a brief run-through of some of the more common techniques.</p><p>TiddlyWiki <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Extended%2520Listops%2520Filters.html">uses</a> lists <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListField.html">internally</a> for many purposes so the word can have several meanings. Here we are concerned with displaying sequences of items, but not necessarily presented as a conventional bullet list.</p><h1 class="">Manually Typed Lists</h1><h2 class="">WikiText</h2><p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> lists are manually typed lists that use a special character to specify what sort of list it is and how it should be displayed.</p><p>Examples include bullet lists created with asterisks (*) and numbered lists (#). Behind the scenes, WikiText lists are based on the standard <code>&lt;ul&gt;</code> and <code>&lt;li&gt;</code> HTML elements. For more information see <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Lists%2520in%2520WikiText.html">Lists in WikiText</a>.</p><p>An example of a typed list in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a>:</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>* Greatest Movies of All Time
+** Casa Blanca
+** Pride and Prejudice and Zombies</code></pre><p>That renders as:</p><ul><li>Greatest Movies of All Time<ul><li>Casa Blanca</li><li>Pride and Prejudice and Zombies</li></ul></li></ul></div><h1 class="">Generated Lists</h1><p>Lists can be automatically generated with the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListWidget.html">ListWidget</a> using <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filters.html">filters</a> in which <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Operators.html">filter operators</a> 
+specify criteria for selecting which tiddlers are desired as output. Shortcut macros are provided for some common types of list.</p><h2 class="">ListWidget</h2><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListWidget.html">ListWidget</a> is the most powerful tool for creating lists. It allows the filtered output to be manipulated and styled into forms that may not seem to resemble lists at all, for example tables or complex texts. For more details, see <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListWidget.html">ListWidget</a>.</p><p>An example to show all tiddlers tagged with "<a class="tc-tiddlylink tc-tiddlylink-resolves" href="HelloThere.html">HelloThere</a>" might look like:</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>&lt;$list filter="[tag[HelloThere]]"&gt;&lt;$view field="title"/&gt;&lt;br/&gt;&lt;/$list&gt;</code></pre><p>That renders as:</p><p>A Gentle Guide to TiddlyWiki<br>Discover TiddlyWiki<br>Some of the things you can do with TiddlyWiki<br>Ten reasons to switch to TiddlyWiki<br>Examples<br>What happened to the original TiddlyWiki?<br>Funding TiddlyWiki<br>Open Collective<br></p></div><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-tip tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z" fill-rule="evenodd"></path></svg></div> Even tiddlers themselves are made with the ListWidget. The <a class="tc-tiddlylink tc-tiddlylink-shadow" href="%2524%253A%252Fcore%252Fui%252FViewTemplate.html">ViewTemplate</a> makes use of the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListWidget.html">ListWidget</a> to fetch all specified templates that are used to show a tiddlers title, tags, text and more.</div></p><h2 class="">Filtered transclusion</h2><p>The syntax for filtered transclusion <code>{{{...}}}</code> takes a filter as input and outputs a linked list of matching titles. You can also apply a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520with%2520Templates.html">template</a>, for example:</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>{{{ [tag[HelloThere]] || $:/core/ui/TagTemplate }}}</code></pre><p>That renders as:</p><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ A Gentle Guide to TiddlyWiki
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Discover TiddlyWiki
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Some of the things you can do with TiddlyWiki
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Ten reasons to switch to TiddlyWiki
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Examples
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ What happened to the original TiddlyWiki?
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Funding TiddlyWiki
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Open Collective
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div><h2 class="">list-links Macro</h2><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="list-links%2520Macro.html">list-links</a> macro gives a preformatted list, typically a bullet list, in a more simplified way than by using the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListWidget.html">ListWidget</a>. Behind the scenes it really is the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListWidget.html">ListWidget</a> applying a default template to each list item.</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>&lt;&lt;list-links "[tag[HelloThere]]"&gt;&gt;</code></pre><p>That renders as:</p><p><ul class="">
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="A%2520Gentle%2520Guide%2520to%2520TiddlyWiki.html">
+
+
+A Gentle Guide to TiddlyWiki
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Discover%2520TiddlyWiki.html">
+
+
+Discover TiddlyWiki
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Some%2520of%2520the%2520things%2520you%2520can%2520do%2520with%2520TiddlyWiki.html">
+
+
+Some of the things you can do with TiddlyWiki
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Ten%2520reasons%2520to%2520switch%2520to%2520TiddlyWiki.html">
+
+
+Ten reasons to switch to TiddlyWiki
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Examples.html">
+
+
+Examples
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="What%2520happened%2520to%2520the%2520original%2520TiddlyWiki%253F.html">
+
+
+What happened to the original TiddlyWiki?
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Funding%2520TiddlyWiki.html">
+
+
+Funding TiddlyWiki
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Open%2520Collective.html">
+
+
+Open Collective
+
+
+</a>
+</li>
+
+</ul></p></div><h1 class="">Other “list related” features</h1><p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListField.html">list</a>, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Order%2520of%2520Tagged%2520Tiddlers.html">list-before</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Order%2520of%2520Tagged%2520Tiddlers.html">list-after</a> are all field names to control the position of tiddlers in a list. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlerFields.html">Fields</a> are a way to add additional bits of structured information to a tiddler such as date, quantity, category, etc.</p><p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="list%2520Operator.html">list</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="listed%2520Operator.html">listed</a> are <em>filter operators</em> to, respectively, select and find titles in lists.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

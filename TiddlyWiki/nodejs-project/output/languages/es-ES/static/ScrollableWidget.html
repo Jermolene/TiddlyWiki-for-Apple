@@ -1,0 +1,204 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>scrollable: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Widgets" data-tags="Widgets" data-tiddler-title="ScrollableWidget" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+ScrollableWidget
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 20 junio 2022 a las 12:53</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Widgets
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>The scrollable widget wraps its content in a scrollable frame. The user can scroll the contents with the mouse or with touch gestures. Code can use the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-scroll.html">WidgetMessage: tm-scroll</a> to programmatically scroll specific DOM nodes into view.</p><h1 class="">Content and Attributes</h1><p>The content of the <code>&lt;$scrollable&gt;</code> widget is displayed within a pair of wrapper DIVs. If the inner DIV is larger then it scrolls within the outer one. CSS is used to specify the size of the outer wrapper.</p><table><tbody><tr class="evenRow"><th align="left">Attribute</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">class</td><td align="left">The CSS class(es) to be applied to the outer DIV</td></tr><tr class="evenRow"><td align="left">fallthrough</td><td align="left">See below</td></tr></tbody></table><dl class="doc-note"><dt>Note</dt><dd>If a scrollable widget can't handle the <code>tm-scroll</code> message because the inner DIV fits within the outer DIV, then by default the message falls through to the parent widget. Setting the <strong>fallthrough</strong> attribute to <code>no</code> prevents this behaviour.</dd></dl><h1 class="">Examples</h1><p>This example requires the following CSS definitions from <a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2524%253A%252F_tw5.com-styles.html">$:/_tw5.com-styles</a>:</p><pre><code>.tc-scrollable-demo {
+	border: 1px solid &lt;&lt;colour message-border&gt;&gt;;
+	background-color: &lt;&lt;colour message-background&gt;&gt;;
+	padding: 1em;
+	height: 400px;
+	position: relative;
+}</code></pre><p>This wiki text shows how to display a list within the scrollable widget:</p><div class="doc-example"><pre><code>&lt;$scrollable class='tc-scrollable-demo'&gt;
+&lt;$list filter='[tag[Reference]]'&gt;
+
+&lt;$view field='title'/&gt;: &lt;$list filter='[all[current]links[]sort[title]]' storyview='pop'&gt;
+&lt;$link&gt;&lt;$view field='title'/&gt;&lt;/$link&gt;
+&lt;/$list&gt;
+
+&lt;/$list&gt;
+&lt;/$scrollable&gt;
+</code></pre><p>Este es su aspecto:</p><p><div class="tc-scrollable-demo"><div>
+<p>Concepts: </p><p>Definitions: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Concepts.html">Concepts</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a>
+</p><p>WikiText: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Editor%2520toolbar.html">Editor toolbar</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Formatting%2520in%2520WikiText.html">Formatting in WikiText</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Formatting%2520text%2520in%2520TiddlyWiki.html">Formatting text in TiddlyWiki</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Markdown.html">Markdown</a>
+</p><p>Macros: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Brackets.html">Brackets</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Core%2520Macros.html">Core Macros</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Custom%2520Widgets.html">Custom Widgets</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Functions.html">Functions</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Calls.html">Macro Calls</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Definitions.html">Macro Definitions</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Parameter%2520Handling.html">Macro Parameter Handling</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Pitfalls.html">Macro Pitfalls</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Pragma%253A%2520%255Cdefine.html">Pragma: \define</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedures.html">Procedures</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion.html">Transclusion</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variables.html">Variables</a>
+</p><p>Widgets: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="HTML%2520in%2520WikiText.html">HTML in WikiText</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Widgets%2520in%2520WikiText.html">Widgets in WikiText</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a>
+</p><p>Filters: 
+<a class="tc-tiddlylink tc-tiddlylink-shadow tc-tiddlylink-resolves" href="%2524%253A%252FAdvancedSearch.html">$:/AdvancedSearch</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="CountWidget.html">CountWidget</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Operators.html">Filter Operators</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Syntax.html">Filter Syntax</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Introduction%2520to%2520filter%2520notation.html">Introduction to filter notation</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListWidget.html">ListWidget</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Title%2520Selection.html">Title Selection</a>
+</p><p>Messages: </p><p>Commands: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki%2520on%2520Node.js.html">TiddlyWiki on Node.js</a>
+</p><p>Mechanisms: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a>
+</p><p>Custom Widgets: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="JavaScript.html">JavaScript</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Pragma%253A%2520%255Cwhitespace.html">Pragma: \whitespace</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Pragma%253A%2520%255Cwidget.html">Pragma: \widget</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedures.html">Procedures</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variables.html">Variables</a>
+</p><p>Developers: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a>
+</p><p>Functions: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Expression.html">Filter Expression</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="function%2520Operator.html">function Operator</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Pragma%253A%2520%255Cfunction.html">Pragma: \function</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variables.html">Variables</a>
+</p><p>Procedures: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Brackets.html">Brackets</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Pragma%253A%2520%255Cprocedure.html">Pragma: \procedure</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedure%2520Calls.html">Procedure Calls</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedure%2520Definitions.html">Procedure Definitions</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedure%2520Parameter%2520Handling.html">Procedure Parameter Handling</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion.html">Transclusion</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variables.html">Variables</a>
+</p><p>SystemTags: </p><p>Variables: 
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Core%2520Variables.html">Core Variables</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Custom%2520Widgets.html">Custom Widgets</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Operators.html">Filter Operators</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filters.html">Filters</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Functions.html">Functions</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="ImportVariablesWidget.html">ImportVariablesWidget</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Definitions.html">Macro Definitions</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Parameter%2520Handling.html">Macro Parameter Handling</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macros.html">Macros</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedures.html">Procedures</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variable%2520Usage.html">Variable Usage</a>
+
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Widgets.html">Widgets</a>
+</p>
+</div></div></p></div></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

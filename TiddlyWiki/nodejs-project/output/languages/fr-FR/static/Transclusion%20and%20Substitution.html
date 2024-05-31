@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Transclusion and Substitution: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText" data-tags="WikiText" data-tiddler-title="Transclusion and Substitution" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Transclusion et substitution</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 19 avril 2022 à 1h27</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="WikiText"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">WikiTexte</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>La puissance du <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiTexte</a> vient de sa capacité à utiliser le contenu d'un tiddler dans un autre. Cette capacité prend plusieurs formes qu'on peut facilement confondre.</p><p>La principale différence réside entre la transclusion et la substitution de texte :</p><ul><li>Une transclusion est remplacée dynamiquement avec l'une ou l'autre de ces valeurs :<ul><li>un champ de tiddler</li><li>une variable</li></ul></li><li>Une substitution de texte est réalisée dans le texte de la définition de la macro avant son utilisation.</li></ul><h1 class="">Transclusion de champ de tiddler</h1><p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520in%2520WikiText.html">Transclusion en WikiTexte</a> décrit les bases de la transclusion. Par exemple :</p><pre><code>{{MonTiddler}}</code></pre><p>Comme décrit dans <a class="tc-tiddlylink tc-tiddlylink-resolves" href="HTML%2520in%2520WikiText.html">HTML dans le WikiTexte</a>, vous pouvez aussi transclure des valeurs de champs de tiddlers dans des attributs de balises HTML et de widgets. Par exemple :</p><pre><code>&lt;$text text={{MonTiddler}}/&gt;</code></pre><p>Comme décrit dans <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Introduction%2520to%2520filter%2520notation.html">Introduction à la rédaction d'un filtre</a>, vous pouvez aussi transclure des valeurs de champs de tiddlers dans des opérandes de filtres. Par exemple :</p><pre><code>{{{ [tag{TiddlerContenantMonTag}] }}}</code></pre><h1 class="">Transclusion de variable/macro</h1><p>Les définitions de variables qui comportent des paramètres ou des substitutions sont nommées des « macros ». Vous pouvez transclure la valeur d'une variable/macro grâce à la syntaxe :</p><pre><code>&lt;&lt;maMacro param:"Valeur d'attribut"&gt;&gt;</code></pre><p>Comme décrit dans <a class="tc-tiddlylink tc-tiddlylink-resolves" href="HTML%2520in%2520WikiText.html">HTML dans le WikiTexte</a>, vous pouvez aussi transclure des valeurs de variables dans des attributs de balises HTML et de widgets. Par exemple :</p><pre><code>&lt;$text text=&lt;&lt;myMacro&gt;&gt;/&gt;</code></pre><p>Comme décrit dans <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Introduction%2520to%2520filter%2520notation.html">Introduction à la rédaction d'un filtre</a>, vous pouvez aussi transclure des valeurs de variables dans des opérandes de filtres. Par exemple :</p><pre><code>{{{ [tag&lt;maMacro&gt;] }}}</code></pre><h1 class="">Substitution de texte</h1><p>La substitution de texte a lieu quand la valeur d'une macro/variable est utilisée. Ce mécanisme est décrit dans <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macros%2520in%2520WikiText.html">Macros en WikiTexte</a>.</p><p>La différence principale entre la substitution et la transclusion est que la substitution a lieu <strong>avant</strong> l'analyse du <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiTexte</a>, ce qui signifie que vous pouvez utiliser la substitution pour construire des assemblages de <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiTexte</a>. Au contraire, les transclusions sont traitées indépendamment et ne peuvent pas être combinées avec du texte adjacent pour construire des assemblages de <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiTexte</a>.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

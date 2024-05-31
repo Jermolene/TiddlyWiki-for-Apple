@@ -1,0 +1,70 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>5.0.11-beta: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-BetaReleaseNotes" data-tags="BetaReleaseNotes" data-tiddler-title="Release 5.0.11-beta" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Release 5.0.11-beta
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2015년 2월 21일 오후 10:57</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ BetaReleaseNotes
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p><em><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/compare/v5.0.10-beta...v5.0.11-beta" rel="noopener noreferrer" target="_blank">See GitHub for detailed change history of this release</a></em></p><h2 class="">Incompatible Changes</h2><p>See <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Notes%2520for%2520upgrading%2520to%25205.0.11-beta.html">Notes for upgrading to 5.0.11-beta</a> for more details of these changes:</p><ul><li>The default output location for command line operations has changed to the <code>/output</code> folder within <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWikiFolders.html">TiddlyWikiFolders</a> (it used to be current directory)</li><li>Note that the shadow tiddler <a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fcore%252Fui%252FPageMacros.html">$:/core/ui/PageMacros</a> has changed with this release. If you've made modifications to it you should copy your modifications to a new tiddler, delete <a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fcore%252Fui%252FPageMacros.html">$:/core/ui/PageMacros</a>, perform the upgrade and then manually update the new copy of <a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fcore%252Fui%252FPageMacros.html">$:/core/ui/PageMacros</a></li></ul><h2 class="">Documentation Improvements</h2><ul><li>Added more warnings about taking care to <a class="tc-tiddlylink tc-tiddlylink-resolves" href="The%2520First%2520Rule%2520of%2520Using%2520TiddlyWiki.html">backup your data</a></li></ul><h2 class="">Usability Improvements</h2><ul><li>Many performance optimisations, particularly for filter operations</li><li>Added support for <a class="tc-tiddlylink tc-tiddlylink-resolves" href="PermaLinks.html">PermaLinks</a> and browser back and forward buttons</li><li>Added support for <a class="tc-tiddlylink tc-tiddlylink-missing" href="WikiLinks.html">WikiLinks</a> in Markdown via <code>[link text](#TiddlerTitle)</code></li><li>Added support for explicit external <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Linking%2520in%2520WikiText.html">Linking in WikiText</a> (eg <code>[ext[tooltip|url]]</code>)</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/issues/580" rel="noopener noreferrer" target="_blank">Replaced</a> hamburger menu icon with double chevron icon</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/552657fc584dbb36754d3fcabca2cdef7e916ec9" rel="noopener noreferrer" target="_blank">Enhance</a> plain text parsing to use the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="CodeBlockWidget.html">CodeBlockWidget</a>, and hence use syntax highlighting if the plugin is installed. This gives us syntax highlighting for <a class="tc-tiddlylink tc-tiddlylink-resolves" href="JavaScript.html">JavaScript</a> shadow tiddlers, amongst other things</li><li>Improvements to the German, French, Italian, Japanese and Chinese translations</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/61c3f8a5ba3c815d623c06f6a97d9c00a31a4157" rel="noopener noreferrer" target="_blank">Removed</a> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> tiddlers from the sidebar "Types" tab</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/a90339d1e573ec82dba1caeaead0f71717618a80" rel="noopener noreferrer" target="_blank">Added</a> various warnings when editing shadow tiddlers</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/0ac4c2b554f045c6bd2dc6ea5daa0d2f0397d04c" rel="noopener noreferrer" target="_blank">Allow</a> digits in field names</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/a4294b55f0a217d019a6e4cbb62f6a8a19668928" rel="noopener noreferrer" target="_blank">Added</a> warning banner and when attempting to edit binary tiddlers</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/b84c663215cf7877fff960748af4b2849ae0dbb3" rel="noopener noreferrer" target="_blank">Added</a> automatic refreshing of the browser window title from <a class="tc-tiddlylink tc-tiddlylink-shadow" href="%2524%253A%252Fcore%252Fwiki%252Ftitle.html">$:/core/wiki/title</a></li></ul><h2 class="">Hackability Improvements</h2><ul><li>Improved vertical layouts of <a class="tc-tiddlylink tc-tiddlylink-resolves" href="tabs%2520Macro.html"><code class="doc-var">tabs</code></a> macro</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/93566cdc332226b77eaba8a70fa166f3b8fcfe1e" rel="noopener noreferrer" target="_blank">Added</a> "standard" tab to <a class="tc-tiddlylink tc-tiddlylink-shadow" href="%2524%253A%252FAdvancedSearch.html">advanced search</a></li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/e83759e86d2a9e05e4b85dae50925fe988f8e239" rel="noopener noreferrer" target="_blank">Added</a> new filter operators <a class="tc-tiddlylink tc-tiddlylink-resolves" href="before%2520Operator.html"><code class="doc-operator">before</code></a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="after%2520Operator.html"><code class="doc-operator">after</code></a></li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/570cad1c7f90e685961130918f09a7f9b2951f8c" rel="noopener noreferrer" target="_blank">Added</a> new <a class="tc-tiddlylink tc-tiddlylink-resolves" href="get%2520Operator.html"><code class="doc-operator">get</code></a> operator</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/f7e50e0950c5bf10d94d926576011893418b25f1" rel="noopener noreferrer" target="_blank">Added</a> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="BuildCommand.html">BuildCommand</a>, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="OutputCommand.html">OutputCommand</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ClearPasswordCommand.html">ClearPasswordCommand</a></li><li>Added new extensible <a class="tc-tiddlylink tc-tiddlylink-missing" href="StartupMechanism.html">StartupMechanism</a> for orchestrating startup tasks</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/711b76307c95d0026f79f584e85ae3d4b7289d15" rel="noopener noreferrer" target="_blank">Updated</a> to new version of <a class="tc-tiddlylink tc-tiddlylink-missing" href="CodeMirror.html">CodeMirror</a></li><li>Added <a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5NodeWebkit" rel="noopener noreferrer" target="_blank">https://github.com/Jermolene/TiddlyWiki5NodeWebkit</a>, a demo of using <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> as a library in a node-webkit application</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/4e07b3335b570f4039427e11df729fc4a899a671" rel="noopener noreferrer" target="_blank">Extended</a> <code>.tid</code> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlerFiles.html">TiddlerFiles</a> to allow single line text fields</li><li>Renamed <code>$:/ShowEditPreview</code> to <code>$:/state/showeditpreview</code></li></ul><h2 class="">Bug Fixes</h2><ul><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/cc60ad1428dcf99a7ea0787e43e3b37f5a02fb98" rel="noopener noreferrer" target="_blank">Fixed</a> issue with hovering of the topbar icons in Firefox</li><li><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/e548dd35af2d3195f82899096d4a4080362a1ff0" rel="noopener noreferrer" target="_blank">Fixed</a> problem with dragging and dropping within a text edit control</li></ul><h2 class="">Contributors</h2><p>I (<a class="tc-tiddlylink-external" href="https://github.com/Jermolene" rel="noopener noreferrer" target="_blank">@Jermolene</a>) would like to thank the contributors to this release who have generously given their time to helping improve <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a>:</p><p><a class="tc-tiddlylink-external" href="https://github.com/BramChen" rel="noopener noreferrer" target="_blank">@BramChen</a>, <a class="tc-tiddlylink-external" href="https://github.com/mwfogleman" rel="noopener noreferrer" target="_blank">@mwfogleman</a>, <a class="tc-tiddlylink-external" href="https://github.com/nameanyone" rel="noopener noreferrer" target="_blank">@nameanyone</a>, <a class="tc-tiddlylink-external" href="https://github.com/natecain" rel="noopener noreferrer" target="_blank">@natecain</a>, <a class="tc-tiddlylink-external" href="https://github.com/pekopeko1" rel="noopener noreferrer" target="_blank">@pekopeko1</a>, <a class="tc-tiddlylink-external" href="https://github.com/pmario" rel="noopener noreferrer" target="_blank">@pmario</a>, <a class="tc-tiddlylink-external" href="https://github.com/sukima" rel="noopener noreferrer" target="_blank">@sukima</a>, <a class="tc-tiddlylink-external" href="https://github.com/xcazin" rel="noopener noreferrer" target="_blank">@xcazin</a>.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

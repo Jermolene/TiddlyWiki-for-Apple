@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Diagramas sintácticos: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists " data-tags="" data-tiddler-title="Railroad Diagrams" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+Diagramas sintácticos
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 20 abril 2016 a las 16:08</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Los <dfn class="doc-def">diagramas sintácticos</dfn> o "de ferrocarril" son una forma visual de explicar las reglas sintácticas de un lenguaje de programación. Para entenderlos, hay que leerlos como si fueran planos de metro. </p><p>Cada diagrama empieza a la izquierda y acaba a la derecha, así que simplemente sigue las líneas de principio a fin. Todas las líneas intermedias son igualmente válidas. A veces unas líneas saltan por encima de un elemento opcional, o vuelven sobre sí mismas, para indicar que ese elemento puede repetirse.</p><div><svg class="railroad-diagram" height="102" viewBox="0 0 469 102" width="469"><g transform="translate(.5 .5)"><path d="M 20 31 v 20 m 0 -10 h 10.5"></path><path d="M30 41h10"></path><g><path d="M40 41h0"></path><path d="M108 41h0"></path><rect height="22" width="68" x="40" y="30"></rect><text x="74" y="45">inicio</text></g><path d="M108 41h10"></path><g><path d="M118 41h0"></path><path d="M242 41h0"></path><path d="M118 41a10 10 0 0 0 10 -10v0a10 10 0 0 1 10 -10"></path><g><path d="M138 21h84"></path></g><path d="M222 21a10 10 0 0 1 10 10v0a10 10 0 0 0 10 10"></path><path d="M118 41h20"></path><g><path d="M138 41h0"></path><path d="M222 41h0"></path><rect height="22" width="84" x="138" y="30"></rect><text x="180" y="45">opcional</text></g><path d="M222 41h20"></path></g><path d="M242 41h10"></path><g><path d="M252 41h0"></path><path d="M364 41h0"></path><path d="M252 41h10"></path><g><path d="M262 41h0"></path><path d="M354 41h0"></path><rect height="22" width="92" x="262" y="30"></rect><text x="308" y="45">reiterado</text></g><path d="M354 41h10"></path><path d="M262 41a10 10 0 0 0 -10 10v10a10 10 0 0 0 10 10"></path><g><path d="M262 71h32"></path><path d="M322 71h32"></path><rect height="22" rx="10" ry="10" width="28" x="294" y="60"></rect><text x="308" y="75">,</text></g><path d="M354 71a10 10 0 0 0 10 -10v-10a10 10 0 0 0 -10 -10"></path><path class="arrow" d="M247 58.5l5 -5l5 5"></path></g><path d="M364 41h10"></path><path d="M374 41h10"></path><g><path d="M384 41h0"></path><path d="M428 41h0"></path><rect height="22" width="44" x="384" y="30"></rect><text x="406" y="45">fin</text></g><path d="M428 41h10"></path><path d="M 438 41 h 10 m 0 -10 v 20"></path></g></svg></div><p>En este ejemplo, se incluye una coma entre cada iteración del elemento <code>reiterado</code>. El camino señalado con una coma va de derecha a izquierda y sólo puede se puede seguir pasando una primera vez por el elemento <code>reiterado</code>.</p><p>Los caracteres en caja redonda son literales, es decir, que se refieren a sí mismos. Un nombre en caja rectangular, por el contrario, se refiere a otro diagrama sintáctico.</p><p>Los diagramas sintácticos de la documentación de TiddlyWiki se generan con el plugin <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Railroad%2520Plugin.html">Railroad</a>.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

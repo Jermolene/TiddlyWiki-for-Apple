@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>range: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Filter%20Operators tc-tagged-Negatable%20Operators tc-tagged-Selection%20Constructors" data-tags="[[Filter Operators]] [[Negatable Operators]] [[Selection Constructors]]" data-tiddler-title="range Operator" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">range Operator</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 7 septembre 2021 à 18h03</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Filter Operators"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Filtre, Opérateurs</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="Negatable Operators"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Negatable Operators</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="Selection Constructors"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Constructeurs de sélection</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+<table class="doc-table before-tiddler-body">
+
+
+
+<tr><th align="left">purpose</th><td>generate a range of numbers</td></tr>
+
+
+
+
+
+<tr><th align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Syntax.html">input</a></th><td>ignored</td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<tr><th align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Parameter.html">parameter</a></th><td><code class="doc-place">N</code> = a range specification, like <code>[1],[5]</code></td></tr>
+
+
+
+
+
+
+<tr><th align="left">output</th><td>a series of evenly spaced numbers ranging from <code>&lt;begin&gt;</code> to <code>&lt;end&gt;</code></td></tr>
+
+
+
+
+
+<tr><th align="left"><code>!</code> output</th><td>a series of evenly spaced numbers ranging from <code>&lt;begin&gt;</code> to <code>&lt;end&gt;</code> in reverse order</td></tr>
+
+
+
+</table>
+
+<p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filters.html">Learn more about how to use Filters</a></p>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>The <code>range</code> operator produces a list of numbers counting up or down.  It is useful for counting and numbering.</p><p><span class="doc-from-version"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> Depuis : 5.2.0</span> The range operator has been updated to use multiple operands to specify its parameters. Prior to this version, the range operator only had one operand, with the three parts delimited by <code>,</code>, <code>;</code> or <code>:</code>.</p><pre><code>[range[&lt;begin&gt;]]
+[range[&lt;begin&gt;],[&lt;end&gt;]]
+[range[&lt;begin&gt;],[&lt;end&gt;],[&lt;step&gt;]]</code></pre><p>The behaviour depends on the number of operands:</p><table><thead><tr class="evenRow"><td align="left">Parameter</td><td align="left">Output</td></tr></thead><tbody><tr class="oddRow"><td align="left"><code>&lt;end&gt;</code></td><td align="left">Whole numbers up to <code>&lt;end&gt;</code></td></tr><tr class="evenRow"><td align="left"><code>&lt;begin&gt;,&lt;end&gt;</code></td><td align="left">Numbers from <code>&lt;begin&gt;</code> to <code>&lt;end&gt;</code>, spaced by whole numbers</td></tr><tr class="oddRow"><td align="left"><code>&lt;begin&gt;,&lt;end&gt;,&lt;step&gt;</code></td><td align="left">Numbers from <code>&lt;begin&gt;</code> to <code>&lt;end&gt;</code> spaced out by <code>&lt;step&gt;</code></td></tr></tbody></table><p>Each part must be a number, and works as follows:</p><ul><li><code>&lt;begin&gt;</code>: start counting at this number.<ul><li>Defaults to 1 if <code>&lt;end&gt;</code> is at least 1 (or -1 if <code>&lt;end&gt;</code> is at most -1).</li></ul></li><li><code>&lt;end&gt;</code>: stop counting at this number.<ul><li>This number will appear in the list unless it falls between two steps.</li></ul></li><li><code>&lt;step&gt;</code>: count up (or down) by this amount.<ul><li>Defaults to 1.</li><li>Cannot be zero.</li><li>We always count from <code>&lt;begin&gt;</code> toward <code>&lt;end&gt;</code>, whether <code>&lt;step&gt;</code> is positive or negative.</li></ul></li></ul><p>The number of decimal points in the output is fixed, and based on the operand with the <em>most</em> decimal points.</p><p>To prevent the browser from freezing, <code>range</code> is currently limited to 10,000 values.</p><h2 class="">Examples</h2><pre><code>[range[7]]</code></pre><p>1 2 3 4 5 6 7 </p><pre><code>[range[1],[10]]</code></pre><p>1 2 3 4 5 6 7 8 9 10 </p><pre><code>[range[17],[13]]</code></pre><p>17 16 15 14 13 </p><pre><code>[range[1.001],[5],[1]]</code></pre><p>1.001 2.001 3.001 4.001 </p><pre><code>[range[.5],[1.4],[.004]]</code></pre><p>0.500 0.504 0.508 0.512 0.516 0.520 0.524 0.528 0.532 0.536 0.540 0.544 0.548 0.552 0.556 0.560 0.564 0.568 0.572 0.576 0.580 0.584 0.588 0.592 0.596 0.600 0.604 0.608 0.612 0.616 0.620 0.624 0.628 0.632 0.636 0.640 0.644 0.648 0.652 0.656 0.660 0.664 0.668 0.672 0.676 0.680 0.684 0.688 0.692 0.696 0.700 0.704 0.708 0.712 0.716 0.720 0.724 0.728 0.732 0.736 0.740 0.744 0.748 0.752 0.756 0.760 0.764 0.768 0.772 0.776 0.780 0.784 0.788 0.792 0.796 0.800 0.804 0.808 0.812 0.816 0.820 0.824 0.828 0.832 0.836 0.840 0.844 0.848 0.852 0.856 0.860 0.864 0.868 0.872 0.876 0.880 0.884 0.888 0.892 0.896 0.900 0.904 0.908 0.912 0.916 0.920 0.924 0.928 0.932 0.936 0.940 0.944 0.948 0.952 0.956 0.960 0.964 0.968 0.972 0.976 0.980 0.984 0.988 0.992 0.996 1.000 1.004 1.008 1.012 1.016 1.020 1.024 1.028 1.032 1.036 1.040 1.044 1.048 1.052 1.056 1.060 1.064 1.068 1.072 1.076 1.080 1.084 1.088 1.092 1.096 1.100 1.104 1.108 1.112 1.116 1.120 1.124 1.128 1.132 1.136 1.140 1.144 1.148 1.152 1.156 1.160 1.164 1.168 1.172 1.176 1.180 1.184 1.188 1.192 1.196 1.200 1.204 1.208 1.212 1.216 1.220 1.224 1.228 1.232 1.236 1.240 1.244 1.248 1.252 1.256 1.260 1.264 1.268 1.272 1.276 1.280 1.284 1.288 1.292 1.296 1.300 1.304 1.308 1.312 1.316 1.320 1.324 1.328 1.332 1.336 1.340 1.344 1.348 1.352 1.356 1.360 1.364 1.368 1.372 1.376 1.380 1.384 1.388 1.392 1.396 1.400 </p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

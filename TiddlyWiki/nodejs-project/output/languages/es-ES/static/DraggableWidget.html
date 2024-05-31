@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>draggable: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Widgets tc-tagged-TriggeringWidgets" data-tags="Widgets TriggeringWidgets" data-tiddler-title="DraggableWidget" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+DraggableWidget
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 15 julio 2022 a las 13:02</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ TriggeringWidgets
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Widgets
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DraggableWidget.html">DraggableWidget</a> creates a DOM element that can be dragged by the user. It only works on browsers that support drag and drop, which typically means desktop browsers, but <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Mobile%2520Drag%2520And%2520Drop%2520Shim%2520Plugin.html">there are workarounds</a>.</p><p>The draggable element can be assigned a list of tiddlers that are used as the payload.
+If desired it can invoke actions when dragging starts and when it ends.
+See <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DragAndDropMechanism.html">DragAndDropMechanism</a> for an overview.</p><h1 class="">Content and Attributes</h1><table><tbody><tr class="evenRow"><th align="left">Attribute</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">tiddler</td><td align="left">Optional title of the payload tiddler for the drag</td></tr><tr class="evenRow"><td align="left">filter</td><td align="left">Optional filter defining the payload tiddlers for the drag</td></tr><tr class="oddRow"><td align="left">tag</td><td>Optional tag to override the default "div" element created by the widget</td></tr><tr class="evenRow"><td>selector</td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.2.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.2</a> Optional CSS Selector to identify a DOM element within the widget that will be used as the drag handle</td></tr><tr class="oddRow"><td align="left">class</td><td align="left">Optional CSS classes to assign to the DOM element created by the widget. The class <code>tc-draggable</code> is added to the the DOM element created by the widget unless the <code class="doc-param">selector</code> attribute is used. The class <code>tc-dragging</code> is applied to the DOM element created by the widget while the element is being dragged</td></tr><tr class="evenRow"><td align="left">enable</td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.3.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.3</a> Optional value "no" to disable the draggable functionality (defaults to "yes")</td></tr></tbody></table><table><tbody><tr class="evenRow"><td align="left">startactions</td><td align="left">Optional action string that gets invoked when dragging <strong>starts</strong></td></tr><tr class="oddRow"><td align="left">endactions</td><td align="left">Optional action string that gets invoked when dragging <strong>ends</strong></td></tr><tr class="evenRow"><td align="left">dragimagetype</td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.0.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.0</a> Optional type of drag image: <code>dom</code> (the default) or <code>blank</code> to disable the drag image</td></tr></tbody></table><p>Either or both of the <strong>tiddler</strong> and <strong>filter</strong> attributes must be specified in order for there to be a payload to drag.</p><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="actionTiddler%2520Variable.html">actionTiddler Variable</a> is accessible in both <em>startactions</em> and <em>endactions</em>. It holds the payload tiddler(s) specified through the <em>tiddler</em> and <em>filter</em> attributes as a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Title%2520List.html">Title List</a> using double square brackets to quote titles that include whitespace.</p><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-tip tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z" fill-rule="evenodd"></path></svg></div> Note that the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="actionTiddler%2520Variable.html">actionTiddler Variable</a> holds a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Title%2520List.html">Title List</a> quoted with double square brackets. This is unlike the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DroppableWidget.html">DroppableWidget</a> which uses the same variable to pass a single unquoted title.</div></p><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-tip tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z" fill-rule="evenodd"></path></svg></div> When specifying a DOM node to use as the drag handle with the <code class="doc-param">selector</code> attribute, give it the class <code>tc-draggable</code> in order for it to have the appropriate cursor and the attribute <code>draggable</code> with the value <code>true</code> to make it draggable.</div></p><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="LinkWidget.html">LinkWidget</a> incorporates the functionality of the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DraggableWidget.html">DraggableWidget</a> via the <strong>draggable</strong> attribute.</p><p><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.3.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.3</a> The following variables are accessible in the <em>startactions</em> and the <em>endactions</em>:</p><table><tbody><tr class="evenRow"><th align="left">Variables</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left"><code>modifier</code></td><td align="left">The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="modifier%2520Variable.html">modifier Variable</a> contains the Modifier Key held while dragging</td></tr><tr class="evenRow"><td align="left"><code>dom-*</code></td><td align="left">All DOM attributes of the node being dragged are made available as variables, with the prefix <code>dom-</code></td></tr><tr class="oddRow"><td align="left"><code>tv-popup-coords</code></td><td align="left">A relative co-ordinate string that can be used with the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionPopupWidget.html">ActionPopupWidget</a> to trigger a popup at the DOM node matching the selector where the event originated (see <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Coordinate%2520Systems.html">Coordinate Systems</a> for more information)</td></tr><tr class="evenRow"><td align="left"><code>tv-popup-abs-coords</code></td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.4.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.4</a> An absolute co-ordinate string that can be used with the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionPopupWidget.html">ActionPopupWidget</a> to trigger a popup at the DOM node matching the selector where the event originated (see <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Coordinate%2520Systems.html">Coordinate Systems</a> for more information)</td></tr><tr class="oddRow"><td align="left"><code>tv-selectednode-posx</code></td><td align="left"><code>x</code> offset position of the dragged DOM node</td></tr><tr class="evenRow"><td align="left"><code>tv-selectednode-posy</code></td><td align="left"><code>y</code> offset position of the dragged DOM node</td></tr><tr class="oddRow"><td align="left"><code>tv-selectednode-width</code></td><td align="left"><code>offsetWidth</code> of the dragged DOM node</td></tr><tr class="evenRow"><td align="left"><code>tv-selectednode-height</code></td><td align="left"><code>offsetHeight</code> of the dragged DOM node</td></tr><tr class="oddRow"><td align="left"><code>event-fromselected-posx</code></td><td align="left"><code>x</code> position of the event relative to the dragged DOM node</td></tr><tr class="evenRow"><td align="left"><code>event-fromselected-posy</code></td><td align="left"><code>y</code> position of the event relative to the dragged DOM node</td></tr><tr class="oddRow"><td align="left"><code>event-fromviewport-posx</code></td><td align="left"><code>x</code> position of the event relative to the viewport</td></tr><tr class="evenRow"><td align="left"><code>event-fromviewport-posy</code></td><td align="left"><code>y</code> position of the event relative to the viewport</td></tr></tbody></table></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

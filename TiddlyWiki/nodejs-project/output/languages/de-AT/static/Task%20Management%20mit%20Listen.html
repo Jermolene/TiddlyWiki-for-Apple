@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Task Management mit Listen: Mein TiddlyWiki — ein persönliches nicht-lineares Web-Notizbuch
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">Diese Seite ist Teil der "reinen" HTML Version von TiddlyWiki auf <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/de-AT" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/de-AT</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Was%20kann%20TiddlyWiki tc-tagged-TaskManagement" data-tags="[[Was kann TiddlyWiki]] TaskManagement" data-tiddler-title="Task Management mit Listen" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="mehr" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Weitere Aktionen"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="Bearbeiten" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Bearbeite diesen Tiddler"></button><button aria-label="Schließen" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Schließe diesen Tiddler"></button></span><span><h2 class="tc-title">Task Management mit Listen</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="pmario.html">pmario</a> 23. September 2014 um 19:21</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="TaskManagement"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">TaskManagement</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="Was kann TiddlyWiki"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Was kann TiddlyWiki</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-reveal"><p>Wie in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Listen%2520in%2520WikiText.html">Listen in WikiText</a> beschrieben, können einzelnen Listenelementen spezifische Formatierungen (CSS Klassen) zugewiesen werden. </p><p>Für ein "reines" Text basierendes Task Management System kann diese Funktion sehr hilfreich sein. </p><p>Zum Beispiel</p><pre><code>* Finde den Ring
+* Gehe nach Mordor
+** Finde den Weg
+* Rette die Welt</code></pre><p>Erzeugt folgende einfache Liste. </p><ul><li>Finde den Ring</li><li>Gehe nach Mordor<ul><li>Finde den Weg</li></ul></li><li>Rette die Welt</li></ul><p>Mit CSS-Klassen und ein wenig Magie</p><pre><code>*.Done Finde den Ring
+*.ToDo Gehe nach Mordor
+**.Check Finde den Weg
+* Rette die Welt</code></pre><p>der richtigen <a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2524%253A_TaskStylesheet.html">Stylesheet</a> und den <a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2524%253A%252F_tags%252FListIcon.html">richtigen Symbolen</a> wird daraus:</p><ul><li class="Done">Finde den Ring</li><li class="ToDo">Gehe nach Mordor<ul><li class="Check">Finde den Weg</li></ul></li><li>Rette die Welt</li></ul></div>
+</div></p>
+</section>
+</body>
+</html>
+

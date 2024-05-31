@@ -1,0 +1,142 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>navigator: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Widgets" data-tags="Widgets" data-tiddler-title="NavigatorWidget" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+Widget Navegador
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 15 abril 2016 a las 6:14</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Widgets
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introducción</h1><p>El widget <strong>Navegador</strong> manipula el <a class="tc-tiddlylink tc-tiddlylink-missing" href="TiddlerStore.html">TiddlerStore</a>, <a class="tc-tiddlylink tc-tiddlylink-missing" href="StoryList.html">StoryList</a> y <a class="tc-tiddlylink tc-tiddlylink-missing" href="HistoryList.html">HistoryList</a> en respuesta a una serie de <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Messages.html">mensajes</a>.</p><h1 class="">Contenido y atributos</h1><p>El widget muestra en pantalla su contenido y responde a los mensajes que se le envían</p><p>The navigator widget displays any contained content, and responds to Messages dispatched within it.</p><table><tbody><tr class="evenRow"><th align="left">Atributo</th><th align="left">Descripción</th></tr><tr class="oddRow"><td align="left">story</td><td align="left">Nombre del tiddler que contiene el <code>StoryList</code> que se va a manipular</td></tr><tr class="evenRow"><td align="left">history</td><td align="left">Nombre del tiddler que contiene el <code>HistoryList</code> que se va a manipular</td></tr><tr class="oddRow"><td align="left">openLinkFromInsideRiver</td><td align="left">Determina dónde se van a abrir los tiddlers nuevos que se invoquen desde dentro del <code>StoryRiver</code>:  <strong>al principio</strong> o <strong>al final</strong> del <a class="tc-tiddlylink tc-tiddlylink-missing" href="StoryRiver.html">StoryRiver</a> o <strong>encima</strong> o <strong>debajo</strong> del tiddler actual</td></tr><tr class="evenRow"><td>openLinkFromOutsideRiver</td><td align="left">Determina dónde se van a abrir los tiddlers nuevos que se llamen desde fuera del <code>StoryRiver</code>:  <strong>al principio</strong> o <strong>al final</strong> del <a class="tc-tiddlylink tc-tiddlylink-missing" href="StoryRiver.html">StoryRiver</a></td></tr></tbody></table><h1 class="">Mensajes del widget</h1><p>El navegador maneja los siguientes <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Messages.html">mensajes</a>:</p><p><ul>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-cancel-tiddler.html">
+WidgetMessage: tm-cancel-tiddler
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-close-all-tiddlers.html">
+WidgetMessage: tm-close-all-tiddlers
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-close-other-tiddlers.html">
+WidgetMessage: tm-close-other-tiddlers
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-close-tiddler.html">
+WidgetMessage: tm-close-tiddler
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-delete-tiddler.html">
+WidgetMessage: tm-delete-tiddler
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-edit-tiddler.html">
+WidgetMessage: tm-edit-tiddler
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-import-tiddlers.html">
+WidgetMessage: tm-import-tiddlers
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-new-tiddler.html">
+WidgetMessage: tm-new-tiddler
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-perform-import.html">
+WidgetMessage: tm-perform-import
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-relink-tiddler.html">
+WidgetMessage: tm-relink-tiddler
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-rename-tiddler.html">
+WidgetMessage: tm-rename-tiddler
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-save-tiddler.html">
+WidgetMessage: tm-save-tiddler
+</a>
+</li>
+
+</ul>
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

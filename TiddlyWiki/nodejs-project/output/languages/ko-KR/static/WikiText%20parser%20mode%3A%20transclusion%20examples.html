@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>WikiText parser mode: transclusion examples: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText%20parser%20mode%20transitions" data-tags="[[WikiText parser mode transitions]]" data-tiddler-title="WikiText parser mode: transclusion examples" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+WikiText parser mode: transclusion examples
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2022년 1월 22일 오후 6:08</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ WikiText parser mode transitions
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Given the tiddler  <a class="tc-tiddlylink tc-tiddlylink-resolves" href="table-example.html">table-example</a> defined with these contents:
+<pre><code>|cell one|cell two|
+|cell three|cell four|</code></pre>
+then
+<table><thead><tr><th></th><th>wiki text</th><th>renders as</th></tr></thead><tbody>
+<tr>
+<th>1</th><td><pre><code>* {{table-example}}</code></pre></td><td><ul><li>|cell one|cell two|
+|cell three|cell four|</li></ul></td>
+</tr>
+<tr>
+<th>2</th><td><pre><code>* &lt;div&gt;
+
+{{table-example}}
+&lt;/div&gt;
+</code></pre></td><td><ul><li><div><table><tbody><tr class="evenRow"><td>cell one</td><td>cell two</td></tr><tr class="oddRow"><td>cell three</td><td>cell four</td></tr></tbody></table></div></li></ul></td>
+</tr>
+<tr>
+<th>3</th><td><pre><code>* &lt;$transclude tiddler=table-example/&gt;</code></pre></td><td><ul><li>|cell one|cell two|
+|cell three|cell four|</li></ul></td>
+</tr>
+<tr>
+<th>4</th><td><pre><code>* &lt;$transclude tiddler=table-example&gt;&lt;/$transclude&gt;</code></pre></td><td><ul><li>|cell one|cell two|
+|cell three|cell four|</li></ul></td>
+</tr>
+<tr>
+<th>5</th><td><pre><code>* &lt;$transclude tiddler=table-example&gt;
+
+&lt;/$transclude&gt;</code></pre></td><td><ul><li><table><tbody><tr class="evenRow"><td>cell one</td><td>cell two</td></tr><tr class="oddRow"><td>cell three</td><td>cell four</td></tr></tbody></table></li></ul></td>
+</tr>
+<tr>
+<th>6</th><td><pre><code>* &lt;$transclude tiddler=table-example mode=block/&gt;</code></pre></td><td><ul><li><table><tbody><tr class="evenRow"><td>cell one</td><td>cell two</td></tr><tr class="oddRow"><td>cell three</td><td>cell four</td></tr></tbody></table></li></ul></td>
+</tr>
+</tbody></table></p><p>The list syntax is recognised in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Block%2520Mode%2520WikiText.html">block mode</a> and the enclosed contents are parsed using <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Inline%2520Mode%2520WikiText.html">inline mode</a>. When the parser encounters a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520in%2520WikiText.html">wikitext transclusion</a> it will use the current parse mode to parse the contents of the transcluded tiddler. The contents of the example tiddler contains table syntax which is only recognised in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Block%2520Mode%2520WikiText.html">block mode</a>. </p><p>Therefore, in #1 above the table syntax is not recognised. In #2 above, the blank line after the open <code>div</code> tag moves the parser back into <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Block%2520Mode%2520WikiText.html">block mode</a>, the transcluded text inherits it and the table is recognised.</p><p>When transcluding tiddlers using the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html">widget</a>, the parse mode will be inline (#3 and #4 above) unless it is written as an open tag with a following blank line (#5 above).</p><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-tip tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z" fill-rule="evenodd"></path></svg></div> See also <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520parser%2520mode%253A%2520macro%2520examples.html">WikiText parser mode: macro examples</a> for similar examples. The only difference here is <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html"><code class="doc-widget">$transclude</code></a> has a <code class="doc-attr">mode</code> attribute (extra example #6) which allows the parse mode to be explicitly overridden rather than come implicitly based on the they way the tag is written</div></p><hr><p>In these examples, the transclusions are at the top level instead of enclosed in list items:</p><p><table><thead><tr><th></th><th>wiki text</th><th>renders as</th></tr></thead><tbody>
+<tr>
+<th>1</th><td><pre><code>{{table-example}}</code></pre></td><td><table><tbody><tr class="evenRow"><td>cell one</td><td>cell two</td></tr><tr class="oddRow"><td>cell three</td><td>cell four</td></tr></tbody></table></td>
+</tr>
+<tr>
+<th>2</th><td><pre><code>&lt;div&gt;
+
+{{table-example}}
+&lt;/div&gt;
+</code></pre></td><td><div><table><tbody><tr class="evenRow"><td>cell one</td><td>cell two</td></tr><tr class="oddRow"><td>cell three</td><td>cell four</td></tr></tbody></table></div></td>
+</tr>
+<tr>
+<th>3</th><td><pre><code>&lt;$transclude tiddler=table-example/&gt;</code></pre></td><td><p>|cell one|cell two|
+|cell three|cell four|</p></td>
+</tr>
+<tr>
+<th>4</th><td><pre><code>&lt;$transclude tiddler=table-example&gt;&lt;/$transclude&gt;</code></pre></td><td><p>|cell one|cell two|
+|cell three|cell four|</p></td>
+</tr>
+<tr>
+<th>5</th><td><pre><code>&lt;$transclude tiddler=table-example&gt;
+
+&lt;/$transclude&gt;</code></pre></td><td><table><tbody><tr class="evenRow"><td>cell one</td><td>cell two</td></tr><tr class="oddRow"><td>cell three</td><td>cell four</td></tr></tbody></table></td>
+</tr>
+<tr>
+<th>6</th><td><pre><code>&lt;$transclude tiddler=table-example mode=inline/&gt;</code></pre></td><td><p>|cell one|cell two|
+|cell three|cell four|</p></td>
+</tr>
+</tbody></table></p><p>Of these examples, only the two <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html"><code class="doc-widget">$transclude</code></a> tags which are not followed by a blank line and the widget call using <code class="doc-attr">mode</code>=<code class="doc-value">inline</code> are parsed using <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Inline%2520Mode%2520WikiText.html">inline mode</a>.</p><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-tip tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z" fill-rule="evenodd"></path></svg></div> See also <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520parser%2520mode%253A%2520macro%2520examples.html">WikiText parser mode: macro examples</a> for similar examples</div></p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Macro Calls: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText tc-tagged-Macros" data-tags="WikiText Macros" data-tiddler-title="Macro Calls" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Macro Calls
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2023년 4월 19일 오전 11:31</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Macros
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ WikiText
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h2 class="">Introduction</h2><p>This tiddler describes the different ways in which <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macros.html">macros</a> can be called.</p><h2 class="">Macro Call Transclusion Shortcut</h2><p>To call a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macros.html">macro</a>, place <code>&lt;&lt;</code>double angle brackets<code>&gt;&gt;</code> around the name and any parameter values.</p><pre><code>&lt;&lt;mymacro param:"This is the parameter value"&gt;&gt;</code></pre><p>By default, parameters are listed in the same order as in the macro's definition. A parameter can be labelled with its name and a colon to allow them to be listed in a different order.</p><p>If no value is specified for a parameter, the default value given for that parameter in the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Definitions.html">macro definition</a> is used instead. (If no default value was defined, the parameter is blank).</p><p>Each parameter value can be enclosed in <code>'</code>single quotes<code>'</code>, <code>"</code>double quotes<code>"</code>, <code>"""</code>triple double quotes<code>"""</code> or <code>[[</code>double square brackets<code>]]</code>. Triple double quotes allow a value to contain almost anything. If a value contains no spaces or single or double quotes, it requires no delimiters.</p><p>A more formal <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Call%2520Syntax.html">presentation</a> of this syntax is also available.</p><p>See some <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Calls%2520in%2520WikiText%2520%2528Examples%2529.html">examples</a> and discussion about <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520parser%2520mode%253A%2520macro%2520examples.html">parser modes</a>.</p><h2 class="">Macro Calls with <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html"><code class="doc-widget">$transclude</code></a> Widget</h2><p>The shortcut syntax expands to the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html"><code class="doc-widget">$transclude</code></a> widget with the <code>$variable</code> attribute specifying the name of the macro to transclude.</p><pre><code>&lt;$transclude $variable="mymacro" param="This is the parameter value"/&gt;</code></pre><p>The widget itself offers greater flexibility than the shortcut syntax, including the ability to specify parameter values.</p><h2 class="">Assigning Macro Calls to Attribute Values</h2><p>The result of a macro can be directly assigned to an attribute of a widget or HTML element. The result of the macro is not wikified, but the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Parameter%2520Handling.html">parameter substitution</a> is performed.</p><pre><code>&lt;div class=&lt;&lt;myclasses "Horizontal"&gt;&gt;&gt;
+...
+&lt;/div&gt;</code></pre><h2 class="">Using Macro Calls in Filters</h2><p>Macro calls can be used in filters:</p><pre><code>&lt;$list filter="[&lt;mymacro param:'value'&gt;]"&gt;
+...
+&lt;/$list&gt;</code></pre></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

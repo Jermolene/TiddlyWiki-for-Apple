@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>codeblock: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Widgets" data-tags="Widgets" data-tiddler-title="CodeBlockWidget" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+CodeBlockWidget
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 17 agosto 2016 a las 18:53</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Widgets
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>The <strong>codeblock</strong> widget renders text in <code>&lt;pre&gt;</code> and <code>&lt;code&gt;</code> blocks, causing it to be
+displayed monospace. A language may optionally be specified using the
+<strong>language</strong> attribute, however syntax highlighting will only be used if the
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Highlight%2520Plugin.html">Highlight Plugin</a> is installed.</p><h1 class="">Content and Attributes</h1><p>The content of the <code>&lt;$codeblock&gt;</code> widget is ignored.</p><table><tbody><tr class="evenRow"><th align="left">Attribute</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">code</td><td align="left">Contents of the block to render as code</td></tr><tr class="evenRow"><td align="left">language</td><td align="left">Programming language for syntax highlighting</td></tr></tbody></table><p>The <code>language</code> attribute accepts either:</p><ul><li>a Highlight.js language code (see <a class="tc-tiddlylink-external" href="https://highlightjs.org/static/demo/" rel="noopener noreferrer" target="_blank">https://highlightjs.org/static/demo/</a> for a list)</li><li>a MIME type (eg, <code>text/html</code> or <code>image/svg+xml</code>)</li></ul><h1 class="">Examples</h1><p>Here is an example embedding the contents of a tiddler as a code block.</p><div class="doc-example"><pre><code>&lt;$codeblock code={{$:/editions/tw5.com/macro-examples/say-hi}} /&gt;</code></pre><p>Este es su aspecto:</p><p><pre><code>\define sayhi(name:"Bugs Bunny",address:"Rabbit Hole Hill")
+Hi, I'm $name$ and I live in $address$.
+\end
+</code></pre>
+</p></div><p>A codeblock may also specify a language.</p><div class="doc-example"><pre><code>&lt;$codeblock code="SELECT * FROM users WHERE deleted = false" language="sql" /&gt;</code></pre><p>Este es su aspecto:</p><p><pre><code>SELECT * FROM users WHERE deleted = false</code></pre>
+</p></div></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

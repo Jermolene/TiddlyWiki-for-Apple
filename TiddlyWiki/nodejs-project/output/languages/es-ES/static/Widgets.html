@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Widgets: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Concepts tc-tagged-Reference" data-tags="Concepts Reference" data-tiddler-title="Widgets" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Widgets
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 19 febrero 2015 a las 18:27</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:#FF8383;
+fill:#333333;
+color:#333333;">
+ Conceptos
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Material de referencia
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>TiddlyWiki's display is driven by an underlying collection of <dfn class="doc-def">widgets</dfn>. These are organised into a tree structure: each widget has a parent widget and zero or more child widgets.</p><p>TiddlyWiki generates this <dfn class="doc-def">widget tree</dfn> by parsing the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> of tiddlers. Each component of the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> syntax, including even the trivial case of ordinary text, generates a corresponding widget. The widget tree is an intermediate representation that is subsequently rendered into the actual display.</p><p>Widgets are analogous to elements in an HTML document. Indeed, HTML tags in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> generate dedicated <dfn class="doc-def">element widgets</dfn>.</p><p>Each class of widget contributes a specific ability to the overall functionality, such as the ability to <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ImageWidget.html">display an image</a> or <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ButtonWidget.html">a button</a>, to <a class="tc-tiddlylink tc-tiddlylink-resolves" href="MacroCallWidget.html">call a macro</a> or <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html">transclude text from elsewhere</a>, or to <a class="tc-tiddlylink tc-tiddlylink-resolves" href="HTML%2520in%2520WikiText.html">mark a piece of text as a heading</a>.</p><p>The more specialised widgets use a general-purpose <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Widgets%2520in%2520WikiText.html">widget syntax</a> as their only possible <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> representation.</p><p>The following classes of widget are built into the core:</p><p><ul class=""><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionConfirmWidget.html">action-confirm</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionCreateTiddlerWidget.html">action-createtiddler</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionDeleteFieldWidget.html">action-deletefield</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionDeleteTiddlerWidget.html">action-deletetiddler</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionListopsWidget.html">action-listops</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionLogWidget.html">action-log</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionNavigateWidget.html">action-navigate</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionPopupWidget.html">action-popup</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionSendMessageWidget.html">action-sendmessage</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionSetFieldWidget.html">action-setfield</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionSetMultipleFieldsWidget.html">action-setmultiplefields</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionWidget%2520Execution%2520Modes.html">ActionWidget Execution Modes</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionWidgets.html">ActionWidgets</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="BrowseWidget.html">browse</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ButtonWidget.html">button</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="CheckboxWidget.html">checkbox</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="CodeBlockWidget.html">codeblock</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="CountWidget.html">Widgets: Count</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="DiffTextWidget.html">diff-text</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="DraggableWidget.html">draggable</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="DroppableWidget.html">droppable</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="DropzoneWidget.html">dropzone</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="EditBitmapWidget.html">edit-bitmap</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="EditTextWidget.html">edit-text</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="EditWidget.html">edit</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="EncryptWidget.html">encrypt</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="EntityWidget.html">entity</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ErrorWidget.html">error</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="EventCatcherWidget.html">EventCatcherWidget</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="FieldManglerWidget.html">fieldmangler</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="FieldsWidget.html">fields</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="FillWidget.html">fill</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="GenesisWidget.html">genesis</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ImageWidget.html">image</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ImportVariablesWidget.html">importvariables</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="JSONTiddlerWidget.html">jsontiddler</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="KeyboardWidget.html">keyboard</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="LetWidget.html">let</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="LinkCatcherWidget.html">linkcatcher</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="LinkWidget.html">link</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListWidget.html">list</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="LogWidget.html">LogWidget</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="MacroCallWidget.html">macrocall</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="MessageCatcherWidget.html">MessageCatcherWidget</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="MessageHandlerWidgets.html">MessageHandlerWidgets</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="NavigatorWidget.html">navigator</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ParametersWidget.html">parameters</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="PasswordWidget.html">password</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="QualifyWidget.html">vars</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="RadioWidget.html">radio</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="RangeWidget.html">range</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="RevealWidget.html">reveal</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ScrollableWidget.html">scrollable</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="SelectWidget.html">select</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="SetMultipleVariablesWidget.html">setmultiplevariables</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="SetVariableWidget.html">setvariable</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="SetWidget.html">set</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="SlotWidget.html">slot</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TextWidget.html">text</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlerWidget.html">tiddler</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html">transclude</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TriggeringWidgets.html">TriggeringWidgets</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="VarsWidget.html">vars</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ViewWidget.html">view</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikifyWidget.html">wikify</a></li></ul></p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

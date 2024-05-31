@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>search-replace Operator (Examples): TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Operator%20Examples tc-tagged-search-replace%20Operator" data-tags="[[Operator Examples]] [[search-replace Operator]]" data-tiddler-title="search-replace Operator (Examples)" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+search-replace Operator (Examples)
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 1 noviembre 2021 a las 12:52</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Operator Examples
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ search-replace Operator
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Replace one string with another:
+<div class="doc-example"><span class=" tc-reveal"><code>[[The quick brown fox jumps over the lazy dog]search-replace[dog],[cat]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p>Replace all matches of a regular expression:</p><p><code>\define myregexp() e|o</code>
+<div class="doc-example"><span class=" tc-reveal"><code>[[Hello There]search-replace:g:regexp&lt;myregexp&gt;,[]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p>Replace all matches of a string irrespective of case:
+<div class="doc-example"><span class=" tc-reveal"><code>[[Hello There]search-replace:gi[H],[]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p>You can also use regular expression capture groups in the replacement string:
+<code>\define names() (\w+)\s(\w+)</code>
+<div class="doc-example"><span class=" tc-reveal"><code>[[John Smith]search-replace::regexp&lt;names&gt;,[$2,$1]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p>You can reference the portion of the input that matches the regular expression with <code>$&amp;</code>:
+<div class="doc-example"><span class=" tc-reveal"><code>[[John Smith]search-replace::regexp[John .*],[His name is $&amp;]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[[This is an exciting feature]search-replace::regexp[exciting],[amazing and $&amp;]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p>To replace everything but a match using a regular expression and the <strong>multiline</strong> (m) flag:
+<code>\define myregexp2() ^(?!Unlike).*$</code>
+<div class="doc-example"><span class=" tc-reveal"><code>[[HelloThere]get[text]search-replace:gm:regexp&lt;myregexp2&gt;,[]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p>You can use the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="search-replace%2520Operator.html">search-replace Operator</a> in combination with the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="sortsub%2520Operator.html">sortsub Operator</a> to ignore stop words like "A" and "The" at the beginning of titles when sorting. (Note for example that "A Tale of Two Cities" sorts under "T" rather than "A")
+<div class="doc-example"><span class=" tc-reveal"><code>[enlist&lt;book-list&gt;sortsub&lt;compare-without-stopwords&gt;]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p>You can also customise the listing so that "A Tale of Two Cities" is listed as "Tale of Two Cities, A" but still links to the correct tiddler.
+<div class="doc-example"><pre><code>&lt;ul&gt;
+&lt;$list filter="[enlist&lt;book-list&gt;sortsub&lt;compare-without-stopwords&gt;]"&gt;
+&lt;li&gt;&lt;$link&gt;&lt;$text text={{{[&lt;currentTiddler&gt;search-replace:i:regexp[(^The |A )(.*)],[$2, $1]]}}}/&gt;&lt;/$link&gt;&lt;/li&gt;
+&lt;/$list&gt;
+&lt;/ul&gt;</code></pre><p>Este es su aspecto:</p><p><ul>
+
+<li><a class="tc-tiddlylink tc-tiddlylink-missing" href="Animal%2520Farm.html">Animal Farm</a></li>
+
+<li><a class="tc-tiddlylink tc-tiddlylink-missing" href="The%2520Dice%2520Man.html">Dice Man, The </a></li>
+
+<li><a class="tc-tiddlylink tc-tiddlylink-missing" href="Great%2520Expectations.html">Great Expectations</a></li>
+
+<li><a class="tc-tiddlylink tc-tiddlylink-missing" href="A%2520New%2520Kind%2520of%2520Science.html">New Kind of Science, A </a></li>
+
+<li><a class="tc-tiddlylink tc-tiddlylink-missing" href="The%2520Recursive%2520Universe.html">Recursive Universe, The </a></li>
+
+<li><a class="tc-tiddlylink tc-tiddlylink-missing" href="A%2520Tale%2520of%2520Two%2520Cities.html">Tale of Two Cities, A </a></li>
+
+</ul>
+</p></div></p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

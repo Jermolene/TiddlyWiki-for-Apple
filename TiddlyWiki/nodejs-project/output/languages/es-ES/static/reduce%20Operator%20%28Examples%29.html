@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>reduce Operator (Examples): TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Operator%20Examples tc-tagged-reduce%20Operator" data-tags="[[Operator Examples]] [[reduce Operator]]" data-tiddler-title="reduce Operator (Examples)" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+reduce Operator (Examples)
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 4 diciembre 2020 a las 13:11</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Operator Examples
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ reduce Operator
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>These examples use the following predefined variables:</p><ul><li><strong>add-price</strong>: <code>[get[price]multiply{!!quantity}add&lt;accumulator&gt;]</code></li><li><strong>num-items</strong>: <code>[get[quantity]add&lt;accumulator&gt;]</code></li><li><strong>join-with-commas</strong>: <code>[&lt;index&gt;compare:number:gt[0]then&lt;accumulator&gt;addsuffix[, ]addsuffix&lt;currentTiddler&gt;else&lt;currentTiddler&gt;]</code></li><li><strong>multiply-input</strong>: <code>[multiply&lt;accumulator&gt;]</code></li></ul><p>They also use the following data tiddlers:</p><p><ul>
+
+<li>
+<strong><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Brownies.html">Brownies</a></strong> quantity: 1,  price: 4.99
+</li>
+
+<li>
+<strong><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Chick%2520Peas.html">Chick Peas</a></strong> quantity: 5,  price: 1.32
+</li>
+
+<li>
+<strong><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Milk.html">Milk</a></strong> quantity: 12,  price: 0.46
+</li>
+
+<li>
+<strong><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Rice%2520Pudding.html">Rice Pudding</a></strong> quantity: 4,  price: 2.66
+</li>
+
+</ul></p><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[shopping]reduce&lt;num-items&gt;]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[shopping]reduce&lt;add-price&gt;]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[shopping]reduce&lt;join-with-commas&gt;]</code><dd>→ Uses <code>&lt;index&gt;</code> to act differently on the first item than the rest</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[non-existent]reduce&lt;add-price&gt;]</code><dd>→ Empty input produces empty output</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[non-existent]reduce&lt;add-price&gt;else[0]]</code><dd>→ Use <code>else</code> to ensure output if input was empty</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>=1 =2 =3 +[reduce&lt;multiply-input&gt;]</code><dd>→ Empty initial value is treated as 0 by mathematical operators</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>=1 =2 =3 +[reduce&lt;multiply-input&gt;,[1]]</code><dd>→ Setting initial value is sometimes necessary for correct results</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,7 @@
+{
+	"title": "$:/plugins/tiddlywiki/filesystem",
+	"name": "Filesystem",
+	"description": "Synchronize changes from the node.js server to the local filesystem",
+	"list": "readme",
+	"stability": "STABILITY_2_STABLE"
+}

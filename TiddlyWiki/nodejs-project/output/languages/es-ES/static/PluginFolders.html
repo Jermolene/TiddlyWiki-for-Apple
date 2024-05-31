@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>PluginFolders: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-PluginMechanism" data-tags="PluginMechanism" data-tiddler-title="PluginFolders" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+PluginFolders
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 13 junio 2022 a las 13:35</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ PluginMechanism
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Working with Plugin Folders</h1><ul><li>Arrange the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="PluginFolders.html">PluginFolders</a> containing the plugins in a convenient shared location</li><li>Use <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Environment%2520Variables%2520on%2520Node.js.html">environment variables</a> to tell <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> to search those folders. </li><li>The plugins can be referenced in <code>tiddlywiki.info</code> by their name (e.g. <code>tiddlytools/magic</code>)</li><li>Place the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="PluginFolders.html">PluginFolders</a> containing the plugins in a <code>plugins</code> folder within the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWikiFolders.html">wiki folder</a>. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> will attempt to include every subfolder as a plugin. Do not add the plugin names to <code>tiddlywiki.info</code>. Do not add the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="PluginFolders.html">PluginFolders</a> under a specific namespace:</li></ul><pre><code>├── plugins/
+│   ├── relink/
+│   │   ├── js/
+│   │   ├── tiddlers/
+│   │   └── plugin.info
+│   └── relink-markdown/
+│       ├── js/
+│       ├── plugin.info
+│       └── readme.tid
+├── tiddlers/
+└── tiddlywiki.info</code></pre><h1 class="">Plugin.info File</h1><p>On the server, plugins can be stored as ordinary JSON tiddlers but it is often more convenient to store them as separate tiddler files within folders. Plugin folders must contain a <code>plugin.info</code> file that contains the metadata for the plugin. It can also optionally identify files external to the plugin folder that should be loaded as tiddlers.</p><p>The <code>plugin.info</code> file should contain the following JSON structure:</p><p>The JSON structure for plugin tiddlers is as follows:</p><pre><code>{
+	"title": "$:/plugins/publisher/name",
+	"name": "name",
+	"description": "An exemplary plugin for demonstration purposes",
+	"author": "JeremyRuston",
+	"version": "1.2.3-alpha3",
+	"core-version": "&gt;=5.0.0",
+	"source": "https://tiddlywiki.com/MyPlugin",
+	"plugin-type": "plugin",
+	"list": "readme license history"
+}</code></pre><p>By convention, the titles of the individual tiddlers are prefixed with the title of the containing plugin, but they are not restricted to do so.</p><p>Note that if the <code>version</code> field is omitted from a <code>plugin.info</code> file when the plugin folder is packed then it is automatically filled in by the core to the current core version number. This is to ensure that all the core plugins carry the correct version number. Generally plugin authors will want to ensure that they do explicitly specify a version number.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

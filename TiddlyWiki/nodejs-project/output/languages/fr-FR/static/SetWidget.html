@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>set: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Widgets" data-tags="Widgets" data-tiddler-title="SetWidget" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Widget set</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 20 juin 2015 à 7h11</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Widgets"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Widgets</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>Le widget set variable affecte une valeur à une <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variables.html">variable</a> spécifiée. La nouvelle valeur est alors disponible par le contenu dans le cadre défini du widget.</p><h1 class="">Contenu et Attributs</h1><p>Le contenu du widget <code>&lt;$set&gt;</code> forme le cadre de la valeur affectée à la variable.</p><table><tbody><tr class="evenRow"><th align="left">Attribut</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">name</td><td align="left">Le nom de la variable à affecter (par défaut du "Tiddlercourant")</td></tr><tr class="evenRow"><td align="left">value</td><td align="left">La valeur à affecter à la variable si le filtre est manquant ou non vide</td></tr><tr class="oddRow"><td align="left">filter</td><td align="left">Un filtre optionnel à évaluer et à affecter à la variable (voir ci-dessous)</td></tr><tr class="evenRow"><td align="left">emptyValue</td><td align="left">La valeur à affecter à la variable si le filtre évalue une liste vide (voir ci-dessous)</td></tr></tbody></table><h2 class="">Affectation simple d'une variable</h2><p>L'utilisation la plus simple du widget set variable affecte une chaine à une variable. L'exemple suivant affecte une chaine littérale</p><pre><code>&lt;$set name="maVariable" value="du texte"&gt;
+&lt;$text text=&lt;&lt;maVariable&gt;&gt;/&gt;
+&lt;/$set&gt;</code></pre><p>Les attributs nom et valeur peuvent tous deux être transclus. Par exemple :</p><pre><code>&lt;$set name=&lt;&lt;autreVariable&gt;&gt; value={{gabarit!!texte}}&gt;
+&lt;$text text=&lt;&lt;maVariable&gt;&gt;/&gt;
+&lt;/$set&gt;</code></pre><h2 class="">Affectation conditionnel d'une variable</h2><p>Cette forme du widget set variable choisit une des deux valeurs spécifiées selon que le résultat du filtre soit une liste vide ou pas. Voici un exemple affectant une variable selon que le tiddler courant se nomme "monTitreMagique" ou pas :</p><pre><code>&lt;$set name="maVariable" filter="[all[current]field:title[monTitreMagique]]" value="C'est magique" emptyValue="Ce n'est pas magique"&gt;
+&lt;$text text=&lt;&lt;maVariable&gt;&gt;/&gt;
+&lt;/$set&gt;</code></pre><h2 class="">Affectation d'une liste filtrée de variable</h2><p>Cette forme du widget set variable évalue le filtre et affecte le résultat à la variable sous forme de liste séparée par des espaces (utilisation des double crochets pour les titres contenant des espaces).</p><pre><code>&lt;$set name="maVariable" filter="[tag[Introduction]]"&gt;
+&lt;$text text=&lt;&lt;maVariable&gt;&gt;/&gt;
+&lt;/$set&gt;</code></pre></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>tm-http-request: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Messages" data-tags="Messages" data-tiddler-title="WidgetMessage: tm-http-request" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+WidgetMessage: tm-http-request
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 23 julio 2023 a las 22:53</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Mensajes
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>The <strong>tm-http-request</strong> message is used to make an HTTP request to a server.</p><p>It uses the following properties on the <code>event</code> object:</p><table><tbody><tr class="evenRow"><th align="left">Name</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">param</td><td align="left">Not used</td></tr><tr class="evenRow"><td align="left"><em>{any other params}</em></td><td align="left">Any other parameters are made available as variables within the context of the widget message. See below.</td></tr></tbody></table><p>The following parameters are used:</p><table><tbody><tr class="evenRow"><th align="left">Name</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">method</td><td align="left">HTTP method (eg "GET", "POST")</td></tr><tr class="evenRow"><td align="left">body</td><td align="left">String data to be sent with the request</td></tr><tr class="oddRow"><td align="left">binary</td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.3.1.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.3.1</a> Set to "yes" to cause the response body to be treated as binary data and returned in base64 format</td></tr><tr class="evenRow"><td align="left">query-*</td><td align="left">Query string parameters with string values</td></tr><tr class="oddRow"><td align="left">header-*</td><td align="left">Headers with string values</td></tr><tr class="evenRow"><td align="left">password-header-*</td><td align="left">Headers with values taken from the password store</td></tr><tr class="oddRow"><td align="left">password-query-*</td><td align="left">Query string parameters with values taken from the password store</td></tr><tr class="evenRow"><td align="left">var-*</td><td align="left">Variables to be passed to the completion and progress handlers (without the "var-" prefix)</td></tr><tr class="oddRow"><td align="left">bind-status</td><td align="left">Title of tiddler to which the status of the request ("pending", "complete", "error") should be bound</td></tr><tr class="evenRow"><td align="left">bind-progress</td><td align="left">Title of tiddler to which the progress of the request (0 to 100) should be bound</td></tr><tr class="oddRow"><td align="left">oncompletion</td><td align="left">Action strings to be executed when the request completes</td></tr><tr class="evenRow"><td align="left">onprogress</td><td align="left">Action strings to be executed when progress is reported</td></tr></tbody></table><p>The following variables are passed to the completion handler:</p><table><tbody><tr class="evenRow"><th align="left">Name</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">status</td><td align="left">HTTP result status code (see <a class="tc-tiddlylink-external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Status" rel="noopener noreferrer" target="_blank">MDN</a>)</td></tr><tr class="evenRow"><td align="left">statusText</td><td align="left">HTTP result status text</td></tr><tr class="oddRow"><td align="left">error</td><td align="left">Error string</td></tr><tr class="evenRow"><td align="left">data</td><td align="left">Returned data</td></tr><tr class="oddRow"><td align="left">headers</td><td align="left">Response headers as a JSON object</td></tr></tbody></table><p>The following variables are passed to the progress handler:</p><table><tbody><tr class="evenRow"><th align="left">Name</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">lengthComputable</td><td align="left">Whether the progress loaded and total figures are valid - "yes" or "no"</td></tr><tr class="evenRow"><td align="left">loaded</td><td align="left">Number of bytes loaded so far</td></tr><tr class="oddRow"><td align="left">total</td><td align="left">Total number bytes to be loaded</td></tr></tbody></table><p>Note that the state tiddler <a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fstate%252Fhttp-requests.html">$:/state/http-requests</a> contains a number representing the number of outstanding HTTP requests in progress.</p><h2 class="">Examples</h2><ul><li><a class="tc-tiddlylink-external" href="https://www.zotero.org/" rel="noopener noreferrer" target="_blank">Zotero's</a> API for retrieving reference items: <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-http-request%2520Example%2520-%2520Zotero.html">WidgetMessage: tm-http-request Example - Zotero</a></li><li><a class="tc-tiddlylink-external" href="https://random.dog/" rel="noopener noreferrer" target="_blank">Random Dog's</a> API for retrieving random pictures of dogs showing how to retrieve binary data: <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WidgetMessage%253A%2520tm-http-request%2520Example%2520-%2520Random%2520Dog.html">WidgetMessage: tm-http-request Example - Random Dog</a></li></ul></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

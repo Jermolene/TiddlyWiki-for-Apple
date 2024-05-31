@@ -1,0 +1,126 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Styles and Classes: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText tc-tagged-How%20to%20apply%20custom%20styles" data-tags="WikiText [[How to apply custom styles]]" data-tiddler-title="Styles and Classes in WikiText" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Styles and Classes in WikiText
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2023년 7월 26일 오전 11:57</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ How to apply custom styles
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ WikiText
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>CSS styles and classes can be applied to inline or block content wrapped in <code>@@double at signs@@</code>. Classes can be applied to certain block <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> elements.</p><p><em>Inline content</em> wrapped in <code>@@double at signs@@</code> without specifying style or class will be assigned the <code>tc-inline-style</code> class and displayed as highlighted text. The foreground and background colours of the highlighted text are defined as <code>highlight-background</code> and <code>highlight-foreground</code> in the current palette.</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>@@Highlighted text@@</code></pre><p>That renders as:</p><p><span class="tc-inline-style">Highlighted text</span></p><p>... and the underlying HTML is:</p><p>
+<pre><code>&lt;p&gt;&lt;span class="tc-inline-style"&gt;Highlighted text&lt;/span&gt;&lt;/p&gt;</code></pre>
+
+</p></div><h2 class="">Styles</h2><p>Multiple style attributes, e.g. <code>color</code>, each followed by <code>;</code> semicolon can be introduced immediately after the opening <code>@@</code>, without spaces in between.</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>@@color:steelblue;background-color:lightcyan;Text with custom style@@</code></pre><p>That renders as:</p><p><span style="color:steelblue;background-color:lightcyan;">Text with custom style</span></p><p>... and the underlying HTML is:</p><p>
+<pre><code>&lt;p&gt;&lt;span style="color:steelblue;background-color:lightcyan;"&gt;Text with custom style&lt;/span&gt;&lt;/p&gt;</code></pre>
+
+</p></div><p>Similarly, styles can be applied to <em>block content</em>. Wrapping block content in <code>@@</code> without specifying style or class has no effect.</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>@@background-color:lightcyan;
+* Item one
+* Item two
+@@
+</code></pre><p>That renders as:</p><ul style="background-color:lightcyan;"><li>Item one</li><li>Item two</li></ul><p>... and the underlying HTML is:</p><p>
+<pre><code>&lt;ul style="background-color:lightcyan;"&gt;&lt;li&gt;Item one&lt;/li&gt;&lt;li&gt;Item two&lt;/li&gt;&lt;/ul&gt;</code></pre>
+
+</p></div><h2 class="">Classes</h2><p>The following <code>coloured-text</code> and <code>coloured-bg</code> classes are defined in this tiddler for demonstration purposes:</p><pre><code>.coloured-text {color: darkkhaki;}
+.coloured-bg {background-color: cornsilk;}</code></pre><p><style>
+.coloured-text {color: darkkhaki;}
+.coloured-bg {background-color: cornsilk;}
+</style></p><p>Multiple classes, each prefixed with <code>.</code>, can be introduced immediately after the opening <code>@@</code>, followed by a <code> </code> space. This works both for inline and block content:</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>@@.coloured-text.coloured-bg Inline content with two assigned classes@@</code></pre><p>That renders as:</p><p><span class=" coloured-text coloured-bg ">Inline content with two assigned classes</span></p><p>... and the underlying HTML is:</p><p>
+<pre><code>&lt;p&gt;&lt;span class=" coloured-text coloured-bg "&gt;Inline content with two assigned classes&lt;/span&gt;&lt;/p&gt;</code></pre>
+
+</p></div><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>@@.coloured-bg
+* Block content
+* With one assigned class
+@@</code></pre><p>That renders as:</p><ul class="coloured-bg"><li>Block content</li><li>With one assigned class</li></ul><p>... and the underlying HTML is:</p><p>
+<pre><code>&lt;ul class="coloured-bg"&gt;&lt;li&gt;Block content&lt;/li&gt;&lt;li&gt;With one assigned class&lt;/li&gt;&lt;/ul&gt;</code></pre>
+
+</p></div><p>Multiple classes and styles can be applied simultaneously. In case of inline content, the styles have to be defined first, followed by the classes.</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>@@font-size:1.5em;.coloured-text.coloured-bg Text with custom style and classes@@</code></pre><p>That renders as:</p><p><span class=" coloured-text coloured-bg " style="font-size:1.5em;">Text with custom style and classes</span></p><p>... and the underlying HTML is:</p><p>
+<pre><code>&lt;p&gt;&lt;span class=" coloured-text coloured-bg " style="font-size:1.5em;"&gt;Text with custom style and classes&lt;/span&gt;&lt;/p&gt;</code></pre>
+
+</p></div><p>In case of block content, the styles and classes can be defined in a single line after the opening <code>@@</code> identically as for the inline content, or in separate lines, each beginning with <code>@@</code>:</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>@@font-size:1.5em;
+@@.coloured-text
+@@.coloured-bg
+* Block content
+* With custom style and classes
+@@</code></pre><p>That renders as:</p><ul class="coloured-text coloured-bg" style="font-size:1.5em;"><li>Block content</li><li>With custom style and classes</li></ul><p>... and the underlying HTML is:</p><p>
+<pre><code>&lt;ul class="coloured-text coloured-bg" style="font-size:1.5em;"&gt;&lt;li&gt;Block content&lt;/li&gt;&lt;li&gt;With custom style and classes&lt;/li&gt;&lt;/ul&gt;</code></pre>
+
+</p></div><p>In a similar way classes, but not styles, can be applied to those block <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> elements that are introduced through characters on the beginning of the line. The classes prefixed with <code>.</code> are specified immediately after the special characters, followed by a <code> </code> space.</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>!!!.coloured-bg Heading with a custom background class.
+
+* Standard list element.
+*.coloured-bg List element with a custom background colour class.
+*.coloured-text List element with  a custom text colour class.
+*.coloured-bg.coloured-text List element with both of the custom classes.
+</code></pre><p>That renders as:</p><h3 class="coloured-bg">Heading with a custom background class.</h3><ul><li>Standard list element.</li><li class="coloured-bg">List element with a custom background colour class.</li><li class="coloured-text">List element with  a custom text colour class.</li><li class="coloured-bg coloured-text">List element with both of the custom classes.</li></ul><p>... and the underlying HTML is:</p><p>
+<pre><code>&lt;h3 class="coloured-bg"&gt;Heading with a custom background class.&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Standard list element.&lt;/li&gt;&lt;li class="coloured-bg"&gt;List element with a custom background colour class.&lt;/li&gt;&lt;li class="coloured-text"&gt;List element with  a custom text colour class.&lt;/li&gt;&lt;li class="coloured-bg coloured-text"&gt;List element with both of the custom classes.&lt;/li&gt;&lt;/ul&gt;</code></pre>
+
+</p></div></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

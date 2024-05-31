@@ -1,0 +1,90 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>DateFormat: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Features" data-tags="Features" data-tiddler-title="DateFormat" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+DateFormat
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2023년 2월 26일 오후 2:43</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Features
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>The default representation of dates is a compact string such as <code class="doc-value">20211002153802059</code>. The associated template is <code>[UTC]YYYY0MM0DD0hh0mm0ss0XXX</code>. For example, the <code class="doc-field">created</code> and <code class="doc-field">modified</code> fields are stored like this.</p><p>The display format for this string can be controlled with a template. For example, transcluding the <code class="doc-field">modified</code> field automatically applies a template to display the date as <code class="doc-value">Sat Oct 02 2021 17:40:50 GMT+0200 (Central European Summer Time)</code>. A few widgets and filter operators allow you to manually specify a template, for example the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ViewWidget.html">ViewWidget</a>:</p><p><code>&lt;$view field=modified format=date template="DDth mmm YYYY 0hh:0mm:0ss" /&gt;</code></p><p>The date string is processed with the following substitutions:</p><table><tbody><tr class="evenRow"><th align="left">Token</th><th align="left">Substituted Value</th></tr><tr class="oddRow"><td align="left"><code>ddddd</code></td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.0.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.0</a> Day of year (1 to 365, or 366 for leap years)</td></tr><tr class="evenRow"><td align="left"><code>0ddddd</code></td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.0.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.0</a> Zero padded day of year (001 to 365, or 366 for leap years)</td></tr><tr class="oddRow"><td align="left"><code>DDD</code></td><td align="left">Day of week in full (eg, "Monday")</td></tr><tr class="evenRow"><td align="left"><code>ddd</code></td><td align="left">Short day of week (eg, "Mon")</td></tr><tr class="oddRow"><td align="left"><code>dddd</code></td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.0.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.0</a> Weekday number from 1 through 7, beginning with Monday and ending with Sunday</td></tr><tr class="evenRow"><td align="left"><code>DD</code></td><td align="left">Day of month</td></tr><tr class="oddRow"><td align="left"><code>0DD</code></td><td align="left">Adds a leading zero</td></tr><tr class="evenRow"><td align="left"><code>DDth</code></td><td align="left">Adds a suffix</td></tr><tr class="oddRow"><td align="left"><code>WW</code></td><td align="left">ISO-8601 week number of year</td></tr><tr class="evenRow"><td align="left"><code>0WW</code></td><td align="left">Adds a leading zero</td></tr><tr class="oddRow"><td align="left"><code>MMM</code></td><td align="left">Month in full (eg, "July")</td></tr><tr class="evenRow"><td align="left"><code>mmm</code></td><td align="left">Short month (eg, "Jul")</td></tr><tr class="oddRow"><td align="left"><code>MM</code></td><td align="left">Month number</td></tr><tr class="evenRow"><td align="left"><code>0MM</code></td><td align="left">Adds leading zero</td></tr><tr class="oddRow"><td align="left"><code>YYYY</code></td><td align="left">Full year</td></tr><tr class="evenRow"><td align="left"><code>YY</code></td><td align="left">Two digit year</td></tr><tr class="oddRow"><td align="left"><code>wYYYY</code></td><td align="left">Full year with respect to week number</td></tr><tr class="evenRow"><td align="left"><code>aYYYY</code></td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.1.23.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.1.23</a> Full year but negative dates are displayed as positive</td></tr><tr class="oddRow"><td align="left"><code>wYY</code></td><td align="left">Two digit year with respect to week number</td></tr><tr class="evenRow"><td align="left"><code>{era:BCE||CE}</code></td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.1.23.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.1.23</a> Displays a different string for years that are negative, zero or positive (see below)</td></tr><tr class="oddRow"><td align="left"><code>hh</code></td><td align="left">Hours</td></tr><tr class="evenRow"><td align="left"><code>0hh</code></td><td align="left">Adds a leading zero</td></tr><tr class="oddRow"><td align="left"><code>hh12</code></td><td align="left">Hours in 12 hour clock</td></tr><tr class="evenRow"><td align="left"><code>0hh12</code></td><td align="left">Hours in 12 hour clock with leading zero</td></tr><tr class="oddRow"><td align="left"><code>mm</code></td><td align="left">Minutes</td></tr><tr class="evenRow"><td align="left"><code>0mm</code></td><td align="left">Minutes with leading zero</td></tr><tr class="oddRow"><td align="left"><code>ss</code></td><td align="left">Seconds</td></tr><tr class="evenRow"><td align="left"><code>0ss</code></td><td align="left">Seconds with leading zero</td></tr><tr class="oddRow"><td align="left"><code>XXX</code></td><td align="left">Milliseconds</td></tr><tr class="evenRow"><td align="left"><code>0XXX</code></td><td align="left">Milliseconds with leading zero</td></tr><tr class="oddRow"><td align="left"><code>am</code> or <code>pm</code></td><td align="left">Lower case AM/PM indicator</td></tr><tr class="evenRow"><td align="left"><code>AM</code> or <code>PM</code></td><td align="left">Upper case AM/PM indicator</td></tr><tr class="oddRow"><td align="left"><code>TZD</code></td><td align="left">Timezone offset</td></tr><tr class="evenRow"><td align="left"><code>TIMESTAMP</code></td><td align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.4.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.4</a> Number of milliseconds since the <a class="tc-tiddlylink-external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date#the_ecmascript_epoch_and_timestamps" rel="noopener noreferrer" target="_blank">ECMAScript epoch</a>, 1 January 1970.</td></tr><tr class="oddRow"><td align="left"><code>\x</code></td><td align="left">Used to escape a character that would otherwise have special meaning</td></tr><tr class="evenRow"><td><code>[UTC]</code></td><td>Time-shift the represented date to UTC. Must be at very start of format string</td></tr></tbody></table><p>Note that other text is passed through unchanged, allowing commas, colons or other separators to be used.</p><p>The <code>{era:BCE||CE}</code> notation can specify different strings for years that are negative, zero or positive. For example <code>{era:BC|Z|AD}</code> would display <code class="doc-value">BC</code> for negative years, <code class="doc-value">AD</code> for positive years, and <code class="doc-value">Z</code> for year zero.</p><h1 class="">Examples</h1><table><tbody><tr class="evenRow"><th align="left">Template</th><th align="left">Output</th></tr><tr class="oddRow"><td align="left"><code>DDth MMM YYYY</code></td><td align="left">16th February 2011</td></tr><tr class="evenRow"><td align="left"><code>DDth MMM \M\M\M YYYY</code></td><td align="left">16th February MMM 2011</td></tr><tr class="oddRow"><td align="left"><code>DDth mmm YYYY 0hh:0mm:0ss</code></td><td align="left">16th Feb 2011 11:38:42</td></tr></tbody></table><h2 class="">Using <code class="doc-value">TIMESTAMP</code> to calculate time difference</h2><p>You can calculate the difference between two dates by doing the following:</p><ol><li>Convert both dates to timestamps</li><li>Subtract the later date from the earlier one – if you don't know which one is earlier use the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="abs%2520Operator.html"><code class="doc-operator">abs</code></a> operator to get an absolute value after subtraction</li><li>Divide the resulting number by the number of milliseconds in your chosen interval</li></ol><p>Here is an example of calculating the number of days that passed between creation and last modification of current tiddler:</p><ul><li>Convert the <code class="doc-field">created</code> and <code class="doc-field">modified</code> fields to timestamps</li><li>Divide their difference by <code class="doc-value">86400000</code> which is the number of milliseconds in a day<ul><li>1000 milliseconds per second × 60 seconds per minute × 60 minutes per hour × 24 hours per day = 86,400,000 milliseconds per day</li></ul></li></ul><p><div class="doc-example">
+<span class=" tc-reveal">
+	<div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div>
+	<pre><code>&lt;$let
+	timestamp-modified={{{ [{!!modified}format:date[TIMESTAMP]] }}}
+	timestamp-created={{{ [{!!created}format:date[TIMESTAMP]] }}}
+	difference-days={{{ [&lt;timestamp-modified&gt;subtract&lt;timestamp-created&gt;divide[86400000]floor[]] }}}&gt;
+
+* ''Modified date:'' &lt;$text text={{{ [{!!modified}format:date[YYYY-0MM-0DD]] }}}/&gt;
+* ''Created date:'' &lt;$text text={{{ [{!!created}format:date[YYYY-0MM-0DD]] }}}/&gt;
+* ''Difference in days:'' &lt;&lt;difference-days&gt;&gt; days
+&lt;/$let&gt;</code></pre>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Try it</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,271 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Filter Syntax: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Filters" data-tags="Filters" data-tiddler-title="Filter Syntax" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Filter Syntax
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2015년 1월 24일 오후 6:42</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Filters
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><dl><dd class="doc-preamble"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filters.html">Filters</a> follow a grammar that is presented here, using <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Railroad%2520Diagrams.html">railroad diagrams</a>, for those who find formal syntax descriptions helpful. However, you can <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Introduction%2520to%2520filter%2520notation.html">learn to write filters</a> without needing to understand this group of tiddlers.</dd></dl><p>A <dfn class="doc-def">filter</dfn> is a pipeline for transforming an <dfn class="doc-def">input</dfn> into an <dfn class="doc-def">output</dfn>. Both the input and the output are <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Title%2520Selection.html">ordered sets of titles</a> of things like tiddlers and fields.</p><p>Filters are <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Expression.html">expressions</a> constructed from smaller building blocks, called <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Run.html">runs</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Step.html">steps</a>, each of which also transforms an input to an output.</p><p>A filter starts with an empty output. Its runs are processed from left to right, progressively modifying the output.</p><p>Here are details of the various building blocks involved:</p><p><ul class="">
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Expression.html">
+
+
+Filter Expression
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Run.html">
+
+
+Filter Run
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Step.html">
+
+
+Filter Step
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Parameter.html">
+
+
+Filter Parameter
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Whitespace.html">
+
+
+Filter Whitespace
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Cascade%2520Filter%2520Run%2520Prefix.html">
+
+
+Cascade Filter Run Prefix
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Cascade%2520Filter%2520Run%2520Prefix%2520%2528Examples%2529.html">
+
+
+Cascade Filter Run Prefix (Examples)
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Filter%2520Run%2520Prefix.html">
+
+
+Filter Filter Run Prefix
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Filter%2520Run%2520Prefix%2520%2528Examples%2529.html">
+
+
+Filter Filter Run Prefix (Examples)
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Run%2520Prefix%2520%2528Examples%2529.html">
+
+
+Filter Run Prefix (Examples)
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Intersection%2520Filter%2520Run%2520Prefix.html">
+
+
+Intersection Filter Run Prefix
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Intersection%2520Filter%2520Run%2520Prefix%2520%2528Examples%2529.html">
+
+
+Intersection Filter Run Prefix (Examples)
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Map%2520Filter%2520Run%2520Prefix.html">
+
+
+Map Filter Run Prefix
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Map%2520Filter%2520Run%2520Prefix%2520%2528Examples%2529.html">
+
+
+Map Filter Run Prefix (Examples)
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Named%2520Filter%2520Run%2520Prefix.html">
+
+
+Named Filter Run Prefix
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Reduce%2520Filter%2520Run%2520Prefix.html">
+
+
+Reduce Filter Run Prefix
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Reduce%2520Filter%2520Run%2520Prefix%2520%2528Examples%2529.html">
+
+
+Reduce Filter Run Prefix (Examples)
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Sort%2520Filter%2520Run%2520Prefix.html">
+
+
+Sort Filter Run Prefix
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Sort%2520Filter%2520Run%2520Prefix%2520%2528Examples%2529.html">
+
+
+Sort Filter Run Prefix (Examples)
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Then%2520Filter%2520Run%2520Prefix.html">
+
+
+Then Filter Run Prefix
+
+
+</a>
+</li>
+
+</ul></p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

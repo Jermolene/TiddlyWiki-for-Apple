@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>image: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Widgets" data-tags="Widgets" data-tiddler-title="ImageWidget" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Widget Image</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 3 mars 2022 à 23h56</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Widgets"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Widgets</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>Le widget image affiche des images qui peuvent être désignées par une URL distante ou le titre d'un tiddler local qui contient l'image.</p><h1 class="">Contenu et attributs</h1><p>Le contenu du widget <code>&lt;$image&gt;</code> est ignoré.</p><table><tbody><tr class="evenRow"><th align="left">Attribut</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">source</td><td align="left">L'URL de l'image, ou le titre d'un tiddler image</td></tr><tr class="evenRow"><td align="left">width</td><td align="left">La largeur de l'image</td></tr><tr class="oddRow"><td align="left">height</td><td align="left">La hauteur de l'image</td></tr><tr class="evenRow"><td align="left">tooltip</td><td align="left">L'info-bulle à afficher au survol de l'image</td></tr><tr class="oddRow"><td align="left">alt</td><td align="left">Le texte alternatif associé à l'image</td></tr><tr class="evenRow"><td align="left">class</td><td align="left">Les classes CSS à assigner à l'élément <code>&lt;img&gt;</code></td></tr></tbody></table><p>La valeur de la largeur et de la hauteur peut être attribuée en pixels (c-à-d "23" ou "23px") ou en pourcentages (c-à-d "23%"). Ces deux attributs sont optionnels et s'ils sont absents le navigateur utilisera des règles CSS pour retailler l'image.</p><h1 class="">Images externes et champ <strong>_canonical_uri</strong></h1><p>Lorsqu'il est utilisé pour afficher des images contenues dans des tiddlers, le widget opère dans deux modes distincts :</p><ul><li>Si le champ <strong>_canonical_uri</strong> est présent, il est utilisé en tant qu'attribut <strong>src</strong> de la balise <code>&lt;img&gt;</code> générée et le champ <strong>text</strong> est ignoré.</li><li>En l'absence du champ <strong>_canonical_uri</strong>, le widget image génère une balise <code>&lt;img&gt;</code> qui encode les données de l'image directement dans une URI de type <code>data:</code>. </li></ul><p>Plus de détails ici : <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ExternalImages.html">Images externes</a>.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

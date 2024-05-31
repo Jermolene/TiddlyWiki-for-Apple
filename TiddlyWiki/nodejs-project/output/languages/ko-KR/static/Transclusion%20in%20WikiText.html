@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Transclusion: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText" data-tags="WikiText" data-tiddler-title="Transclusion in WikiText" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Transclusion in WikiText
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2022년 1월 22일 오후 7:33</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ WikiText
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>You can incorporate the content of one tiddler within another using the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion.html">Transclusion</a> notation:</p><ul><li><code>{{MyTiddler}}</code> transcludes a single tiddler</li><li><code>{{MyTiddler||TemplateTitle}}</code> displays the tiddler through a specified <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TemplateTiddlers.html">TemplateTiddler</a></li><li><code>{{||TemplateTitle}}</code> displays the specified template tiddler without altering the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Current%2520Tiddler.html">current tiddler</a></li><li><code>{{MyTiddler|Parameter}}</code> transcludes a single tiddler with a single parameter</li><li><code>{{MyTiddler||TemplateTitle|Parameter|SecondParameter}}</code> transcludes a single tiddler through a specified <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TemplateTiddlers.html">TemplateTiddler</a> with two parameters</li></ul><h2 class="">Transcluding Text References</h2><p>You can also use a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TextReference.html">TextReference</a> instead of a tiddler title:</p><ul><li><code>{{MyTiddler!!field}}</code> transcludes a specified field of a tiddler</li><li><code>{{!!field}}</code> transcludes a specified field of the current tiddler</li><li><code>{{MyTiddler##index}}</code> transcludes a specified indexed property of a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DataTiddlers.html">DataTiddler</a></li><li><code>{{##index}}</code> transcludes a specified indexed property of the current <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DataTiddlers.html">DataTiddler</a></li></ul><h2 class="">Filtered Transclusion</h2><p>A similar syntax can be used to transclude a list of tiddlers matching a specified <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filters.html">filter</a>:</p><pre><code>{{{ [tag[mechanism]] }}}
+{{{ [tag[mechanism]] ||TemplateTitle}}}</code></pre><h1 class="">Generated Widgets</h1><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> transclusion syntax generates a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlerWidget.html">TiddlerWidget</a> wrapped around a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html">TranscludeWidget</a>. For example, <code>{{MyTiddler||MyTemplate!!myField}}</code> generates the following pair of widgets:</p><pre><code>&lt;$tiddler tiddler="MyTiddler"&gt;
+&lt;$transclude $tiddler="MyTemplate" $field="myField"/&gt;
+&lt;/$tiddler&gt;</code></pre><p>See also:</p><ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520Basic%2520Usage.html">Transclusion Basic Usage</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520with%2520Templates.html">Transclusion with Templates</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TemplateTiddlers.html">TemplateTiddlers</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html">TranscludeWidget</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520and%2520Substitution.html">Transclusion and Substitution</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520parser%2520mode%253A%2520transclusion%2520examples.html">WikiText parser mode: transclusion examples</a></li></ul></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

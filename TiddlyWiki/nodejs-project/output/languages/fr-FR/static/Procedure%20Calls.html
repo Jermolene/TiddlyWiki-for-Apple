@@ -1,0 +1,42 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Procedure Calls: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText tc-tagged-Procedures" data-tags="WikiText Procedures" data-tiddler-title="Procedure Calls" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Procedure Calls</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 19 avril 2023 à 11h31</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Procedures"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Procedures</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="WikiText"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">WikiTexte</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h2 class="">Introduction</h2><p>This tiddler describes the different ways in which <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedures.html">procedure</a> can be called.</p><h2 class="">Procedure Call Transclusion Shortcut</h2><p>To call a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedures.html">procedure</a>, place <code>&lt;&lt;</code>double angle brackets<code>&gt;&gt;</code> around the name and any parameter values.</p><pre><code>&lt;&lt;my-procedure param:"This is the parameter value"&gt;&gt;</code></pre><p>By default, parameters are listed in the same order as in the procedure definition. A parameter can be labelled with its name and a colon to allow them to be listed in a different order.</p><p>If no value is specified for a parameter, the default value given for that parameter in the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedure%2520Definitions.html">procedure definition</a> is used instead. (If no default value was defined, the parameter is blank).</p><p>Each parameter value can be enclosed in <code>'</code>single quotes<code>'</code>, <code>"</code>double quotes<code>"</code>, <code>"""</code>triple double quotes<code>"""</code> or <code>[[</code>double square brackets<code>]]</code>. Triple double quotes allow a value to contain almost anything. If a value contains no spaces or single or double quotes, it requires no delimiters.</p><p>See the discussion about <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520parser%2520mode%253A%2520macro%2520examples.html">parser modes</a></p><h2 class="">Procedure Calls with <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html"><code class="doc-widget">$transclude</code></a> Widget</h2><p>The shortcut syntax expands to the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html"><code class="doc-widget">$transclude</code></a> widget with the <code>$variable</code> attribute specifying the name of the procedure to transclude.</p><pre><code>&lt;$transclude $variable="my-procedure" param="This is the parameter value"/&gt;</code></pre><p>The widget itself offers greater flexibility than the shortcut syntax, including the ability to specify dynamic parameter values.</p><h2 class="">Assigning Procedure Calls to Attribute Values</h2><p>The text of a procedure can be directly assigned to an attribute of a widget or HTML element. The result of the procedure is not wikified, which means that <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedure%2520Parameter%2520Handling.html">parameter handling</a> does not take place.</p><pre><code>&lt;div class=&lt;&lt;myclasses&gt;&gt;&gt;
+...
+&lt;/div&gt;</code></pre><h2 class="">Using Procedure Calls in Filters</h2><p>Procedure calls can be used in filters. The text is not wikified which again means that the parameters will be ignored.</p><pre><code>&lt;$list filter="[&lt;my-procedure&gt;]"&gt;
+...
+&lt;/$list&gt;</code></pre></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

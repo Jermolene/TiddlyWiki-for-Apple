@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title><<.attr tag>>: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-CheckboxWidget" data-tags="CheckboxWidget" data-tiddler-title="CheckboxWidget (tag Mode)" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+CheckboxWidget (tag Mode)
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 17 marzo 2023 a las 16:11</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ CheckboxWidget
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h2 class=""><a class="tc-tiddlylink tc-tiddlylink-resolves" href="CheckboxWidget%2520%2528tag%2520Mode%2529.html"><code class="doc-attr">tag</code> Mode</a></h2><p>Using the checkbox widget in tag mode requires the <code class="doc-attr">tag</code> attribute to specify the name of the tag. The checkbox will be checked if the tiddler specified in the <code class="doc-attr">tiddler</code> attribute has the specified tag and unchecked if it does not.</p><p>This example creates a checkbox that flips the <code class="doc-tag">done</code> tag on the current tiddler:</p><div class="doc-example"><pre><code>&lt;$checkbox tag="done"&gt; Is it done?&lt;/$checkbox&gt;</code></pre><p>Este es su aspecto:</p><p><label class="tc-checkbox "><input type="checkbox"><span> Is it done?</span></label>
+</p></div><p>When the attribute <code class="doc-attr">invertTag</code> is set to <code class="doc-value">yes</code>, the checkbox will be checked if the tiddler does <em class="doc-em">not</em> have the specified tag and unchecked if it does.</p><div class="doc-example"><pre><code>&lt;$checkbox tag="done" invertTag="yes"&gt; Is it not done?&lt;/$checkbox&gt;</code></pre><p>Este es su aspecto:</p><p><label class="tc-checkbox  tc-checkbox-checked"><input checked="true" type="checkbox"><span> Is it not done?</span></label>
+</p></div></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

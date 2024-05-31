@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>save: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Commands" data-tags="Commands" data-tiddler-title="SaveCommand" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">SaveCommand</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 19 septembre 2017 à 14h18</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Commands"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Commandes</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Enregistre des tiddlers individuels identifiés par un filtre, soit tels quels, soit dans un format binaire dans les fichiers spécifiés.</p><pre><code>--save &lt;filtre-des-tiddlers&gt; &lt;filtre-des-noms-de-fichiers&gt;</code></pre><ul><li><strong>filtre-des-tiddlers</strong>: Un filtre identifiant les tiddlers à enregistrer</li><li><strong>filtre-des-noms-de-fichiers</strong>: Filtre optionnel pour transformer les titres de tiddlers en chemins de fichiers. À défaut, le filtre utilisé est <code>[is[tiddler]]</code>, qui utilise le titre inchangé du tiddler comme nom de fichier</li></ul><p>Par défaut, le nom de fichier est résolu relativement au sous-répertoire <code>output</code> du réepertoire de l'édition. La commande <code>--output</code> peut servir à diriger les sorties vers un répertoire différent.</p><p>Notes :</p><ul><li>Les éventuels fichiers présents dans le répertoire de sortie ne sont pas supprimmés</li><li>Les répertoires absents dans le chemin de fichier sont créés automatiquement.</li><li>Lorsqu'un tiddler contient des espaces dans le titre, prendre garde à utiliser aussi bien les guillemets nécessaires au shell et les doubles crochets droits propres à <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> : <code>--render "[[Motovun Jack.jpg]]"</code></li><li>Le filtre des noms de fichier est évalué après avoir initialisé l'élément d'entrée avec le titre du tiddler en cours d'exécution, permettant ainsi d'utiliser le titre comme base de calcul pour le nom de fichier. Par exemple <code>[encodeuricomponent[]addprefix[static/]]</code> applique un encodage d'URI à chaque titre, puis ajoute le préfixe <code>static/</code></li><li>La commande <code>--save</code> remplace de manière plus souple les deux commandes <code>--savetiddler</code> et <code>--savetiddlers</code>, qui sont du même coup obsolètes. </li></ul><p>Exemples :</p><ul><li><code>--save "[!is[system]is[image]]" "[encodeuricomponent[]addprefix[tiddlers/]]"</code> – enregistre tous les tiddlers images non-système comme des fichiers du sous-répertoire "tiddlers" nommés après encodage URL des titres.</li></ul></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

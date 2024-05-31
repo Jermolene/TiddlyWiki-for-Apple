@@ -1,0 +1,75 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Creating a splash screen: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Customise%20TiddlyWiki" data-tags="[[Customise TiddlyWiki]]" data-tiddler-title="Creating a splash screen" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Creating a splash screen
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2018년 9월 27일 오전 9:44</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Customise TiddlyWiki
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>By default, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> displays a blank screen while it is loading. You can add a special "splash screen" that is displayed while the wiki loads.</p><p>Larger <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> files and those loaded over a slow network connection may take a little time to load. Once fully loaded, performance improves, because everything is now running entirely within the browser. Using a splash screen ensures people know the loading process is taking place, reducing the chance they will leave the page.</p><p>In order for the splash screen to be displayed before <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> is initialised or <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Encryption.html">decrypted</a>, it is embedded as static HTML/CSS within the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> HTML file. This is done with the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="SystemTag%253A%2520%2524%253A%252Ftags%252FRawMarkupWikified%252FTopBody.html">SystemTag: $:/tags/RawMarkupWikified/TopBody</a>, or any of the other system tags beginning with <a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Ftags%252FRawMarkup..html">$:/tags/RawMarkup.</a> </p><p>In order to remove the splash screen when the wiki has finished loading, the HTML should be wrapped in a container with the special class <code>tc-remove-when-wiki-loaded</code>. Any DOM elements with this class are automatically deleted by the core once the wiki has loaded.</p><p>Here's an example of a simple splash screen that just displays the text <em>Loading</em>. To use it, copy the text into a new tiddler, give it the type "text/plain" and the tag "<a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Ftags%252FRawMarkupWikified%252FTopBody.html">$:/tags/RawMarkupWikified/TopBody</a>":</p><pre><code>&lt;div class="tc-remove-when-wiki-loaded"&gt;
+Loading...
+&lt;/div&gt;</code></pre><p>If the tiddler is given the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> type <code>text/vnd.tiddlywiki</code> then the contents are wikified as the file is saved, allowing transclusion etc. For example, here's an example that quotes the site title in the loading message. To use it, copy the text into a new tiddler, give it the type "text/vnd.tiddlywiki" and the tag "<a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Ftags%252FRawMarkupWikified%252FTopBody.html">$:/tags/RawMarkupWikified/TopBody</a>":</p><pre><code>\rules only filteredtranscludeinline transcludeinline
+&lt;div class="tc-remove-when-wiki-loaded"&gt;
+Please wait while {{$:/SiteTitle}} is loading
+&lt;/div&gt;</code></pre><p>The <code>\rules</code> directive is used to limit the wikitext syntax that is recognised to the two forms of inline transclusion. This avoids accidental wikification of tiddler content.</p><p>There is a more complex example splash screen using CSS animations and images configured in this wiki: see <a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2524%253A%252FSplashScreen.html">$:/SplashScreen</a>
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

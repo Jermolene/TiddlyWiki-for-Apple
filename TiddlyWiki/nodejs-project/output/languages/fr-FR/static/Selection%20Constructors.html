@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Selection Constructors: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Concepts" data-tags="Concepts" data-tiddler-title="Selection Constructors" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Constructeurs de sélection</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 24 juin 2015 à 10h27</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Concepts"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:#FF8383;
+fill:#333333;
+color:#333333;">Concepts</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Le résultat du <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filters.html">filtre</a> d'une étape dépend de son <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Operators.html">opérateur</a>:</p><ul><li>La plupart des opérateurs forment leurs résultats à partir de leurs entrées. Par exemple, la plupart produisent un sous-ensemble de leur entrée, et se faisant, méritent vraiment leur nom de "filtres",car ils réduisent la taille du résultat généré par la <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Run.html">séquence</a>. Ces opérateurs sont nommés <dfn class="doc-def">modifieurs de sélection</dfn>.</li><li>Quelques opérateurs ignorent leurs entrées et génèrent un résultat indépendant. Ils sont appelés <dfn class="doc-def">constructeurs de sélection</dfn> : Ils construisent une <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Title%2520Selection.html">sélection</a> entièrement nouvelle.</li></ul><p>Un bon exemple de constructeur est l'opérateur <a class="tc-tiddlylink tc-tiddlylink-missing" href="Op%25C3%25A9rateur%2520title.html"><code class="doc-operator">title</code></a>. Le résultat de <code>[title[A]title[B]]</code> est juste <code class="doc-tiddler">B</code>. Mais l'ajout de l'opérateur modifieur <a class="tc-tiddlylink tc-tiddlylink-missing" href="Op%25C3%25A9rateur%2520field.html"><code class="doc-operator">field</code></a>, <code>[title[A]field:title[B]</code> ne produit plus rien du tout.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

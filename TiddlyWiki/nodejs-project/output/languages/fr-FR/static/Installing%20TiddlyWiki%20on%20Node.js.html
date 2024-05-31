@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Node.js: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-TiddlyWiki%20on%20Node.js tc-tagged-Linux tc-tagged-Mac tc-tagged-Saving tc-tagged-Windows" data-tags="[[TiddlyWiki on Node.js]] Linux Mac Saving Windows" data-tiddler-title="Installing TiddlyWiki on Node.js" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Installer TiddlyWiki sur Node.js</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2 avril 2022 à 11h58</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Linux"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Linux</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="Mac"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Mac</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="Saving"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:darkorchid;
+fill:#ffffff;
+color:#ffffff;"><svg class="tc-image-help tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M36.055 111.441c-5.24 4.396-15.168 7.362-26.555 7.362-1.635 0-3.24-.06-4.806-.179 7.919-2.64 14.062-8.6 16.367-16.014C8.747 92.845 1.05 78.936 1.05 63.5c0-29.547 28.206-53.5 63-53.5s63 23.953 63 53.5-28.206 53.5-63 53.5c-10.055 0-19.56-2-27.994-5.559zm35.35-33.843a536.471 536.471 0 00.018-4.682 199.02 199.02 0 00-.023-3.042c.008-1.357.595-2.087 3.727-4.235.112-.077 1.085-.74 1.386-.948 3.093-2.133 5.022-3.786 6.762-6.187 2.34-3.228 3.558-7.077 3.558-11.649 0-13.292-9.86-21.952-21.455-21.952-11.103 0-22.499 9.609-24.066 22.295a6.023 6.023 0 1011.956 1.477c.806-6.527 6.972-11.726 12.11-11.726 5.265 0 9.408 3.64 9.408 9.906 0 3.634-1.1 5.153-5.111 7.919l-1.362.93c-2.682 1.84-4.227 3.1-5.7 4.931-2.109 2.62-3.242 5.717-3.258 9.314.013.892.02 1.86.022 2.981a470.766 470.766 0 01-.022 4.943 6.023 6.023 0 1012.046.12l.003-.395zm-6.027 24.499a7.529 7.529 0 100-15.058 7.529 7.529 0 000 15.058z" fill-rule="evenodd"></path></svg>Enregistrer les modifications</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="TiddlyWiki on Node.js"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">TiddlyWiki sur Node.js</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="Windows"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Windows</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><ol><li>Installez <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Node.js.html">Node.js</a><ul><li>Linux<blockquote><div><em>Debian/Ubuntu</em> :<br><code>apt install node.js</code><br>Et éventuellement :<br><code>apt install npm</code></div><div><em>Arch Linux</em><br><code>pacman -S tiddlywiki</code> <br>(installe node et tiddlywiki)</div></blockquote></li><li>Mac<blockquote><div><code>brew install node</code></div></blockquote></li><li>Android<blockquote><div><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Serving%2520TW5%2520from%2520Android.html">Termux pour Android</a></div></blockquote></li><li>Autres<blockquote><div>Voir <a class="tc-tiddlylink-external" href="https://nodejs.org" rel="noopener noreferrer" target="_blank">https://nodejs.org</a></div></blockquote></li></ul></li><li>Ouvrez un terminal de ligne de commande et saisissez :<blockquote><div><code>npm install -g tiddlywiki</code></div><div>En cas d'erreur, il faudra peut-être relancer la commande en tant qu'administrateur :</div><div><code>sudo npm install -g tiddlywiki</code> (Mac/Linux)</div></blockquote></li><li>Vérifiez que <em>TiddlyWiki</em> est bien installé en tapant :<blockquote><div><code>tiddlywiki --version</code></div></blockquote></li><li>En réponse, vous devriez voir <em>TiddlyWiki</em> renvoyer la version en cours (par exemple 5.3.2-prerelease ;  d'autres informations de débogage peuvent aussi apparaître).</li><li>Faites l'essai :<ol><li><code>tiddlywiki monnouveauwiki --init server</code> pour créer un dossier pour un nouveau wiki qui inclura des composants orientés serveur</li><li><code>tiddlywiki monnouveauwiki --listen</code> pour démarrer <em>TiddlyWiki</em></li><li>Positionnez votre navigateur sur l'adresse <a class="tc-tiddlylink-external" href="http://127.0.0.1:8080/" rel="noopener noreferrer" target="_blank">http://127.0.0.1:8080/</a></li><li>Essayez d'éditer et de créer de nouveaux tiddlers</li></ol></li><li>Eventuellement, créez une copie hors-ligne :<ul><li>Cliquez sur le bouton <span class="doc-icon"><svg class="tc-image-save-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M120.783 34.33c4.641 8.862 7.266 18.948 7.266 29.646 0 35.347-28.653 64-64 64-35.346 0-64-28.653-64-64 0-35.346 28.654-64 64-64 18.808 0 35.72 8.113 47.43 21.03l2.68-2.68c3.13-3.13 8.197-3.132 11.321-.008 3.118 3.118 3.121 8.193-.007 11.32l-4.69 4.691zm-12.058 12.058a47.876 47.876 0 013.324 17.588c0 26.51-21.49 48-48 48s-48-21.49-48-48 21.49-48 48-48c14.39 0 27.3 6.332 36.098 16.362L58.941 73.544 41.976 56.578c-3.127-3.127-8.201-3.123-11.32-.005-3.123 3.124-3.119 8.194.006 11.319l22.617 22.617a7.992 7.992 0 005.659 2.347c2.05 0 4.101-.783 5.667-2.349l44.12-44.12z" fill-rule="evenodd"></path></svg></span> <strong>Enregistrer les modifications</strong> de la barre latérale, <strong>OU</strong></li><li><code>tiddlywiki monnouveauwiki --build index</code></li></ul></li></ol><p>L'option <code>-g</code> demande à Node.js d'installer <em>TiddlyWiki</em> globalement. Sans elle, <em>TiddlyWiki</em> sera disponible seulement dans le répertoire où vous l'avez installé.</p><p>Si vous utilisez Debian ou une distribution Linux dérivée de Debian et que vous recevez une erreur <code>node: command not found</code> alors que le paquet node.js est installé, vous devrez peut-être créer un lien symbolique entre <code>nodejs</code> et <code>node</code>. Consultez le manuel de votre distribution et de <code>whereis</code> pour créer un lien correctement. Voir le <a class="tc-tiddlylink-external" href="http://github.com/Jermolene/TiddlyWiki5/issues/1434" rel="noopener noreferrer" target="_blank">rapport d'erreur 1434</a> sur github.</p><p>Exemple pour Debian 8.0 : <code>sudo ln -s /usr/bin/nodejs /usr/bin/node</code></p><p>Vous pouvez aussi installer d'anciennes versions de <em>TiddlyWiki</em> ainsi :</p><blockquote><div><code>npm install -g tiddlywiki@5.1.13</code></div></blockquote></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

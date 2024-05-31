@@ -1,0 +1,81 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>PHP: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Saving tc-tagged-PHP" data-tags="Saving PHP" data-tiddler-title="Saving on a PHP Server" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:#F06292;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Saving on a PHP Server
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2020년 5월 7일 오후 12:03</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ PHP
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Saving
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>The built-in <code>TiddlySpot </code>saver can also be used to save changes to a simple PHP script that you can run on most hosting providers.</p><p><em>This code hasn't been updated in several years. If you have difficulty with it, consider using <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Saving%2520with%2520TW%2520Receiver.html">TW Receiver</a> instead</em></p><ol><li>Download a copy of <code>TiddlyHome_0.1.2.zip</code> from <a class="tc-tiddlylink-external" href="https://code.google.com/archive/p/bidix/downloads" rel="noopener noreferrer" target="_blank">https://code.google.com/archive/p/bidix/downloads</a></li><li>Unzip. </li><li>Extract a copy of <code>store.php</code> from under the unzipped subdirectory <code>_th\lib</code></li><li>Edit your copy of <strong>store.php</strong> to add your username(s) and password(s). Find the line <code>$USERS = array( 'UserName1'=&gt;'Password1', etc)</code> and replace Username1 and Password1 with your desired username and password<ul><li>Make sure you leave all the punctuation and code, such as the single quotes, intact</li></ul></li><li>Save the file</li><li>Using FTP or your web interface, upload <strong>store.php</strong> to your server. Make sure that the filename is correct<ul><li>If you've uploaded the file correctly you should be able to view it in your browser (eg, <a class="tc-tiddlylink-external" href="http://example.com/store.php" rel="noopener noreferrer" target="_blank">http://example.com/store.php</a>)</li></ul></li><li>In <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a>, go to the <strong>Saving</strong> tab of the <strong>control panel</strong> <span class="doc-icon"><svg class="tc-image-options-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M110.488 76a47.712 47.712 0 01-5.134 12.384l6.724 6.724c3.123 3.123 3.132 8.192.011 11.313l-5.668 5.668c-3.12 3.12-8.186 3.117-11.313-.01l-6.724-6.725c-3.82 2.258-7.98 4-12.384 5.134v9.505c0 4.417-3.578 8.007-7.992 8.007h-8.016C55.58 128 52 124.415 52 119.993v-9.505a47.712 47.712 0 01-12.384-5.134l-6.724 6.725c-3.123 3.122-8.192 3.131-11.313.01l-5.668-5.668c-3.12-3.12-3.116-8.186.01-11.313l6.725-6.724c-2.257-3.82-4-7.98-5.134-12.384H8.007C3.591 76 0 72.422 0 68.01v-8.017C0 55.58 3.585 52 8.007 52h9.505a47.712 47.712 0 015.134-12.383l-6.724-6.725c-3.123-3.122-3.132-8.191-.011-11.312l5.668-5.669c3.12-3.12 8.186-3.116 11.313.01l6.724 6.725c3.82-2.257 7.98-4 12.384-5.134V8.007C52 3.591 55.578 0 59.992 0h8.016C72.42 0 76 3.585 76 8.007v9.505a47.712 47.712 0 0112.384 5.134l6.724-6.724c3.123-3.123 8.192-3.132 11.313-.01l5.668 5.668c3.12 3.12 3.116 8.186-.01 11.312l-6.725 6.725c2.257 3.82 4 7.979 5.134 12.383h9.505c4.416 0 8.007 3.578 8.007 7.992v8.017c0 4.411-3.585 7.991-8.007 7.991h-9.505zM64 96c17.673 0 32-14.327 32-32 0-17.673-14.327-32-32-32-17.673 0-32 14.327-32 32 0 17.673 14.327 32 32 32z" fill-rule="evenodd"></path></svg></span> and enter the following information:<ul><li>Your username as the wiki name</li><li>Your password</li><li>The URL of the <strong>store.php</strong> file (<em><strong>not</strong> the URL of the wiki, this must the full URL to the <strong>store.php</strong> file</em>)</li></ul></li></ol><p>The control panel <strong>Saving</strong> tab includes the following configuration options:</p><table><tbody><tr class="evenRow"><th align="left">Name</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">Server URL</td><td align="left">The full URL to the <strong>store.php</strong> file on your server</td></tr><tr class="evenRow"><td align="left">Upload filename</td><td align="left">The filename used to save the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> (defaults to <strong>index.html</strong>)</td></tr><tr class="oddRow"><td align="left">Upload directory</td><td align="left">The relative path from <strong>store.php</strong> to the directory used for saving the file</td></tr><tr class="evenRow"><td align="left">Backup directory</td><td align="left">The relative path from <strong>store.php</strong> to the directory used for backups</td></tr></tbody></table><h3 class="">Note about maximum size</h3><p>As your TW file increases in size, you may need to modify  your <code>.htaccess</code> or <code>htaccess</code> file (depending on system)  to increase the value of the maximum upload and/or post size. Check with your Web Host Provider for your particular settings. Be sure also to make backups before experiementing. On some systems, the settings might look like:</p><pre><code>php_value upload_max_filesize 4M
+php_value post_max_size 6M</code></pre><h3 class="">Note about possible error message</h3><p>If you get an error message regarding <code>split()</code>, you may need to change references  to <code>split</code> in <strong>store.php</strong> to function <code>explode</code> .</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

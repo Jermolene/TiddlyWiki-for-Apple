@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>button: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Widgets" data-tags="Widgets" data-tiddler-title="ButtonWidget" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">ButtonWidget</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href="127.0.0.1.html">127.0.0.1</a> 17 décembre 2014 à 21h12</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Widgets"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Widgets</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>The button widget displays an HTML <code>&lt;button&gt;</code> element that can perform a combination of optional actions when clicked:</p><ul><li>Executing any <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionWidgets.html">ActionWidgets</a> that are immediate children of the button widget</li><li>Execute any integrated actions:<ul><li>Navigate to a specified tiddler</li><li>Dispatch a user defined <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Messages.html">widget message</a></li><li>Trigger a user defined <a class="tc-tiddlylink tc-tiddlylink-resolves" href="PopupMechanism.html">popup</a></li><li>Assign new text to a specified tiddler</li></ul></li></ul><p>The integrated actions are provided as a shortcut for invoking common actions. The same functionality is available via <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionWidgets.html">ActionWidgets</a>, with the exception of the support for highlighting selected popups.</p><h1 class="">Content and Attributes</h1><p>The content of the <code>&lt;$button&gt;</code> widget is displayed within the button.</p><table><tbody><tr class="evenRow"><th align="left">Attribute</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">to</td><td align="left">The title of the tiddler to navigate to</td></tr><tr class="evenRow"><td align="left">message</td><td align="left">The name of the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Messages.html">widget message</a> to send when the button is clicked</td></tr><tr class="oddRow"><td align="left">param</td><td align="left">The optional parameter to the message</td></tr><tr class="evenRow"><td align="left">set</td><td align="left">A <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TextReference.html">TextReference</a> to which a new value will be assigned</td></tr><tr class="oddRow"><td align="left">setTo</td><td align="left">The new value to assign to the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TextReference.html">TextReference</a> identified in the <code>set</code> attribute</td></tr><tr class="evenRow"><td align="left">popup</td><td align="left">Title of a state tiddler for a popup that is toggled when the button is clicked</td></tr><tr class="oddRow"><td align="left">aria-label</td><td align="left">Optional <a class="tc-tiddlylink tc-tiddlylink-missing" href="Accessibility.html">Accessibility</a> label</td></tr><tr class="evenRow"><td align="left">tooltip</td><td align="left">Optional tooltip</td></tr><tr class="oddRow"><td align="left">class</td><td>An optional CSS class name to be assigned to the HTML element</td></tr><tr class="evenRow"><td align="left">style</td><td align="left">An optional CSS style attribute to be assigned to the HTML element</td></tr><tr class="oddRow"><td align="left">selectedClass</td><td align="left">An optional additional CSS class to be assigned if the popup is triggered or the tiddler specified in <code>set</code> already has the value specified in <code>setTo</code></td></tr><tr class="evenRow"><td align="left">default</td><td align="left">Default value if <code>set</code> tiddler is missing for testing against <code>setTo</code> to determine <code>selectedClass</code></td></tr></tbody></table><p><strong>Tip:</strong> Set <strong>class</strong> to <code>tc-btn-invisible tc-tiddlylink</code> to have a button look like an internal link.</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

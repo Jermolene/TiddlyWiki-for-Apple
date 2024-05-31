@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>regexp Operator (Examples): TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-regexp%20Operator tc-tagged-Operator%20Examples" data-tags="[[regexp Operator]] [[Operator Examples]]" data-tiddler-title="regexp Operator (Examples)" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+regexp Operator (Examples)
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 23 enero 2015 a las 22:53</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Operator Examples
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ regexp Operator
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>These examples make use of the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Days%2520of%2520the%2520Week.html">Days of the Week</a> tiddler.</p><p><div class="doc-example"><span class=" tc-reveal"><code>[!is[system]regexp[Wiki]]</code><dd>→ non-system tiddlers with <code>Wiki</code> in their title</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[!is[system]regexp[(?i)Wiki]]</code><dd>→ non-system tiddlers with <code>Wiki</code> in their title, ignoring case</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[!is[system]regexp[Wiki(?i)]]</code><dd>→ same again</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[regexp[(?i)\.jpe?g$]]</code><dd>→ tiddlers with titles ending in <code>.jpg</code> or <code>.jpeg</code>, ignoring case</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[regexp:created[^201408]]</code><dd>→ tiddlers created in August 2014</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p>The regular expression <code>[0-9]{2}</code> matches two consecutive digits. Because it contains square brackets, the way to use it with the <code class="doc-operator">regexp</code> operator is via a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variables.html">variable</a>, as follows:</p><div class="doc-example"><pre><code>&lt;$set name="digit-pattern" value="[0-9]{2}"&gt;
+&lt;&lt;list-links "[regexp:title&lt;digit-pattern&gt;]" field:"title"&gt;&gt;
+&lt;/$set&gt;</code></pre><p>Este es su aspecto:</p><p>
+<ul class=""><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2522%25E3%2583%2587%25E3%2582%25B6%25E3%2582%25A4%25E3%2583%25B3%25E5%2588%25B7%25E6%2596%25B0%25E3%2580%2582%25E6%25AC%25A1%25E3%2581%25AE25%25E5%25B9%25B4%25E3%2582%2592%25E7%259B%25AE%25E6%258C%2587%25E3%2581%2599TiddlyWiki%2522%2520by%2520Moongift.html">"デザイン刷新。次の25年を目指す<span>TiddlyWiki</span>" by Moongift</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2524%253A%252Fstate%252Ftab%252Fsidebar--1835078512.html"><span>$:/state/tab/sidebar--1835078512</span></a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Base64.html">Base64</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="decodebase64%2520Operator.html">decodebase64 Operator</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="encodebase64%2520Operator.html">encodebase64 Operator</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Notes%2520for%2520upgrading%2520to%25205.0.11-beta.html">Notes for upgrading to 5.0.11-beta</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.0-alpha.11.html">Release 5.0.0-alpha.11</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.0-alpha.12.html">Release 5.0.0-alpha.12</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.0-alpha.13.html">Release 5.0.0-alpha.13</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.0-alpha.14.html">Release 5.0.0-alpha.14</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.0-alpha.15.html">Release 5.0.0-alpha.15</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.0-alpha.16.html">Release 5.0.0-alpha.16</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.0-alpha.17.html">Release 5.0.0-alpha.17</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.10-beta.html">Release 5.0.10-beta</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.11-beta.html">Release 5.0.11-beta</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.12-beta.html">Release 5.0.12-beta</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.13-beta.html">Release 5.0.13-beta</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.14-beta.html">Release 5.0.14-beta</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.15-beta.html">Release 5.0.15-beta</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.16-beta.html">Release 5.0.16-beta</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.17-beta.html">Release 5.0.17-beta</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.0.18-beta.html">Release 5.0.18-beta</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.10.html">Release 5.1.10</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.11.html">Release 5.1.11</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.12.html">Release 5.1.12</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.13.html">Release 5.1.13</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.14.html">Release 5.1.14</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.15.html">Release 5.1.15</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.16.html">Release 5.1.16</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.17.html">Release 5.1.17</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.18.html">Release 5.1.18</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.19.html">Release 5.1.19</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.20.html">Release 5.1.20</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.21.html">Release 5.1.21</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.22.html">Release 5.1.22</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Release%25205.1.23.html">Release 5.1.23</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="sha256%2520Operator.html">sha256 Operator</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki%2520European%2520Meetup%25202016.html"><span>TiddlyWiki</span> European Meetup 2016</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki%2520European%2520Meetup%25202017.html"><span>TiddlyWiki</span> European Meetup 2017</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki%2520extensions%2520for%2520Sublime%2520Text%25203%2520by%2520roma0104.html"><span>TiddlyWiki</span> extensions for Sublime Text 3 by roma0104</a></li></ul>
+
+</p></div></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

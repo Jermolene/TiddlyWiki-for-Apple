@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>mode d'analyse ignoré: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText%20Parser%20Modes" data-tags="[[WikiText Parser Modes]]" data-tiddler-title="Places where the parser ignores WikiText" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Endroits où le WikiTexte est ignoré</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 21 avril 2022 à 21h01</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="WikiText Parser Modes"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Modes d'analyse du WikiTexte</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Le texte contenu dans les constructions suivantes est survolé par l'interpréteur sans analyse du <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiTexte</a> :</p><table><tbody><tr class="evenRow"><td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Code%2520Blocks%2520in%2520WikiText.html">Blocs de code en WikiTexte</a></td><td>L'une des fonctions principales des blocs de code est de supprimer l'analyse du <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiTexte</a>. Dès que le bloc de code commence l'interpréteur arrête l'analyse du <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiTexte</a> jusqu'à la fin du bloc.</td></tr><tr class="oddRow"><td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Images%2520in%2520WikiText.html">Images en WikiTexte</a></td><td><code>[[img|texte littéral de lien image]]</code> - le texte inclus entre crochets est ignoré, ce qui signifie par exemple que ni les <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520in%2520WikiText.html">transclusions</a> ni les <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Calls%2520in%2520WikiText.html">appels de macros</a> ne peuvent être utilisés pour construire le lien dynamiquement.</td></tr><tr class="evenRow"><td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Linking%2520in%2520WikiText.html">Liens en WikiTexte</a></td><td><code>[[cible littérale du lien|intitulé littéral du lien]]</code> - le texte inclus entre crochets est ignoré, ce qui signifie par exemple que ni les <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520in%2520WikiText.html">transclusions</a> ni les <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Calls%2520in%2520WikiText.html">appels de macros</a> ne peuvent être utilisés pour construire la cible ou l'intitulé du lien dynamiquement.</td></tr><tr class="oddRow"><td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Calls%2520in%2520WikiText.html">Appel de macro en WikiTexte</a></td><td><code>&lt;&lt;maMacro ''pas-en-gras'' "texte littéral" "&lt;&lt;expansion-de-macro-ignorée&gt;&gt;" {{transclusion-ignorée}}&gt;&gt;</code> - pour traiter le texte inclus dans un appel de macro, l'interpréteur suit des règles particulières de détection des arguments de macros. Ces règles ne permettent pas d'analyser le <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiTexte</a>, mais après la substitution des arguments dans la définition de la macro, le résultat est analysé à l'aide des <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520Parser%2520Modes.html">règles normales</a>. Le <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiTexte</a> sera donc interprété ultérieurement dans le résultat.</td></tr></tbody></table></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

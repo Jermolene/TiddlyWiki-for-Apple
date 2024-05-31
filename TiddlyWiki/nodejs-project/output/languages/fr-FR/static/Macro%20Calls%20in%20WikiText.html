@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Appel de Macro: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText" data-tags="WikiText" data-tiddler-title="Macro Calls in WikiText" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Appel de macro en WikiTexte</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 22 avril 2022 à 23h58</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="WikiText"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">WikiTexte</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Pour appeler une <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macros.html">macro</a>, placez des <code>&lt;&lt;</code>doubles parenthèses en équerre<code>&gt;&gt;</code> autour de son nom et des valeurs de ses paramètres. ex : <code>&lt;&lt;maMacro val1 val2 ... valn&gt;&gt;</code></p><p>Par défaut, les paramètres sont passés dans l'ordre fixé lors de la définition de la macro. Un paramètre peut être identifié par son nom, pour plus de clarté ou pour pouvoir les utiliser dans le désordre.</p><p>Si aucune valeur n'est fournie pour un paramètre, la valeur par défaut fixée lors de la définition de la macro est utilisée (si aucune valeur par défaut n'est définie, le paramètre est tout simplement vide).</p><p>Chaque valeur de paramètre peut être délimitée par des <code>'</code>simples cotes<code>'</code>, des <code>"</code>doubles cotes<code>"</code>,  des <code>"""</code>doubles cotes triplées<code>"""</code> ou des  <code>[[</code>doubles crochets<code>]]</code>. Les doubles cotes triplées permettent de passer à peu près toutes les valeurs. Si une valeur ne contient ni espace, ni simple ou double cotes, les délimiteurs sont inutiles.</p><p>Une <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Call%2520Syntax.html">description</a> plus formelle de cette syntaxe est aussi disponible.</p><p>Cette syntaxe est une forme abrégée du widget <a class="tc-tiddlylink tc-tiddlylink-resolves" href="MacroCallWidget.html"><code class="doc-widget">$macrocall</code></a>. Le widget en lui-même permet une plus grande flexibilité, incluant la capacité de <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion.html">transclure</a> des valeurs de paramètres ou de les générer via des macros additionnelles.</p><p>Comme les macros sont de simples <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variables.html">variables</a> paramétrées, des valeurs de variables peuvent être insérées en faisant appel aux mêmes techniques.</p><p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macro%2520Calls%2520in%2520WikiText%2520%2528Examples%2529.html">Des exemples</a> et <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520parser%2520mode%253A%2520macro%2520examples.html">d'autres exemples</a> sont à votre disposition.</p><h2 class="">Paramètres nommés ou anonymes</h2><p>En <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiTexte</a>, nommer les paramètres lors de l'appel aux macros est toujours le choix le plus sûr par rapport à l'utilisation de valeurs anonymes. Ne pas utiliser le nom des paramètres peut avoir des effets indésirables perturbants. Imaginez par exemple que le premier paramètre d'une macro serve à spécifier le nom d'un <a class="tc-tiddlylink tc-tiddlylink-resolves" href="StateMechanism.html">tiddler d'état</a>, et que le second soit destiné à préciser un <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520with%2520Templates.html">tiddler gabarit</a>. Si vous deviez par mégarde oublier de définir la valeur du premier paramètre ou vous tromper dans l'ordre des paramètres, au prochain appel de la macro (qui pourrait même avoir lieu en prévisualisant votre tiddler) votre gabarit pourrait être malencontreusement écrasé avec le contenu destiné au tiddler d'état.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

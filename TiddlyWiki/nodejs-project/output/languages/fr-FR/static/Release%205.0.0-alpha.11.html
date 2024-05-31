@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>5.0.0-alpha.11: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-AlphaReleaseNotes" data-tags="AlphaReleaseNotes" data-tiddler-title="Release 5.0.0-alpha.11" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Release 5.0.0-alpha.11</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 8 novembre 2013 à 17h54</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="AlphaReleaseNotes"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">AlphaReleaseNotes</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>This release is the culmination of a large scale refactoring of the widget mechanism of <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki5.html">TiddlyWiki5</a>. There are several changes to be aware of if upgrading from earlier versions:</p><ul><li>The following widgets have been removed:<ul><li><code>&lt;$setstyle&gt;</code> - use <code>&lt;div style=&lt;&lt;macroName Param&gt;&gt;&gt;</code> instead</li><li><code>&lt;$video&gt;</code> - will return in a later release</li><li><code>&lt;$datauri&gt;</code> - use the <code>&lt;&lt;makedatauri&gt;&gt;</code> built-in macro instead</li><li><code>&lt;$error&gt;</code> - may return in a later release</li><li><code>&lt;$import&gt;</code> - use the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="BrowseWidget.html">BrowseWidget</a>, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DropzoneWidget.html">DropzoneWidget</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="NavigatorWidget.html">NavigatorWidget</a> instead</li><li><code>&lt;$info&gt;</code> - use the <code>&lt;&lt;changecount&gt;&gt;</code> built-in macro instead</li><li><code>&lt;$version&gt;</code> - use the <code>&lt;&lt;version&gt;&gt;</code> built-in macro instead</li></ul></li><li>The following widgets have had significant changes:<ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="EditWidget.html">EditWidget</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListWidget.html">ListWidget</a> - the list widget itself no longer generates HTML nodes, so you'll often need to wrap the template in a <code>&lt;div&gt;</code> or a <code>&lt;span&gt;</code> to be able to style the content</li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ViewWidget.html">ViewWidget</a> - has several changes:<ul><li><code>&lt;$view format="link"/&gt;</code> is no longer available; use an explicit <code>&lt;$link&gt;</code> widget instead</li><li><code>&lt;$view format="link"/&gt;</code> is no longer available; use the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html">TranscludeWidget</a> instead</li></ul></li></ul></li><li>The following new widgets have been added:<ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="BrowseWidget.html">BrowseWidget</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="DropzoneWidget.html">DropzoneWidget</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="EditTextWidget.html">EditTextWidget</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="EditBitmapWidget.html">EditBitmapWidget</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="SetVariableWidget.html">SetVariableWidget</a></li></ul></li><li>Widget attribute names have been made more consistent. In particular, <code>tiddler</code> is used to reference a tiddler by title, not <code>title</code></li><li>It is no longer possible to import the macro definitions within another tiddler by transcluding that tiddler</li><li>The <code>body</code> element now has the class <code>tw-body</code>, which will need to be specified in any overrides<ul><li>This was done due to the new support for HTML foreign objects, which makes it possible to have multiple <code>&lt;body&gt;</code> elements in a document</li></ul></li></ul></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

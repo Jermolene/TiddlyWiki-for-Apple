@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Plugin Dependencies: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-PluginMechanism" data-tags="PluginMechanism" data-tiddler-title="Plugin Dependencies" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Plugin Dependencies</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 28 septembre 2019 à 9h27</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="PluginMechanism"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">PluginMechanism</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>The simplest form of dependency between plugins is that one plugin can declare itself to be a sub-plugin of another plugin by specifying that plugin in the <code>parent-plugin</code> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Plugin%2520Fields.html">field</a>. Sub-plugins are displayed in the control panel plugin chooser within the expandable area of their parent plugin. For example, the official plugin library includes the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="CodeMirror%2520Plugin.html">CodeMirror Plugin</a> and also more than a dozen sub-plugins that extend the <a class="tc-tiddlylink tc-tiddlylink-missing" href="CodeMirror.html">CodeMirror</a> plugin with optional functionality. Note that sub-plugins cannot themselves have further sub-plugins.</p><p>Plugins can also use their <code>dependents</code> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Plugin%2520Fields.html">field</a> to list the titles of any other plugins that should also be installed. Note that the list is not resolved recursively: dependents of dependents will not be installed.</p><p>When installing a plugin from the plugin library, both the <code>parent-plugin</code> and <code>dependents</code> fields are used to determine any additional plugins to be installed.</p><p>Note that the <code>dependents</code> field is also used by the <a class="tc-tiddlylink tc-tiddlylink-missing" href="ThemeMechanism.html">ThemeMechanism</a> and the <a class="tc-tiddlylink tc-tiddlylink-missing" href="LanguageMechanism.html">LanguageMechanism</a> to switch in dependent theme/language plugins.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

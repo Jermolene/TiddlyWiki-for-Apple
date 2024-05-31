@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>TiddlerFiles: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-TiddlyWiki%20on%20Node.js" data-tags="[[TiddlyWiki on Node.js]]" data-tiddler-title="TiddlerFiles" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+TiddlerFiles
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2021년 7월 14일 오후 2:07</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ TiddlyWiki on Node.js
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Tiddlers can be stored in text files in several different formats. Files containing single tiddlers can also have an auxiliary <code>.meta</code> file formatted as a sequence of name:value pairs:</p><pre><code>title: TheTitle
+modifier: someone</code></pre><h2 class="">TiddlyWeb-style .tid files</h2><p>These files consist of a sequence of lines containing name:value pairs, a blank line and then the text of the tiddler. For example:</p><pre><code>title: MyTiddler
+modifier: Jeremy
+
+This is the text of my tiddler.</code></pre><p>Note that many text editors require that files include a terminating newline. If you want to avoid including the terminating newline in the text of the tiddler you can use this alternative syntax:</p><pre><code>title: MyTiddler
+modifier: Jeremy
+text: This is the text of my tiddler.</code></pre><p><em>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ContentType.html">ContentType</a> <code>application/x-tiddler</code> is used internally for these files</em></p><h2 class=""><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> <code>&lt;DIV&gt;</code> .tiddler files</h2><p>In <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> 5, <code>*.tiddler</code> files look like this:</p><pre><code>&lt;div title="AnotherExampleStyleSheet" modifier="blaine" created="201102111106" modified="201102111310" tags="examples" creator="psd"&gt;
+&lt;pre&gt;Note that there is an embedded &lt;pre&gt; tag, and line feeds are not escaped.
+
+And, weirdly, there is no HTML encoding of the body.&lt;/pre&gt;
+&lt;/div&gt;</code></pre><p>These <code>*.tiddler</code> files are not exactly the same as the tiddlers inside a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> HTML file where they are HTML encoded.</p><p>Older <code>*.tiddler</code> files more closely matched the store format used by <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> at the time:</p><pre><code>&lt;div tiddler="AnotherExampleStyleSheet" modifier="JeremyRuston" modified="200508181432" created="200508181432" tags="examples"&gt;This is an old-school .tiddler file, without an embedded &amp;lt;pre&amp;gt; tag.\nNote how the body is &amp;quot;HTML encoded&amp;quot; and new lines are escaped to \\n&lt;/div&gt;</code></pre><p><em>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ContentType.html">ContentType</a> <code>application/x-tiddler-html-div</code> is used internally for these files</em></p><h2 class="">TiddlyWeb-style JSON files</h2><p>These files are a straightforward array of hashmaps of <code>name:value</code> properties. All field values must be specified as strings.</p><p>For example:</p><pre><code>[
+	{
+		"title": "First Tiddler",
+		"text": "Text of first tiddler",
+		"tags": "one two [[t h r e e]]"
+	},{
+		"title": "Second Tiddler",
+		"text": "Text of second tiddler",
+		"modified": "20150216171751154"
+	}
+]</code></pre><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ContentType.html">ContentType</a> <code>application/json</code> is used internally for these files.</p><p>Note that JSON files that do not conform to the tiddler structure will instead be imported as a single tiddler containing the JSON data.</p><h2 class="">New JSON-based format for <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> HTML files</h2><p>The new format for <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> HTML files embeds the tiddlers in JSON format within a script tag:</p><pre><code>&lt;script class="tiddlywiki-tiddler-store" type="application/json"&gt;[
+{"title": "A","text": "One"},
+{"title": "B","text": "Two"}
+]&lt;/script&gt;</code></pre><h2 class="">Old DIV-based format for <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> HTML files</h2><p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> Classic and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> 5 prior to version v5.2.0 stored tiddlers encoded in <code>&lt;DIV&gt;</code> format.</p><p>For <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> to import an unencrypted DIV-based HTML file, it requires a <code>&lt;div id="storeArea"&gt;</code> containing tiddler DIVs as explained above. For example:</p><pre><code>&lt;div id="storeArea"&gt;
+&lt;div created="20130302085406905" modified="20130302084548184" tags="Examples" title="A tiddler title"&gt;
+&lt;pre&gt;HTML encoded text of tiddler
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div created="20140315085406905" modified="20140321084548184" tags="One Two [[Three with Space]]" title="Another title" customfield="field value"&gt;
+&lt;pre&gt;Text of this tiddler
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

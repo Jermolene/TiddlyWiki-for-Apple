@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Widget Documentation Style Guide: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Reference%20Tiddlers" data-tags="[[Reference Tiddlers]]" data-tiddler-title="Widget Documentation Style Guide" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Widget Documentation Style Guide
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2023년 3월 25일 오후 4:25</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Reference Tiddlers
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Widget documentation generally consists of</p><ul><li>an introductory summary of the widget's function</li><li>an overview of attributes and how the widget content is handled</li><li>more detailed attribute explanation when required</li><li>examples</li></ul><p>The <em>Content and Attributes</em> section should describe how the content of the widget is used, followed by a table of the possible attributes, each with a short description of a single sentence. The attribute names in the table and elsewhere in the tiddler should be rendered with the <code class="doc-var">.attr</code> macro. The <code class="doc-var">.from-version</code> macro should be used as first item in the description to designate the version at which a parameter became available.</p><p>A subsection should be used for parameters that need an <em>extended description</em>, possibly with separate examples. When there are more than 2 such subsection necessary, the subsections should be split into their own tiddlers, and the <code class="doc-var">.doc-tabs</code> macro should be used to transclude them into the widget documentation tiddler as tabs.</p><ul><li>The <code class="doc-var">.doc-tabs</code> macro is used without parameters</li><li>The <code class="doc-var">.doc-tabs</code> macro must not be used more than once within a single documentation tiddler</li><li>The tiddlers to be included in the tab group should be tagged with the respective widget documentation tiddler and have a <code class="doc-field">description</code> field set to <code class="doc-value">tab</code></li><li>The <code class="doc-field">caption</code> contains the tab button text. It should be as short as possible. For the attribute name, the <code class="doc-var">.attr</code> macro should be used in the <code class="doc-field">caption</code></li><li>The tab tiddlers should start with a level-2-heading that links to itself, so that they may be opened from within the tabs</li><li>They can contain examples if these are specific to the topic of the subsection</li></ul><p>In the attribute table, the <code class="doc-var">.widget-attr-link</code> macro can be used to turn attributes into a button that activates the respective tab. The <code class="doc-var">.widget-attr-link</code> macro is used like this</p><pre><code>&lt;&lt;.widget-attr-link text:&lt;display text&gt; target:&lt;title of corresponding tiddler&gt; &gt;&gt;</code></pre><p>Elsewhere, the <code class="doc-var">.doc-tab-link</code> macro can be used to activate the respective tab</p><pre><code>&lt;&lt;.doc-tab-link text:&lt;display text&gt; target:&lt;title of corresponding tiddler&gt; tooltip:&lt;tooltip to show when hovering over the button&gt; class:&lt;additional classes&gt; &gt;&gt;</code></pre><p>The parameters <code class="doc-param">tooltip</code> and <code class="doc-param">class</code> are optional.</p><p>Both link macros scroll to the tab group additionally to setting the selected tab. They can also be used within the tab contents tiddlers themselves. If a tab tiddler is opened outside the tab group, <code class="doc-var">doc-tab-link</code> will open the tiddler containing the tab group if it is not yet open, and scroll to its tab group if it is.</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

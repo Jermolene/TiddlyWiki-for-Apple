@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Launch of TiddlyWiki: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists " data-tags="" data-tiddler-title="Launch of TiddlyWiki" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Lancement de TiddlyWiki</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 17 décembre 2014 à 19h34</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>En septembre 2004, j'ai donc publié une <a class="tc-tiddlylink-external" href="https://classic.tiddlywiki.com/firstversion.html" rel="noopener noreferrer" target="_blank">version préliminaire de TiddlyWiki</a>. Il s'agissait de la plus petite  application possible démontrant le concept : un simple fichier HTML de 48KB qui s'auto-engendrait.</p><p>L'inconvénient d'avoir écrit de cette manière la première version de <em>TiddlyWiki</em>, c'est que ça la rendait complètement impraticable pour l'édition — quand vous cliquiez sur « enregistrer les modifications », elle faisait apparaître une fenêtre montrant les données qui auraient été enregistrées s'il avait été possible d'écrire sur le système de fichiers depuis une page HTML.</p><p>Un grande partie des premiers commentaires sur <em>TiddlyWiki</em> étaient que c'était un outil sympathique, mais qu'il aurait été plus utile si on avait pu enregistrer correctement les modifications. J'étais plutôt frustré, car je tenais pour certaine l'impossibilité pour un fichier HTML tournant dans un navigateur d'enregistrer des modifications sur le système de fichiers local.</p><p>Quelques mois plus tard, j'ai repéré une extension Firefox expérimentale qui permettait à <em>TiddlyWiki</em> de sauvegarder les modifications depuis le navigateur. En examinant le code, je réalisai que l'API utilisée pour écrire sur le système de fichiers était en fait disponible pour les fichiers HTML ordinaires — pourvu qu'ils soient chargés depuis une URI de type <code>file://</code>.</p><p>J'adaptai le code Firefox dans le noyau de <em>TiddlyWiki</em> et j'ajoutai bientôt une fonctionnalité similaire pour Internet Explorer (en utilisant un ancien contrôle ActiveX que Microsoft distribuait avec Internet Explorer).
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

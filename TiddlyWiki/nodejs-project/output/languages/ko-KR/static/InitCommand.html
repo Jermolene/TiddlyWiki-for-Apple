@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>init: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Commands" data-tags="Commands" data-tiddler-title="InitCommand" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+InitCommand
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2014년 6월 17일 오후 10:25</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Commands
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>빈 <a class="tc-tiddlylink tc-tiddlylink-missing" href="WikiFolders.html">위키폴더</a>를 초기화하고 지정한 에디션을 복사합니다.</p><pre><code>--init &lt;에디션&gt; [&lt;에디션&gt; ...]</code></pre><p>예를 들어:</p><pre><code>tiddlywiki ./MyWikiFolder --init empty</code></pre><p>참고:</p><ul><li>필요하다면 위키 폴더 디렉터리가 만들어집니다</li><li>"에디션" 기본값은 <strong>empty</strong>입니다</li><li>init 명령은 위키 폴더가 비어 있지 않으면 실패합니다</li><li>init 명령은 에디션의 <code>tiddlywiki.info</code> 파일에 정의된 모든 <code>includeWikis</code>를 제거합니다</li><li>여러 에디션이 지정되어 있을 때, 이른 에디션의 공유된 파일을 마지막 초기화 에디션으로 덮어쓰게 됩니다 (그래서, 마지막 <code>tiddlywiki.info</code> 파일은 마지막 에디션에서 복사됩니다)</li><li><code>--editions</code>는 사용할 수 있는 에디션의 목록을 반환합니다</li></ul><p>See also:</p><ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Environment%2520Variables%2520on%2520Node.js.html">Environment Variables on Node.js</a></li></ul></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Performance: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Working%20with%20TiddlyWiki" data-tags="[[Working with TiddlyWiki]]" data-tiddler-title="Performance" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Performance
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2019년 10월 14일 오전 10:19</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Working with TiddlyWiki
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> ships with defaults that are designed to get the best out of modern devices from smartphones to desktop computers. If you need to work on older, less powerful devices, or work with large amounts of content, there are a few steps you can take to improve performance.</p><h2 class="">Usage</h2><ul><li><strong>Avoid the "Recent" tab</strong>. It is computationally slow to generate and update in response to tiddler changes.</li><li><strong>Use the "Vanilla" theme</strong>. The default "Snow White" theme includes visual effects like shadows, transparency and blurring that can be slow to render on older devices</li><li><strong>Avoid large tiddlers</strong>. Large bitmaps can significantly slow <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a>'s performance. For example, an image taken with a modern smartphone will often be 5MB or more. Use <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ExternalImages.html">ExternalImages</a> whenever possible</li><li><strong>Don't have too many tiddlers open at once</strong>. Every tiddler you have open will require processing to keep it up to date as the store changes (for example, while you type into a draft tiddler). It is particularly easy when using zoomin story view to end up with dozens of tiddlers listed in the <strong>Open</strong> tab in the sidebar. Get into the habit of periodically closing all open tiddlers with the <span class="doc-icon"><svg class="tc-close-all-button tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><path d="M28 111.314l-14.144 14.143a8 8 0 01-11.313-11.313L16.686 100 2.543 85.856a8 8 0 0111.313-11.313L28 88.686l14.144-14.143a8 8 0 0111.313 11.313L39.314 100l14.143 14.144a8 8 0 01-11.313 11.313L28 111.314zM28 39.314L13.856 53.457A8 8 0 012.543 42.144L16.686 28 2.543 13.856A8 8 0 0113.856 2.543L28 16.686 42.144 2.543a8 8 0 0111.313 11.313L39.314 28l14.143 14.144a8 8 0 01-11.313 11.313L28 39.314zM100 39.314L85.856 53.457a8 8 0 01-11.313-11.313L88.686 28 74.543 13.856A8 8 0 0185.856 2.543L100 16.686l14.144-14.143a8 8 0 0111.313 11.313L111.314 28l14.143 14.144a8 8 0 01-11.313 11.313L100 39.314zM100 111.314l-14.144 14.143a8 8 0 01-11.313-11.313L88.686 100 74.543 85.856a8 8 0 0111.313-11.313L100 88.686l14.144-14.143a8 8 0 0111.313 11.313L111.314 100l14.143 14.144a8 8 0 01-11.313 11.313L100 111.314z"></path></g></svg></span> <strong>close all</strong> button</li></ul><h2 class=""><a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a></h2><ul><li><strong>Use the built-in performance instrumentation</strong>.  Studying the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Performance%2520Instrumentation.html">performance instrumentation</a> results can help highlight performance problems</li><li>Take advantage of indexed filter operators. The following constructions at the start of a filter run will be optimised to run many times faster than otherwise:<ul><li><code>[all[tiddlers]tag[x]...</code></li><li><code>[all[shadows]tag[x]...</code></li><li><code>[all[tiddlers+shadows]tag[x]...</code></li><li><code>[all[shadows+tiddlers]tag[x]...</code></li><li><code>[all[tiddlers]field:y[x]...</code></li><li><code>[all[shadows]field:y[x]...</code></li><li><code>[all[tiddlers+shadows]field:y[x]...</code></li><li><code>[all[shadows+tiddlers]field:y[x]...</code></li><li>Note that the field indexer currently defaults to indexing field values of less than 128 characters; longer values can still be searched for, but no index will be constructed</li><li>Also note that the “field” operator is also used when the operator name is a fieldname, so, for example, <code>[all[shadows+tiddlers]caption[x]...</code> is optimised.</li></ul></li><li>Use the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="RefreshThrottling.html">throttling</a> feature of the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="RefreshMechanism.html">RefreshMechanism</a> judiciously</li><li>Keep in mind that <strong>transcluding separate tiddlers is more performant than heavy use of macros</strong> and the difference can be significant in some situations. The result of parsing each tiddler is cached and reused the next time if the tiddler has not changed. The same technique cannot be used for macros and they have to be re-parsed every time, as they are not global but local to the widget tree.<ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.1.23.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.1.23</a> Parse trees are now cached for macros that do <strong>not</strong> perform any text substitution either via parameters or variables (i.e. <code>$parameter$</code> or <code>$(variable)$</code>).</li></ul></li><li>Where possible <strong>use the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="SetWidget.html">SetWidget</a> or <a class="tc-tiddlylink tc-tiddlylink-resolves" href="VarsWidget.html">VarsWidget</a> with filters instead of the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikifyWidget.html">WikifyWidget</a></strong> for declaring variables and string concatenation. The performance of the wikify mechanism is relatively poor as there is no opportunity to cache the parse tree or widget tree.</li></ul></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

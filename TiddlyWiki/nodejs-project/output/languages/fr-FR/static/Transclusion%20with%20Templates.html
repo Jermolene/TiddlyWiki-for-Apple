@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Par Gabarits: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Transclusion%20in%20WikiText" data-tags="[[Transclusion in WikiText]]" data-tiddler-title="Transclusion with Templates" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Transclusion par gabarits</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 17 avril 2022 à 23h43</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Transclusion in WikiText"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Transclusion en WikiTexte</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>Dans <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520Basic%2520Usage.html">Transclusion, utilisation basique</a> nous avons découvert comment inclure le contenu d'un tiddler A dans un tiddler B. Alors, supposons que le tiddler A contienne :</p><pre><code>
+@@background-color:yellow;
+Salut, mon titre est {{!!title}}
+@@</code></pre><p>Ceci fait afficher au tiddler A son titre sur fond jaune (voir <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Styles%2520and%2520Classes%2520in%2520WikiText.html">Les styles et les classes avec WikiText</a> pour les styles CSS). Imaginez que vous vouliez afficher le titre du tiddler B de la même façon. Mais que vous ne souhaitiez pas copier/coller les instructions de style, car vous désirez changer la couleur du fond plus tard et que vous vioulez maintenir une cohérence entre les tiddlers. Cela ressemble à un cas typique de transclusion, aussi essayons de transclure le tiddler A en tiddler B par la voie classique par <code>{{A}}</code>. Vous verriez alors le contenu suivant dans le tiddler B :</p><blockquote class="tc-quote"><p style="background-color:yellow;">Salut, mon fr-titre est Transclusion par gabarits
+</p></blockquote><p>Le stype est appliqué comme attendu, mais le titre est faux : nous voulons que <code>{{!!title}}</code> se réfère au tiddler B, cible, et pas au tiddler A, source.</p><p>La solution est dans l'utilisation d'un <em>gabarit</em>. Dans ce cas, le tiddler A, source, est appelé le <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TemplateTiddlers.html">Tiddler Gabarit</a>, et est <em>appliqué</em> au tiddler B par l'utilisation de la notation <code>{{||A}}</code>. La différence est que toute <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TextReference.html">Référence texte</a> qui ne se réfère pas explicitement à  un tiddler spécifique est affectée au <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Current%2520Tiddler.html">tiddler courant</a>, qui est, le tiddler cible. En conséquence, le tiddler B a maintenant l'aspect attendu :</p><blockquote class="tc-quote"><p style="background-color:yellow;">Salut, mon titre est B
+</p></blockquote><h1 class="">Utilisation</h1><p>La Transclusion par gabarit est comparable à un masque : en supposant que le tiddler source contienne les références génériques (comme les trous des yeux dans un masque), celles-ci seront remplacées par les valeurs des tiddlers cible (comme les yeux d'une personne qui porte le masque).</p><p>Un gabarit peut être appliqué à tout tiddler, pas seulement au tiddler en cours,  en utilisant la notation complète <code>{{&lt;cible&gt;||&lt;gabarit&gt;}}</code>. La <code>&lt;cible&gt;</code> par défaut est le <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Current%2520Tiddler.html">tiddler courant</a> (qui a été utilisé dans l'exemple supra).</p><h1 class="">Exemples</h1><h2 class="">Un gabarit prédéfini pour un bel affichage des tags</h2><p>Vous pouvez appliquer le gabarit système <code>$:/core/ui/TagTemplate</code> à un tag pour lui donner le style d'une pilule avec menu déroulant :</p><pre><code>{{Transclusion||$:/core/ui/TagTemplate}}</code></pre><p>a pour rendu : <span class="tc-tag-list-item" data-tag-title="Transclusion"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Transclusion</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></p><p>Voir aussi :</p><ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520in%2520WikiText.html">Transclusion grâce à WikiText</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transclusion%2520Basic%2520Usage.html">Transclusion, Utilisation basique</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TextReference.html">Référence textuelle</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TemplateTiddlers.html">Tiddlers Gabarit</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="TranscludeWidget.html">Widget Transclude</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Current%2520Tiddler.html">Tiddler Courant</a></li></ul></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

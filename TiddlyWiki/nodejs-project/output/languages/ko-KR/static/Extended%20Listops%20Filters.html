@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Extended Listops Filters: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Filters" data-tags="Filters" data-tiddler-title="Extended Listops Filters" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Extended Listops Filters
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2023년 2월 27일 오후 5:55</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Filters
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>A number of filters are used to manipulate lists. </p><p>Some filters are designed to move items from the tail of the list and insert them at specified locations in the list, e.g. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="putafter%2520Operator.html">putafter</a> or <a class="tc-tiddlylink tc-tiddlylink-resolves" href="putbefore%2520Operator.html">putbefore</a>. Items are often appended to the list before using these filters. In general, these filters accept a suffix specifying the number of items to move (default to 1.) </p><p>Some filters are designed to either add or remove from the list, a selected range of items from an array, e.g. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="append%2520Operator.html">append</a> or <a class="tc-tiddlylink tc-tiddlylink-resolves" href="remove%2520Operator.html">remove</a>. These filters are best used with a reference to an array, stored in a field or data index elsewhere in the wiki (they may be used with a simple list of items, provided the items do not include white space.) In general, these filters accept a suffix specifying the number of items to move (default to All.)</p><p><table>
+<tr class="doc-table-subheading"><th align="center" colspan="4">Listops Operators</th></tr>
+<tr>
+<th align="left">Operator</th>
+<th align="left">Purpose</th>
+<th>✓</th>
+<th><code>!</code></th>
+</tr>
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="allafter%2520Operator.html">allafter</a></td>
+<td>discard all items except those after the marker</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="allbefore%2520Operator.html">allbefore</a></td>
+<td>discard all items except those before the marker</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="append%2520Operator.html">append</a></td>
+<td>append a range of items from an array to the list</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="cycle%2520Operator.html">cycle</a></td>
+<td>toggle in the input, the titles specified in the first operand in a cyclical manner</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="insertafter%2520Operator.html">insertafter</a></td>
+<td>insert an item <code class="doc-place">T</code> into a list immediately after an item <code class="doc-place">A</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="insertbefore%2520Operator.html">insertbefore</a></td>
+<td>insert an item <code class="doc-place">T</code> into a list immediately before an item <code class="doc-place">B</code></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="move%2520Operator.html">move</a></td>
+<td>move marker N places in the list</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="prepend%2520Operator.html">prepend</a></td>
+<td>prepend a range of items from an array to the list</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="putafter%2520Operator.html">putafter</a></td>
+<td>move N trailing items after the marker</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="putbefore%2520Operator.html">putbefore</a></td>
+<td>move N trailing items before the marker</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="putfirst%2520Operator.html">putfirst</a></td>
+<td>move N trailing items to the head of the list</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="putlast%2520Operator.html">putlast</a></td>
+<td>move N leading items to the tail of the list</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="remove%2520Operator.html">remove</a></td>
+<td>remove a list of titles specified in the operand from the input</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="replace%2520Operator.html">replace</a></td>
+<td>replace marker with N trailing items</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="sortby%2520Operator.html">sortby</a></td>
+<td>sort the current list in the order of the list referenced in the operand</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="toggle%2520Operator.html">toggle</a></td>
+<td>toggle the title specified in the operand in the input</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr><tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="unique%2520Operator.html">unique</a></td>
+<td>remove all duplicate items from the current list</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+</table></p><h1 class="">Examples</h1><p>In this example we shall populate the 'DataIndex' index of the tiddler 'MyData' with the names of the days of the week, then clear this list. </p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $filter="[list[Days of the Week]]"/&gt;
+Get days-of-the-week
+&lt;/$button&gt; 
+&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $filter="[[]]"/&gt;
+Clear
+&lt;/$button&gt;
+
+{{ListopsData}}</code></pre><p>That renders as:</p><p><button class="">
+
+Get days-of-the-week
+</button> 
+<button class="">
+
+Clear
+</button></p><pre><code>DataIndex: 
+</code></pre></div><hr><p>In this example we shall slice the populated list from the '<a class="tc-tiddlylink tc-tiddlylink-missing" href="DaysOfTheWeek.html">DaysOfTheWeek</a>' index of the tiddler 'MyData' in order to insert items before and after a marker item (Wednesday) that are first appended to the list.</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $subfilter="one two +[putbefore:2[Wednesday]]"/&gt;
+Put 2 Items Before Wednesday
+&lt;/$button&gt; 
+&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $subfilter="four five +[putafter:2[Wednesday]] three +[putbefore[Wednesday]]"/&gt;
+Put One Item Before &amp; Two Items After Wednesday
+&lt;/$button&gt;
+
+{{ListopsData}}</code></pre><p>That renders as:</p><p><button class="">
+
+Put 2 Items Before Wednesday
+</button> 
+<button class="">
+
+Put One Item Before &amp; Two Items After Wednesday
+</button></p><pre><code>DataIndex: 
+</code></pre></div><hr><p>In this example we shall slice the populated list from the '<a class="tc-tiddlylink tc-tiddlylink-missing" href="DaysOfTheWeek.html">DaysOfTheWeek</a>' index of the tiddler 'MyData' in order to replace the marker item (Wednesday) with items which are first appended to the list. We shall then move 3 items to the head of the list which have first been appended to the list from referenced fields.</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $subfilter="[[---o]] [[o---]] +[replace:2{!!marker}]"/&gt;
+Replace '!!marker' with 2 Items
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $subfilter="[{!!item1}] [{!!item2}] [{!!item3}] +[putfirst:3[]]"/&gt;
+Put 3 Items First
+&lt;/$button&gt;
+
+{{ListopsData}}</code></pre><p>That renders as:</p><p><button class="">
+
+Replace '!!marker' with 2 Items
+</button>
+<button class="">
+
+Put 3 Items First
+</button></p><pre><code>DataIndex: 
+</code></pre></div><hr><p>In this example we shall slice the populated list from the '<a class="tc-tiddlylink tc-tiddlylink-missing" href="DaysOfTheWeek.html">DaysOfTheWeek</a>' index of the tiddler 'MyData' in order to append to the truncated list, items from a referenced field. We shall then remove the first two of the items added.</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>|list: |&lt;$view field="list"/&gt; |
+
+&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $subfilter="+[allbefore:include[Wednesday]] +[prepend{!!list}]"/&gt;
+Prepend '!!list' to items before 'Wednesday'
+&lt;/$button&gt; 
+&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $subfilter="+[remove:2{!!list}]"/&gt;
+Remove first two items in '!!list' from current list
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $subfilter="+[!remove:1{!!list}]"/&gt;
+Remove last item in '!!list' from current list
+&lt;/$button&gt;
+
+{{ListopsData}}</code></pre><p>That renders as:</p><table><tbody><tr class="evenRow"><td align="left">list:</td><td align="left">Yesterday Today Tomorrow</td></tr></tbody></table><p><button class="">
+
+Prepend '!!list' to items before 'Wednesday'
+</button> 
+<button class="">
+
+Remove first two items in '!!list' from current list
+</button>
+<button class="">
+
+Remove last item in '!!list' from current list
+</button></p><pre><code>DataIndex: 
+</code></pre></div><hr><p>In this example we shall populate the list with numbers, then move items one by one from the head to the tail and from the tail to the head (best seen by clicking the lower buttons several times.) </p><p>This example illustrates that the append[] and prepend[] operators do not enforce unique instances of an item and that, with the next run, any duplicates are removed.</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $filter="[[]]" $subfilter="+[append:3{!!numbers}]"/&gt;
+Setup some numbers
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $subfilter="+[!append:6{!!numbers}]"/&gt;
+Append more numbers
+&lt;/$button&gt;
+
+&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $subfilter="+[putfirst:2[]]"/&gt;
+Move last 2 items to the head
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $tiddler="ListopsData" $index="DataIndex" $subfilter="+[putlast[]]"/&gt;
+Move the head to the last item
+&lt;/$button&gt;
+
+{{ListopsData}}</code></pre><p>That renders as:</p><p><button class="">
+
+Setup some numbers
+</button>
+<button class="">
+
+Append more numbers
+</button></p><p><button class="">
+
+Move last 2 items to the head
+</button>
+<button class="">
+
+Move the head to the last item
+</button></p><pre><code>DataIndex: 
+</code></pre></div></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,145 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>regexp: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Filter%20Operators tc-tagged-Field%20Operators tc-tagged-Negatable%20Operators" data-tags="[[Filter Operators]] [[Field Operators]] [[Negatable Operators]]" data-tiddler-title="regexp Operator" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+regexp Operator
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2015년 2월 3일 오후 7:06</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Field Operators
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Filter Operators
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Negatable Operators
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+<table class="doc-table before-tiddler-body">
+
+
+
+<tr><th align="left">purpose</th><td>filter the input by pattern-matched field</td></tr>
+
+
+
+
+
+<tr><th align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Syntax.html">input</a></th><td>a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Title%2520Selection.html">selection of titles</a></td></tr>
+
+
+
+
+
+
+
+
+
+
+
+
+<tr><th align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Step.html">suffix</a></th><td><code class="doc-place">F</code> = the name of a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlerFields.html">field</a>, defaulting to <code class="doc-field">title</code></td></tr>
+
+
+
+
+
+
+
+<tr><th align="left"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Parameter.html">parameter</a></th><td><code class="doc-place">X</code> = a regular expression</td></tr>
+
+
+
+
+
+
+<tr><th align="left">output</th><td>those input tiddlers in which field <code class="doc-place">F</code> matches <code class="doc-place">X</code></td></tr>
+
+
+
+
+
+<tr><th align="left"><code>!</code> output</th><td>those input tiddlers in which field <code class="doc-place">F</code> does <em class="doc-em">not</em> match <code class="doc-place">X</code></td></tr>
+
+
+
+</table>
+
+<p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filters.html">Learn more about how to use Filters</a></p>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p><dfn class="doc-def">Regular expressions</dfn> are concise strings of characters that denote patterns of text to search for. The format used in TiddlyWiki is fully defined in <a class="tc-tiddlylink-external" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions" rel="noopener noreferrer" target="_blank">this Mozilla reference</a>.</p><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Run.html">filter syntax</a> makes it impossible to directly specify a regular expression that contains square brackets. The solution is to store the expression in a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variables.html">variable</a>. See the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="regexp%2520Operator%2520%2528Examples%2529.html">examples</a>.</p><p>The parameter <code class="doc-place">X</code> can optionally start or end with a string of flags:</p><div><svg class="railroad-diagram" height="131" viewBox="0 0 273 131" width="273"><g transform="translate(.5 .5)"><path d="M 20 81 v 20 m 0 -10 h 10.5"></path><path d="M30 91h10"></path><g><path d="M40 91h0"></path><path d="M76 91h0"></path><rect height="22" rx="10" ry="10" width="36" x="40" y="80"></rect><text x="58" y="95">(?</text></g><path d="M76 91h10"></path><path d="M86 91h10"></path><g><path d="M96 91h0"></path><path d="M184 91h0"></path><path d="M96 91h10"></path><g><path d="M106 91h0"></path><path d="M174 91h0"></path><path d="M106 91a10 10 0 0 0 10 -10v-10a10 10 0 0 1 10 -10"></path><g><path d="M126 61h0"></path><path d="M154 61h0"></path><rect height="22" rx="10" ry="10" width="28" x="126" y="50"></rect><text x="140" y="65">m</text></g><path d="M154 61a10 10 0 0 1 10 10v10a10 10 0 0 0 10 10"></path><path d="M106 91a10 10 0 0 0 10 -10v-40a10 10 0 0 1 10 -10"></path><g><path d="M126 31h0"></path><path d="M154 31h0"></path><rect height="22" rx="10" ry="10" width="28" x="126" y="20"></rect><text x="140" y="35">i</text></g><path d="M154 31a10 10 0 0 1 10 10v40a10 10 0 0 0 10 10"></path><path d="M106 91h20"></path><g><path d="M126 91h0"></path><path d="M154 91h0"></path><rect height="22" rx="10" ry="10" width="28" x="126" y="80"></rect><text x="140" y="95">g</text></g><path d="M154 91h20"></path></g><path d="M174 91h10"></path><path d="M106 91a10 10 0 0 0 -10 10v0a10 10 0 0 0 10 10"></path><g><path d="M106 111h68"></path></g><path d="M174 111a10 10 0 0 0 10 -10v0a10 10 0 0 0 -10 -10"></path><path class="arrow" d="M91 103.5l5 -5l6 5"></path></g><path d="M184 91h10"></path><path d="M194 91h10"></path><g><path d="M204 91h0"></path><path d="M232 91h0"></path><rect height="22" rx="10" ry="10" width="28" x="204" y="80"></rect><text x="218" y="95">)</text></g><path d="M232 91h10"></path><path d="M 242 91 h 10 m 0 -10 v 20"></path></g></svg></div><p>Only the <code>i</code> flag is generally useful: it forces the different between capital and lowercase letters to be ignored.</p><p>If <code class="doc-place">X</code> is empty, <code class="doc-operator">regexp</code> will match all of the input tiddlers.</p><p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="regexp%2520Operator%2520%2528Examples%2529.html">Examples</a></p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

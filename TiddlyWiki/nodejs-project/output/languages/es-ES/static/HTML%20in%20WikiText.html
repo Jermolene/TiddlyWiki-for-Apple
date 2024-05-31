@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>HTML: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText" data-tags="WikiText" data-tiddler-title="HTML in WikiText" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+HTML in WikiText
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 15 junio 2023 a las 7:01</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ WikiText
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">HTML tags and comments</h1><p>HTML tags and comments can be used directly in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a>. For example:</p><pre><code>&lt;article class="hello"&gt;
+This is my nice and simple block of text. HelloThere
+&lt;!-- This comment will not appear in the wikified output --&gt;
+&lt;/article&gt;</code></pre><h2 class="">Pragma Comments</h2><p><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.0.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.0</a> Comments can now be freely intermixed with pragmas as well as within the main body of a block of wikitext.</p><pre><code>&lt;!-- NEW: Comment that describes the macro --&gt;
+\define test()
+some text &lt;!-- inline comment --&gt;
+\end
+
+&lt;&lt;test&gt;&gt;</code></pre><h1 class="">Important</h1><h2 class="">Security </h2><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg></div> Note that any HTML attributes prefixed with <code>on</code> are removed from the rendered HTML content. This is done to prevent event handlers (such as "onclick") being used as a clandestine way to execute untrusted <a class="tc-tiddlylink tc-tiddlylink-resolves" href="JavaScript.html">JavaScript</a>. A design goal of <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> is to ensure that executable <a class="tc-tiddlylink tc-tiddlylink-resolves" href="JavaScript.html">JavaScript</a> can only enter the system through explicit <a class="tc-tiddlylink tc-tiddlylink-resolves" href="JavaScript.html">JavaScript</a> module tiddlers or raw markup tiddlers. This makes it possible to filter unsafe content in multiuser environments, and also makes it safer to copy untrusted wikitext examples.</div> </p><h2 class="">Widgets</h2><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-tip tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z" fill-rule="evenodd"></path></svg></div> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Widgets%2520in%2520WikiText.html">Widgets share the same syntax as HTML tags</a><br>and so the following information applies to them, too.</div></p><h1 class="">Block mode versus Inline mode</h1><p>To get the content of an HTML element to be <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520Parser%2520Modes.html">parsed</a> in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Block%2520Mode%2520WikiText.html">block mode</a>, the opening tag must be followed by two linebreaks.</p><p>Without the two linebreaks, the tag content will be <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520Parser%2520Modes.html">parsed</a> in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Inline%2520Mode%2520WikiText.html">inline mode</a> which means that block mode formatting such as wikitext tables, lists and headings is not recognised.</p><p>See also <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520parser%2520mode%253A%2520HTML%2520examples.html">WikiText parser mode: HTML examples</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText%2520parser%2520mode%2520transitions.html">WikiText parser mode transitions</a>.</p><h1 class="">Self closing elements</h1><p>The following tags are treated as 'void'. This means that <code>&lt;tag&gt;</code> is treated as if it were <code>&lt;tag/&gt;</code>, and that  no terminating <code>&lt;/tag&gt;</code> is needed (if one is provided it will be ignored and treated as plain text).</p><ul><li><code>&lt;area&gt;</code>, <code>&lt;base&gt;</code>, <code>&lt;br&gt;</code>, <code>&lt;col&gt;</code>, <code>&lt;command&gt;</code>, <code>&lt;embed&gt;</code>, <code>&lt;hr&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;input&gt;</code>, <code>&lt;keygen&gt;</code>, <code>&lt;link&gt;</code>, <code>&lt;meta&gt;</code>, <code>&lt;param&gt;</code>, <code>&lt;source&gt;</code>, <code>&lt;track&gt;</code>, <code>&lt;wbr&gt;</code></li></ul><p>If you do not close any other tag then it will behave as if the missing closing tag were at the end of the tiddler.</p><h1 class="">Attributes</h1><p>In an extension of conventional HTML syntax, attributes of elements and widgets can be specified in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Widget%2520Attributes.html">several different ways</a>:</p><ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Literal%2520Attribute%2520Values.html">a literal string</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transcluded%2520Attribute%2520Values.html">a transclusion of a textReference</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Transcluded%2520Attribute%2520Values.html">a transclusion of a macro/variable</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filtered%2520Attribute%2520Values.html">as the result of a filter expression</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.3.0.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.3.0</a> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Substituted%2520Attribute%2520Values.html">as the result of performing filter and variable substitutions on the given string</a></li></ul><h2 class="">Style Attributes</h2><p><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.2.2.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.2.2</a> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> supports the usual HTML <strong>style</strong> attribute for assigning CSS styles to elements:</p><pre><code>&lt;div style="color:red;"&gt;Hello&lt;/div&gt;</code></pre><p>In an extension to HTML, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> also supports accessing individual CSS styles as independent attributes. For example:</p><pre><code>&lt;div style.color="red"&gt;Hello&lt;/div&gt;</code></pre><p>The advantage of this syntax is that it simplifies assigning computed values to CSS styles. For example:</p><pre><code>&lt;div style.color={{!!color}}&gt;Hello&lt;/div&gt;</code></pre></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

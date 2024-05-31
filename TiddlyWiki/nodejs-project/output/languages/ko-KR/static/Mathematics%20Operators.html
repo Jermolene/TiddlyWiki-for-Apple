@@ -1,0 +1,270 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Mathematics Operators: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Filters" data-tags="Filters" data-tiddler-title="Mathematics Operators" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Mathematics Operators
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2022년 3월 30일 오후 2:37</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Filters
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.1.20.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.1.20</a>The mathematics filter operators allow numerical calculations to be performed within filters.</p><h1 class="">Using mathematics operators</h1><p>The mathematics operators interpret their arguments as numbers according to the following rules:</p><ul><li>Any non-numeric characters after a valid number are ignored (e.g. <code>28px</code> is interpreted as the number 28)</li><li>If the argument cannot be interpreted as a number, the value 0 is used (e.g. <code>foo</code> is interpreted as the number 0)</li><li>The special values <code>Infinity</code> and <code>-Infinity</code> can be used to represent positive and negative infinity respectively</li></ul><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg></div> Some filter operators remove duplicate items which can cause unexpected results when using the mathematics operators. See <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Dominant%2520Append.html">Dominant Append</a> for details.</div></p><p>The mathematics operators take three different forms:</p><ul><li><strong>Unary operators</strong> apply an operation to each number in the input list (e.g. negate, truncate, sign)<ul><li><code>=1 =2 =3 =4 +[negate[]]</code> evaluates to  <code>-1</code>  <code>-2</code>  <code>-3</code>  <code>-4</code> </li><li><code>=1.2 =2.4 =3.6 =4.8 +[trunc[]]</code> evaluates to  <code>1</code>  <code>2</code>  <code>3</code>  <code>4</code> </li><li><code>=1.2 =2.4 =3.6 =4.8 +[round[]]</code> evaluates to  <code>1</code>  <code>2</code>  <code>4</code>  <code>5</code> </li></ul></li><li><strong>Binary operators</strong> apply an operation and operand to each number in the input list (e.g. add, multiply, remainder) <ul><li><code>=1 =2 =3 =4 +[add[3]]</code> evaluates to  <code>4</code>  <code>5</code>  <code>6</code>  <code>7</code> </li><li><code>=1 =2 =3 =4 +[multiply[8]]</code> evaluates to  <code>8</code>  <code>16</code>  <code>24</code>  <code>32</code> </li></ul></li><li><strong>Reducing operators</strong> apply an operation to all of the numbers in the input list, returning a single result (e.g. sum, product)<ul><li><code>=1 =2 =3 =4 +[sum[]]</code> evaluates to  <code>10</code> </li><li><code>=1 =2 =3 =4 +[product[]]</code> evaluates to  <code>24</code> </li><li><code>=1 =2 =3 =4 +[average[]]</code> evaluates to  <code>2.5</code> </li></ul></li></ul><h1 class="">Operations Combination</h1><p>Operations can be combined by concatenating them while merging the inner <code>][</code> characters.</p><ul><li><code>[[355]divide[113]fixed[5]]</code> evaluates to  <code>3.14159</code> </li><li><code>[range[100]sum[]divide[100]]</code> evaluates to  <code>50.5</code> </li><li><code>[tag[HelloThere]get[text]length[]sum[]]</code> evaluates to  <code>10375</code> </li></ul><p>Complex operations will sometimes need to be split up into separate filters. For example, to compute the average length of the text field of tiddlers tagged "HelloThere":</p><div class="doc-example"><p><div style="position: relative;"><div style="position: absolute; bottom: 0; right: 0;"><button class="tc-btn-invisible" title="Copy this text to the clipboard"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copy to clipboard</button></div></div></p><pre><code>&lt;$set name="number-of-tiddlers" value={{{ [tag[HelloThere]count[]] }}}&gt;
+Average length of &lt;$text text=&lt;&lt;number-of-tiddlers&gt;&gt;/&gt; tiddlers tagged &lt;&lt;tag "HelloThere"&gt;&gt;: &lt;$text text={{{ [tag[HelloThere]get[text]length[]sum[]divide&lt;number-of-tiddlers&gt;fixed[3]] }}}/&gt;
+&lt;/$set&gt;</code></pre><p>That renders as:</p><p>
+Average length of 8 tiddlers tagged <span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ HelloThere
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span>: 1296.875
+</p></div><h1 class="">Mathematics Operators list</h1><p><table>
+<tr>
+<th align="left">Operator</th>
+<th align="left">Purpose</th>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="abs%2520Operator.html">abs</a></td>
+<td>calculate the absolute value of a list of numbers</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="acos%2520Operator.html">acos</a></td>
+<td>calculate the arccosine value (in radians) of a list of numbers</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="add%2520Operator.html">add</a></td>
+<td>treating each input title as a number, add to each the numeric value of the operand</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="asin%2520Operator.html">asin</a></td>
+<td>calculate the arcsine value (in radians) of a list of numbers</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="atan%2520Operator.html">atan</a></td>
+<td>calculate the arctangent value (in radians) of a list of numbers</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="atan2%2520Operator.html">atan2</a></td>
+<td>returns the angle in the plane (in radians) between the positive x-axis and the ray from (0,0) to the point (x,y), for [<code class="doc-place">Y</code>]atan2[<code class="doc-place">X</code>]</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="average%2520Operator.html">average</a></td>
+<td>treating each input title as a number, compute their arithmetic mean</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ceil%2520Operator.html">ceil</a></td>
+<td>rounds a list of numbers up to the next largest integer</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="compare%2520Operator.html">compare</a></td>
+<td>filter the input by comparing each item against the operand</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="cos%2520Operator.html">cos</a></td>
+<td>calculate the cosine value of a list of angles (given in radians)</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="divide%2520Operator.html">divide</a></td>
+<td>treating each input title as a number, divide them by the numeric value of the operand</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="exponential%2520Operator.html">exponential</a></td>
+<td>convert each number to exponential notation with <code class="doc-place">N</code> digits</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="fixed%2520Operator.html">fixed</a></td>
+<td>convert each number to fixed point notation with <code class="doc-place">N</code> digits after the decimal point</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="floor%2520Operator.html">floor</a></td>
+<td>rounds a list of numbers to the largest integer less than or equal to each number</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="log%2520Operator.html">log</a></td>
+<td>treating each input title as a number, return its logarithm with base equal to the numeric value of the operand if specified, otherwise base <code>e</code></td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="max%2520Operator.html">max</a></td>
+<td>treating each input title as a number, take the maximum of its value and the numeric value of the operand</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="maxall%2520Operator.html">maxall</a></td>
+<td>find the largest of a list of numbers</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="median%2520Operator.html">median</a></td>
+<td>treating each input title as a number, compute their median value</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="min%2520Operator.html">min</a></td>
+<td>treating each input title as a number, take the minimum of its value and the numeric value of the operand</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="minall%2520Operator.html">minall</a></td>
+<td>find the smallest of a list of numbers</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="multiply%2520Operator.html">multiply</a></td>
+<td>treating each input title as a number, multiply it by the numeric value of the operand</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="negate%2520Operator.html">negate</a></td>
+<td>calculate the negation of a list of numbers</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="power%2520Operator.html">power</a></td>
+<td>treating each input title as a number, raise it to the power of the numeric value of the operand</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="precision%2520Operator.html">precision</a></td>
+<td>convert each number to a string with <code class="doc-place">N</code> significant digits</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="product%2520Operator.html">product</a></td>
+<td>produce the product of the input numbers</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="remainder%2520Operator.html">remainder</a></td>
+<td>treating each input title as a number, return the remainder when divided by the numeric value of the operand</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="round%2520Operator.html">round</a></td>
+<td>rounds a list of numbers to the nearest integer</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="sign%2520Operator.html">sign</a></td>
+<td>return -1, 0 or 1 for a list of numbers according to whether each number is negative, zero, or positive</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="sin%2520Operator.html">sin</a></td>
+<td>calculate the sine value of a list of angles (given in radians)</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="standard-deviation%2520Operator.html">standard-deviation</a></td>
+<td>treating each input title as a number, compute their standard-deviation</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="subtract%2520Operator.html">subtract</a></td>
+<td>treating each input title as a number, subtract from each the numeric value of the operand</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="sum%2520Operator.html">sum</a></td>
+<td>produce the sum of the input numbers</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="tan%2520Operator.html">tan</a></td>
+<td>calculate the tangent value of a list of angles (given in radians)</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="trunc%2520Operator.html">trunc</a></td>
+<td>truncates a list of numbers to their integer part, removing any fractional part</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="untrunc%2520Operator.html">untrunc</a></td>
+<td>rounds a list of numbers to the next integer with largest absolute value, that is, away from zero</td>
+</tr>
+
+<tr>
+<td><a class="tc-tiddlylink tc-tiddlylink-resolves" href="variance%2520Operator.html">variance</a></td>
+<td>treating each input title as a number, compute their variance</td>
+</tr>
+
+</table></p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

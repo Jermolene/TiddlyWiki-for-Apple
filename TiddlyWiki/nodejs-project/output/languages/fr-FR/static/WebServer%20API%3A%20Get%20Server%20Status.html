@@ -1,0 +1,44 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>WebServer API: Get Server Status: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WebServer%20API" data-tags="[[WebServer API]]" data-tiddler-title="WebServer API: Get Server Status" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">WebServer API: Get Server Status</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2 octobre 2018 à 13h58</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="WebServer API"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">WebServer API</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Get server status information</p><pre><code>GET /status</code></pre><p>Parameters:</p><ul><li>none</li></ul><p>Response:</p><ul><li>200 OK<blockquote><div><code>Content-Type: application/json</code></div><div>Body: see below</div></blockquote></li></ul><p>The JSON data returned comprises the following properties:</p><ul><li><strong>username</strong> - the username of the currently authenticated user. If undefined, the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520anon-username.html">WebServer Parameter: anon-username</a> is returned instead</li><li><strong>anonymous</strong> - true if the current user is anonymous</li><li><strong>read_only</strong> - true if the current user is restricted to read only access to the server</li><li><strong>logout_is_available</strong> - true if the server supports logging out (optional, defaults to true)</li><li><strong>space</strong> - always contains the object <code>{recipe: "default"}</code></li><li><strong>tiddlywiki_version</strong>  - the current <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> version</li></ul><p>For example:</p><pre><code>{
+  "username": "",
+  "anonymous": true,
+  "read_only": false,
+  "space": {
+    "recipe": "default"
+  },
+  "tiddlywiki_version": "5.1.18"
+}</code></pre></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

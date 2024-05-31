@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>WebServer: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-ListenCommand tc-tagged-ServerCommand tc-tagged-Features" data-tags="ListenCommand ServerCommand Features" data-tiddler-title="WebServer" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+WebServer
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2018년 12월 16일 오후 6:19</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Features
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ ListenCommand
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ ServerCommand
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>When <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki%2520on%2520Node.js.html">running under Node.js</a>, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> includes a simple HTTP/HTTPS web server that allows you to use it from any browser running on the same machine or over a network.</p><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-tip tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z" fill-rule="evenodd"></path></svg></div> The web server includes a very simple mechanism allowing multiple users to log in with different credentials. The implementation is designed to be simple and easy to use, and would not generally be considered robust enough for use on the open internet. It is intended for use by individuals or small groups on a trusted network. It is recommended to use an external proxy before exposing it on the Internet.</div></p><h1 class="">How It Works</h1><p>The web server listens for requests coming over the network, and performs the following actions in turn:</p><ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Authentication.html">Authentication</a> is the process of identifying the current user. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> supports three types of authentication: <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Anonymous%2520Access.html">Anonymous</a>, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Basic%2520Authentication.html">Basic</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Header%2520Authentication.html">Header</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Authorization.html">Authorization</a> is the process of determining which resources may be accessed by a particular user. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> implements a simple scheme whereby read and write access to the wiki can be independently controlled.</li><li>Routing is the process of dispatching the request to the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520API.html">API handler</a>, and returning any required data.</li></ul><h1 class="">Usage</h1><h2 class="">Anonymous Access </h2><p>The web server is started with the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ListenCommand.html">ListenCommand</a> (which supersedes the older <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ServerCommand.html">ServerCommand</a>). All 
+the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="NamedCommandParameters.html">NamedCommandParameters</a> are optional, so the simplest form is:</p><pre><code>tiddlywiki mywikifolder --listen</code></pre><p>Visit <a class="tc-tiddlylink-external" href="http://127.0.0.1:8080/" rel="noopener noreferrer" target="_blank">http://127.0.0.1:8080/</a> to access the wiki. Access is anonymous, so anyone can read or write to the wiki.</p><p>This will typically be available only to users on the local machine. For information on how to open the instance to the local network see the Web Server <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520host.html">host</a> parameter entry. </p><h2 class="">Authenticated Access</h2><p>Adding <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520username.html">username</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520password.html">password</a> parameters enforces basic authentication for both reading and writing:</p><pre><code>tiddlywiki mywikifolder --listen username=test password=tset</code></pre><p>Visiting the wiki will prompt for a username and password, and access is denied if they do not match the provided credentials.</p><h2 class="">Anonymous Read, Authenticated Write</h2><p>This example adds the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Authorization.html">authorization</a> parameters <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520readers.html">readers</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520writers.html">writers</a> to grant read access to anonymous users, but require authentication as "joe" in order to gain write access.</p><blockquote><div>Note that anonymous users can trigger a username/password prompt by visiting the route <code>\login-basic</code> (eg <a class="tc-tiddlylink-external" href="http://127.0.0.1:8080/login-basic" rel="noopener noreferrer" target="_blank">http://127.0.0.1:8080/login-basic</a>).</div></blockquote><pre><code>tiddlywiki mywikifolder --listen "readers=(anon)" writers=joe username=joe password=bloggs</code></pre><p>Note  the double quotes that are required for parameters containing special characters.</p><h1 class="">Arguments</h1><p>The full list of available optional parameters is:</p><p><ul class="">
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520admin.html">
+admin
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520anon-username.html">
+anon-username
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520authenticated-user-header.html">
+authenticated-user-header
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520credentials.html">
+credentials
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520csrf-disable.html">
+csrf-disable
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520debug-level.html">
+debug-level
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520host.html">
+host
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520password.html">
+password
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520path-prefix.html">
+path-prefix
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520port.html">
+port
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520readers.html">
+readers
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520required-plugins.html">
+required-plugins
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520root-render-type.html">
+root-render-type
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520root-serve-type.html">
+root-serve-type
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520root-tiddler.html">
+root-tiddler
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520system-tiddler-render-template.html">
+system-tiddler-render-template
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520system-tiddler-render-type.html">
+system-tiddler-render-type
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520tiddler-render-template.html">
+tiddler-render-template
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520tiddler-render-type.html">
+tiddler-render-type
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520tls-cert.html">
+tls-cert
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520tls-key.html">
+tls-key
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520tls-passphrase.html">
+tls-passphrase
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520username.html">
+username
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer%2520Parameter%253A%2520writers.html">
+writers
+</a>
+</li>
+
+</ul></p><h1 class="">Guides</h1><p>Further information on usage of the integrated <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WebServer.html">WebServer</a>:</p><p><ul class="">
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWeb%2520JSON%2520tiddler%2520format.html">
+
+
+TiddlyWeb JSON tiddler format
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Using%2520HTTPS.html">
+
+
+Using HTTPS
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Using%2520the%2520external%2520JavaScript%2520template.html">
+
+
+Using the external JavaScript template
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Using%2520the%2520integrated%2520static%2520file%2520server.html">
+
+
+Using the integrated static file server
+
+
+</a>
+</li>
+
+<li>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Using%2520the%2520read-only%2520single%2520tiddler%2520view.html">
+
+
+Using the read-only single tiddler view
+
+
+</a>
+</li>
+
+</ul></p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

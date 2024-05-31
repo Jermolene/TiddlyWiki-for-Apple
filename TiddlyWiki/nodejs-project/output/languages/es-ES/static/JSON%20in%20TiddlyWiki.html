@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>JSON in TiddlyWiki: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Features" data-tags="Features" data-tiddler-title="JSON in TiddlyWiki" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+JSON in TiddlyWiki
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 11 junio 2022 a las 11:47</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Características
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h2 class="">Introduction</h2><p>JSON (JavaScript Object Notation) is a standardised text representation for data structures that is widely used for the storage and transfer of data.</p><p>JSON is used in several different contexts in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a>. For example:</p><ul><li>Tiddlers are represented as JSON data within <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> HTML files</li><li>Groups of tiddlers can be <a class="tc-tiddlylink tc-tiddlylink-resolves" href="How%2520to%2520export%2520tiddlers.html">exported</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Importing%2520Tiddlers.html">imported</a> as JSON files</li><li>Plugin tiddlers store their constituent shadow tiddlers as JSON data</li><li>The client-server configuration uses <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWeb%2520JSON%2520tiddler%2520format.html">JSON messages</a> to communicate between the client and the server</li><li>Arbitrary JSON data within <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DataTiddlers.html">DataTiddlers</a> can be processed and manipulated using a set of filter operators and action widgets</li></ul><h2 class="">About JSON</h2><p>The technical description of JSON at the official website <a class="tc-tiddlylink-external" href="https://json.org/" rel="noopener noreferrer" target="_blank">https://json.org/</a> is terse. Here we summarise the main features.</p><p>JSON supports two basic data structures:</p><p><strong>Arrays</strong> are lists of items. The items are identified by their numeric index (starting at zero)</p><p>An example of an array is:</p><pre><code>["one","two","three\"four"]</code></pre><p>Note the following features of arrays:</p><ul><li>The array is signified by square brackets surrounding the list of items</li><li>Each item is a string in double quotes. Double quotes can be included within the strings by preceding them with a backslash (<code>\</code>)</li><li>The items are separated by commas</li></ul><p><strong>Objects</strong> are collections of name/value pairs. Each item is a value that is identified by a unique name</p><p>An example of an object is:</p><pre><code>{
+  "first": "This is the first value",
+  "second": "This is the second value",
+  "third": "This is the third value"
+}</code></pre><p>Note the following features of objects:</p><ul><li>The object is signified by curly braces surrounding the list of name/value pairs</li><li>Each name/value pair consists of the name in double quotes, a colon, and then the value</li><li>The name/value pairs are separated by commas</li></ul><p>The examples above all show string values. JSON actually supports several different types of value. Any of these types can be used as a value:</p><ul><li>String values, as shown above</li><li>Numeric values, represented as signed decimals such as <code>1</code>, <code>3.14</code>. Exponential notation can also be used e.g. <code>-1E10</code></li><li>Boolean values, represented by the keywords <code>true</code> and <code>false</code></li><li>The special value <code>null</code>, which is often used to represent data that is missing or incomplete</li><li>Objects and arrays are also values, allowing complex nested structures to be represented</li></ul><h2 class="">Working with Data Tiddlers</h2><ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Reading%2520data%2520from%2520JSON%2520tiddlers.html">Reading data from JSON tiddlers</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Constructing%2520JSON%2520tiddlers.html">Constructing JSON tiddlers</a></li><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="Modifying%2520JSON%2520tiddlers.html">Modifying JSON tiddlers</a></li></ul></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

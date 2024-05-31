@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>5.0.0-alpha.16: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-AlphaReleaseNotes" data-tags="AlphaReleaseNotes" data-tiddler-title="Release 5.0.0-alpha.16" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Release 5.0.0-alpha.16</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 30 novembre 2013 à 9h55</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="AlphaReleaseNotes"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">AlphaReleaseNotes</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p><em><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/compare/v5.0.0-alpha.15...v5.0.0-alpha.16" rel="noopener noreferrer" target="_blank">See GitHub for detailed change history of this release</a></em></p><h2 class="">New Features and Improvements</h2><ul><li>Improved appearance of tags editor</li><li>Improved generation of qualified tiddler titles for state storage<ul><li>Instead of <code>$:/state/tab/sidebar-{$:/core/ui/SideBar|$:/core/ui/SideBar||}{$:/core/ui/PageTemplate|$:/core/ui/PageTemplate||}</code> one gets <code>$:/state/tab/sidebar-{1743827719}</code></li></ul></li><li>Significant updates to the structure and content of the user documentation</li><li>Added a new plugin for displaying corner ribbons; currently used for a version banner on tw5.com</li><li>Split <strong>Snow White</strong> theme into a base <strong>Vanilla</strong> theme with all the basic formatting, leaving the decorative bits to <strong>Snow White</strong><ul><li>Existing <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWikiFolders.html">TiddlyWikiFolders</a> will need updating to include <strong>Vanilla</strong> as an additional theme</li></ul></li><li>The page building blocks are now driven by the system tag <code>$:/tags/PageTemplate</code><ul><li><a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252FTopSideBar.html">$:/TopSideBar</a> and <a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252FLeftSideBar.html">$:/LeftSideBar</a> are no longer specially treated; use the new tag instead</li></ul></li><li>Fixed problem that prevented tag configured items from shadow tiddlers interleaving with items from ordinary tiddlers</li><li>Refactored control panel to add <strong>Saving</strong> tab that includes <a class="tc-tiddlylink tc-tiddlylink-missing" href="TiddlySpot.html">TiddlySpot</a> options</li><li>Improved notifications when saving to <a class="tc-tiddlylink tc-tiddlylink-missing" href="TiddlySpot.html">TiddlySpot</a></li><li>Added backup URL to <a class="tc-tiddlylink tc-tiddlylink-missing" href="TiddlySpot.html">TiddlySpot</a> control panel tab</li><li>Extended the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ServerCommand.html">ServerCommand</a> to add primitive support for basic authentication when running under <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Node.js.html">Node.js</a></li></ul><h2 class="">Bug fixes</h2><ul><li>Fixed problem with displaying tiddler titles that contain <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a> syntax</li><li>No longer crashes when encountering an error in a filter string</li><li>Fixed a crash when dragging and dropping tiddlers within <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki5.html">TiddlyWiki5</a></li><li>No longer update the modified date for imported tiddlers</li><li>Automatically forces new field names to be lower case</li></ul><h2 class="">Internal changes</h2><ul><li>Added Windows-compatible build scripts</li><li>Changes to the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="SavingMechanism.html">SavingMechanism</a> to allow the tiddlers that are saved to be selected<ul><li>This enables the wiki at <a class="tc-tiddlylink-external" href="http://five.tiddlywiki.com/index.html" rel="noopener noreferrer" target="_blank">http://five.tiddlywiki.com/index.html</a> to generate an empty wiki</li></ul></li><li>The main HTML file template used for saving <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki5.html">TiddlyWiki5</a> documents has changed from <code>$:/core/templates/tiddlywiki5.template.html</code> to <code>$:/core/save/all</code></li><li>Moved tw5.com's Google Analytics integration into a proper plugin</li></ul><p>Contributors to this release include @jermolene, @asampal and @pmario.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

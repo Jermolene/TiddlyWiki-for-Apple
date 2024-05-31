@@ -1,0 +1,80 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>keyboard-driven-input Macro: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Macros tc-tagged-Core%20Macros" data-tags="Macros [[Core Macros]]" data-tiddler-title="keyboard-driven-input Macro" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+keyboard-driven-input Macro
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> </div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Core Macros
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Macros
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>The <dfn class="doc-def">keyboard-driven-input</dfn> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macros.html">macro</a> generates an input field or textarea that lets you cycle through a given list of entries with the <kbd>Up</kbd> and <kbd>Down</kbd> keys. Doing so, an entry gets selected and can be processed with further actions</p><h2 class="">Parameters</h2><p>To create the input field or textarea, the <dfn class="doc-def">keyboard-driven-input</dfn> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Macros.html">macro</a> accepts all parameters of the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="EditTextWidget.html">EditTextWidget</a></p><p>The additional parameters are:</p><table><thead><tr class="evenRow"><td align="left">parameter</td><td align="left">purpose</td></tr></thead><tbody><tr class="oddRow"><td align="left">storeTitle</td><td align="left">the title of the tiddler that stores the user input</td></tr><tr class="evenRow"><td align="left">selectionStateTitle</td><td align="left">the title of the tiddler that stores the selected entry with a -primaryList or -secondaryList suffix to make it unique</td></tr><tr class="oddRow"><td align="left">inputAcceptActions</td><td align="left">the actions that get processed when the user hits <kbd>Enter</kbd></td></tr><tr class="evenRow"><td align="left">inputAcceptVariantActions</td><td align="left">the actions that get processed when the user hits <kbd>ctrl-Enter</kbd></td></tr><tr class="oddRow"><td align="left">inputCancelActions</td><td align="left">the actions that get processed when the user hits <kbd>Escape</kbd></td></tr><tr class="evenRow"><td align="left">configTiddlerFilter</td><td align="left">a <strong>filter</strong> that specifies the tiddler that stores the first item-filter in its <code class="doc-field">first-search-filter</code> field and the second item-filter in its <code class="doc-field">second-search-filter</code> field</td></tr><tr class="oddRow"><td align="left">firstSearchFilterField</td><td align="left">the field of the configTiddler where the first search-filter is stored. Defaults to <code class="doc-field">first-search-filter</code></td></tr><tr class="evenRow"><td align="left">secondSearchFilterField</td><td align="left">the field of the configTiddler where the second search-filter is stored. Defaults to <code class="doc-field">second-search-filter</code></td></tr><tr class="oddRow"><td align="left">filterMinLength</td><td align="left">the minimum length of the user input after which items are filtered</td></tr></tbody></table><p>See <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Demonstration%253A%2520keyboard-driven-input%2520Macro.html">Demonstration: keyboard-driven-input Macro</a> for further guidance on using this macro.</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

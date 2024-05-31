@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>TiddlyWikiFolders: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-TiddlyWiki%20on%20Node.js" data-tags="[[TiddlyWiki on Node.js]]" data-tiddler-title="TiddlyWikiFolders" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+TiddlyWikiFolders
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2016년 10월 15일 오후 2:44</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ TiddlyWiki on Node.js
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>As well as traditional single file wikis, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki%2520on%2520Node.js.html">TiddlyWiki on Node.js</a> supports wikis that are stored as a folder of individual tiddler files.</p><h1 class="">Wiki Folder Structure</h1><p>Wiki folders can contain the following files and folders:</p><ul><li><strong>tiddlywiki.info</strong> - JSON file containing metadata for the wiki – see <a class="tc-tiddlylink tc-tiddlylink-resolves" href="tiddlywiki.info%2520Files.html">tiddlywiki.info Files</a></li><li><strong>\tiddlers</strong> - folder containing tiddler files comprising the wiki</li><li><strong>\plugins</strong> - folder containing <a class="tc-tiddlylink tc-tiddlylink-resolves" href="PluginFolders.html">plugin folders</a> to be included in the wiki</li><li><strong>\languages</strong> - folder containing <a class="tc-tiddlylink tc-tiddlylink-resolves" href="PluginFolders.html">plugin folders</a> for language plugins to be included in the wiki</li><li><strong>\themes</strong> - folder containing <a class="tc-tiddlylink tc-tiddlylink-resolves" href="PluginFolders.html">plugin folders</a> for theme plugins to be included in the wiki</li></ul><p>Only the <strong>tiddlywiki.info</strong> file is required; everything else is optional. Any files and folders not listed above are ignored.</p><h2 class="">Plugin processing</h2><p>To be usable in the browser, plugins just need to be included in the wiki. For wikis that are generated on the server, <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWikiFolders.html">TiddlyWikiFolders</a> can contain a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="tiddlywiki.info%2520Files.html">tiddlywiki.info file</a> that identifies the plugins to be included in this wiki:</p><pre><code>{
+	"plugins": [
+		"tiddlywiki/slider",
+		"tiddlytools/chooser"
+	]
+}</code></pre><p>Plugins names refer to plugin folders listed in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki5.html">TiddlyWiki5</a>'s root <code>plugins</code> folder. Plugins can also be included manually by copying them into the <code>plugins</code> subfolder of the wiki.</p><h2 class="">Processing of <code>tiddlers</code> folder</h2><p>All the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlerFiles.html">TiddlerFiles</a> in the <code>tiddlers</code> folder are read into the wiki at startup. Sub-folders are scanned recursively for <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlerFiles.html">TiddlerFiles</a>. Newly created tiddlers are stored in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlerFiles.html">TiddlerFiles</a> directly beneath the <code>tiddlers</code> folder, unless <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Customising%2520Tiddler%2520File%2520Naming.html">configured otherwise</a>.</p><p>The default processing for sub-folders within the <code>tiddlers</code> folder can  be overridden by providing a JSON file called <code>tiddlywiki.files</code> – see <a class="tc-tiddlylink tc-tiddlylink-resolves" href="tiddlywiki.files%2520Files.html">tiddlywiki.files Files</a>.</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

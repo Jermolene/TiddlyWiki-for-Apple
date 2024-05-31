@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>How to create a custom story tiddler template: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Learning tc-tagged-Cascades tc-tagged-Story%20Tiddler%20Template tc-tagged-Story%20Tiddler%20Template%20Cascade tc-tagged-Customise%20TiddlyWiki" data-tags="Learning Cascades [[Story Tiddler Template]] [[Story Tiddler Template Cascade]] [[Customise TiddlyWiki]]" data-tiddler-title="How to create a custom story tiddler template" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+How to create a custom story tiddler template
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2021년 12월 6일 오후 4:51</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Cascades
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Customise TiddlyWiki
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Learning
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Story Tiddler Template
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Story Tiddler Template Cascade
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Here we show how to add a rule to the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Story%2520Tiddler%2520Template%2520Cascade.html">Story Tiddler Template Cascade</a> that causes tiddlers tagged <span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ $:/tags/TiddlerList
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span> to be displayed with a custom appearance incorporating thumbnails of the tiddlers named in the list field.</p><p>Open <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Demo%2520Tiddler%2520List%2520with%2520Custom%2520Story%2520Tiddler%2520Template.html">Demo Tiddler List with Custom Story Tiddler Template</a> to see the demo.</p><p>First, we add a new step to the story tiddler template cascade. The new filter step is:</p><pre><code>[tag[$:/tags/TiddlerList]then[$:/_tw5.com/CustomStoryTiddlerTemplateDemo/Template]]</code></pre><p>It can be read as:</p><pre><code>If the tiddler has the tag $:/tags/TiddlerList then return $:/_tw5.com/CustomStoryTiddlerTemplateDemo/Template</code></pre><blockquote><div>The template <a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2524%253A%252F_tw5.com%252FCustomStoryTiddlerTemplateDemo%252FTemplate.html">$:/_tw5.com/CustomStoryTiddlerTemplateDemo/Template</a> also depends on styles defined in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2524%253A%252F_tw5.com%252FCustomStoryTiddlerTemplateDemo%252FStyles.html">$:/_tw5.com/CustomStoryTiddlerTemplateDemo/Styles</a>.</div></blockquote><p>The story tiddler template cascade is defined by the tag <span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ $:/tags/StoryTiddlerTemplateFilter
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span>, so we need to create a configuration tiddler with that tag.</p><p>We also need to make sure that it is inserted at the correct point in the cascade:</p><ul><li>The new rule must be after the "draft" rule to ensure that draft tiddlers with the tag <a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Ftags%252FTiddlerList.html">$:/tags/TiddlerList</a> can be edited</li><li>The new rule must be before the "default" rule otherwise it will never be executed</li></ul><p>The control panel "Cascades" tab shows that this can be achieved by inserting the new step immediately before the default step using the <code>list-before</code> field.</p><p>The full list of fields in the configuration tiddler is:</p><p>
+<div class="doc-tiddler-fields">
+<h2>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2524%253A%252F_tw5.com%252FCustomStoryTiddlerTemplateDemo%252FFilter.html">
+<span class="tc-tiddler-title-icon"></span>$:/_tw5.com/CustomStoryTiddlerTemplateDemo/Filter
+</a>
+</h2>
+<table class="tc-view-field-table">
+<tbody>
+<tr class="tc-view-field"><td class="tc-view-field-name">code-body</td><td class="tc-view-field-value">yes</td></tr><tr class="tc-view-field"><td class="tc-view-field-name">list-before</td><td class="tc-view-field-value">$:/config/StoryTiddlerTemplateFilters/default</td></tr><tr class="tc-view-field"><td class="tc-view-field-name">tags</td><td class="tc-view-field-value">$:/tags/StoryTiddlerTemplateFilter</td></tr><tr class="tc-view-field"><td class="tc-view-field-name">text</td><td class="tc-view-field-value">[tag[$:/tags/TiddlerList]then[$:/_tw5.com/CustomStoryTiddlerTemplateDemo/Template]]
+</td></tr>
+</tbody>
+</table>
+</div>
+</p><p>Finally, we need to create the demo tiddler itself:</p><p>
+<div class="doc-tiddler-fields">
+<h2>
+<a class="tc-tiddlylink tc-tiddlylink-resolves" href="Demo%2520Tiddler%2520List%2520with%2520Custom%2520Story%2520Tiddler%2520Template.html">
+<span class="tc-tiddler-title-icon"></span>Demo Tiddler List with Custom Story Tiddler Template
+</a>
+</h2>
+<table class="tc-view-field-table">
+<tbody>
+<tr class="tc-view-field"><td class="tc-view-field-name">created</td><td class="tc-view-field-value">20211204122107920</td></tr><tr class="tc-view-field"><td class="tc-view-field-name">filter</td><td class="tc-view-field-value">HelloThere Community GettingStarted Features Reference Plugins Learning</td></tr><tr class="tc-view-field"><td class="tc-view-field-name">modified</td><td class="tc-view-field-value">20211204131610322</td></tr><tr class="tc-view-field"><td class="tc-view-field-name">tags</td><td class="tc-view-field-value">$:/tags/TiddlerList</td></tr><tr class="tc-view-field"><td class="tc-view-field-name">text</td><td class="tc-view-field-value">This is a demo tiddler with a custom story tiddler template that displays the tiddlers named in the list field as a fan.
+
+See [[How to create a custom story tiddler template]] for details.
+</td></tr><tr class="tc-view-field"><td class="tc-view-field-name">type</td><td class="tc-view-field-value">text/vnd.tiddlywiki</td></tr>
+</tbody>
+</table>
+</div>
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

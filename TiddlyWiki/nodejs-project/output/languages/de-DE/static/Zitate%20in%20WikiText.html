@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Zitate: Mein TiddlyWiki — ein persönliches nicht-lineares Web-Notizbuch
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">Diese Seite ist Teil der "reinen" HTML Version von TiddlyWiki auf <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/de-DE" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/de-DE</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText" data-tags="WikiText" data-tiddler-title="Zitate in WikiText" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="mehr" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Weitere Aktionen"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="Bearbeiten" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Bearbeite diesen Tiddler"></button><button aria-label="Schließen" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Schließe diesen Tiddler"></button></span><span><h2 class="tc-title">Zitate in WikiText</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="pmario.html">pmario</a> 21. September 2014 um 18:07</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="WikiText"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">WikiText</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-reveal"><p>Es gibt zwei Möglichkeiten um Zitate zu erstellen. Eine, die mehrere Zeilen Text einfasst und eine, für einzelne Zeilen.</p><h1 class="">Mehrzeilige Zitate</h1><h2 class="">Einfaches Zitat</h2><p>Die Syntax für Zitate, die mehrere Zeilen einfasst ist wie folgt:</p><pre><code>&lt;&lt;&lt;
+Das ist ein Absatz mit mehreren Zeilen im Quelltext.
+Das Ergebnis wird zusammenhängend dargestellt.
+&lt;&lt;&lt;
+</code></pre><p>Dargestellt als:</p><blockquote class="tc-quote"><p>Das ist ein Absatz mit mehreren Zeilen im Quelltext.
+Das Ergebnis wird zusammenhängend dargestellt.
+</p></blockquote><p>Erzeugter HTML Code:</p><pre>&lt;blockquote class="tc-quote"&gt;&lt;p&gt;Das ist ein Absatz mit mehreren Zeilen im Quelltext.
+Das Ergebnis wird zusammenhängend dargestellt.
+&lt;/p&gt;&lt;/blockquote&gt;</pre><h2 class="">Zitat mit Autor</h2><p>Wenn Sie den Autor anführen möchten, dann schreiben Sie wie folgt:</p><pre><code>&lt;&lt;&lt;
+Computers are like a bicycle for our minds
+&lt;&lt;&lt; Steve Jobs
+</code></pre><p>Dargestellt als:</p><blockquote class="tc-quote"><p>Computers are like a bicycle for our minds
+</p><cite>Steve Jobs</cite></blockquote><p>Erzeugter HTML Code:</p><pre>&lt;blockquote class="tc-quote"&gt;&lt;p&gt;Computers are like a bicycle for our minds
+&lt;/p&gt;&lt;cite&gt;Steve Jobs&lt;/cite&gt;&lt;/blockquote&gt;</pre><h1 class="">Einzeilige Zitate</h1><p>Ein einzeiliger Zitat Block ist eine Erweiterung der Syntax für <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Listen%2520in%2520WikiText.html">Listen in WikiText</a>. Zum Beispiel:</p><pre><code>&gt; Einzeiliges Zitat 1
+&gt; Einzeiliges Zitat 2
+</code></pre><p>Dargestellt als:</p><blockquote><div>Einzeiliges Zitat 1</div><div>Einzeiliges Zitat 2</div></blockquote><p>Erzeugter HTML Code:</p><pre>&lt;blockquote&gt;&lt;div&gt;Einzeiliges Zitat 1&lt;/div&gt;&lt;div&gt;Einzeiliges Zitat 2&lt;/div&gt;&lt;/blockquote&gt;</pre><p>Zitate können "verschachtelt" werden:</p><pre><code>&gt; Zitat 1
+&gt;&gt; Zitat 1.1
+&gt; Zitat 2</code></pre><p>Dargestellt als: </p><blockquote><div>Zitat 1<blockquote><div>Zitat 1.1</div></blockquote></div><div>Zitat 2</div></blockquote><p>Sie können Zitate mit Listenelementen mischen. zB:</p><pre><code>* Liste Eins
+** Liste Zwei
+**&gt; Ein Zitat
+**&gt; Ein weiteres Zitat
+* Liste Drei
+</code></pre><p>Dargestellt als:</p><ul><li>Liste Eins<ul><li>Liste Zwei<blockquote><div>Ein Zitat</div><div>Ein weiteres Zitat</div></blockquote></li></ul></li><li>Liste Drei</li></ul><p>Erzeugter HTML Code:</p><pre>&lt;ul&gt;&lt;li&gt;Liste Eins&lt;ul&gt;&lt;li&gt;Liste Zwei&lt;blockquote&gt;&lt;div&gt;Ein Zitat&lt;/div&gt;&lt;div&gt;Ein weiteres Zitat&lt;/div&gt;&lt;/blockquote&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;li&gt;Liste Drei&lt;/li&gt;&lt;/ul&gt;</pre><h2 class="">CSS Klassen</h2><p><a class="tc-tiddlylink tc-tiddlylink-resolves" href="CSS%2520Klassen.html">CSS Klassen</a>, um eine Formatierung direkt zu ändern, können in <strong>Ausnahmefällen</strong> direkt angegeben werden. Diese Option ist nur für geübte Benutzer gedacht. </p><pre><code>&lt;&lt;&lt;.myClass.another-class
+Operating systems are like a brick wall for our minds
+&lt;&lt;&lt; Nobody
+</code></pre><p>Dargestellt als:</p><blockquote class="tc-quote myClass another-class"><p>Operating systems are like a brick wall for our minds
+</p><cite>Nobody</cite></blockquote><p>Erzeugter HTML Code:</p><pre>&lt;blockquote class="tc-quote myClass another-class"&gt;&lt;p&gt;Operating systems are like a brick wall for our minds
+&lt;/p&gt;&lt;cite&gt;Nobody&lt;/cite&gt;&lt;/blockquote&gt;</pre></div>
+</div></p>
+</section>
+</body>
+</html>
+

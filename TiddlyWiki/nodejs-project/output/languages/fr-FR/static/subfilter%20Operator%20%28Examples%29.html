@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>subfilter Operator (Examples): TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-subfilter%20Operator tc-tagged-Operator%20Examples" data-tags="[[subfilter Operator]] [[Operator Examples]]" data-tiddler-title="subfilter Operator (Examples)" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">subfilter Operator (Examples)</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 30 octobre 2021 à 23h34</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Operator Examples"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Operator Examples</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="subfilter Operator"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">subfilter Operator</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Literal filter operands can be used, but such cases are better rewritten without using <code class="doc-operator">subfilter</code>:
+<div class="doc-example">
+<code>[subfilter[one two three]addsuffix[!]]</code>
+<dd>→ same as <code>one two three +[addsuffix[!]]</code></dd>
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p><p>The <code class="doc-operator">subfilter</code> operator can be used to dynamically define parts of a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Run.html">filter run</a>. This is useful for sharing a common pieces of a filter across multiple filters.</p><p>For example, this variable:</p><ul><li><strong>recent-mods</strong>: <code>[has[modified]!sort[modified]limit[5]]</code></li></ul><p>can be used in one filter like this:</p><p><div class="doc-example">
+<code>[tag[Filter Operators]subfilter&lt;recent-mods&gt;addsuffix[!]]</code>
+<dd>→ same as <code>[tag[Filter Operators]has[modified]!sort[modified]limit[5]addsuffix[!]]</code></dd>
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p><p>and in another similar filter like this:
+<div class="doc-example">
+<code>[tag[ActionWidgets]subfilter&lt;recent-mods&gt;addprefix[!]]</code>
+
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p><p>Variables are not the only way to define dynamic subfilters. <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TextReference.html">Text references</a> can be used to load a subfilter from a tiddler field (see also <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Filter%2520Parameter.html">Filter Parameter</a>):
+<div class="doc-example">
+<code>[subfilter{$:/StoryList!!list}limit[5]]</code>
+
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div>
+<div class="doc-example">
+<code>[subfilter{$:/StoryList!!list}subfilter&lt;recent-mods&gt;]</code>
+
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div>
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

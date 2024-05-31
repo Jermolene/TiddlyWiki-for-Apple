@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>TiddlerFiles: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-TiddlyWiki%20on%20Node.js" data-tags="[[TiddlyWiki on Node.js]]" data-tiddler-title="TiddlerFiles" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">TiddlerFiles</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 19 octobre 2014 à 11h14</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="TiddlyWiki on Node.js"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">TiddlyWiki sur Node.js</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Les tiddlers peuvent être conservés dans des fichiers texte dans plusieurs formats différents. Les fichiers contenant un seul tiddler peuvent aussi avoir un fichier .meta auxiliaire formaté comme une suite de paires <em>nom:valeur</em> :</p><pre><code>title: LeTitre</code></pre><h2 class="">Fichiers <code>.tid</code> à la TiddlyWeb</h2><p>Ces fichiers consistent en une séquence de paires <em>nom:valeur</em>, suivie d'une ligne blanche, puis du texte du tiddler. Par exemple :</p><pre><code>title: MonTiddler
+
+Voici le texte de mon tiddler.</code></pre><p>Notez que de nombreux éditeurs de texte imposent que les fichiers se terminent par un caractère de « nouvelle ligne ». Si vous voulez éviter qu'une ligne soit ajoutée à la fin de votre texte, vous pouvez utiliser cette autre syntaxe :</p><pre><code>title: MonTiddler
+text: Voici le texte de mon tiddler.</code></pre><p><em>Le <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ContentType.html">ContentType</a> <code>application/x-tiddler</code> est utilisé en interne pour ces fichiers</em></p><h2 class="">Fichiers <code>&lt;DIV&gt;</code> avec l'extension <em>.tiddler</em></h2><p>Les fichiers <code>*.tiddler</code> modernes ressemblent à ça :</p><pre><code>&lt;div title="AnotherExampleStyleSheet" modifier="blaine" created="201102111106" modified="201102111310" tags="examples" creator="psd"&gt;
+&lt;pre&gt;Notez qu'il y a une balise &lt;pre&gt; embarquée, et que les retours à la ligne ne sont pas échappés.
+
+Et bizarrement, aucun codage HTML dans le corps du tiddler.&lt;/pre&gt;
+&lt;/div&gt;</code></pre><p>Ces fichiers <code>*.tiddler</code> ne sont donc pas vraiment similaires aux tiddlers trouvés à l'intérieur d'un fichier HTML <em>TiddlyWiki</em>, dans lequel le corps du texte est encodé en HTML comme attendu.</p><p>Les anciens fichiers <code>*.tiddler</code> étaient plus proches du format de stockage utilisé par <em>TiddlyWiki</em> à l'époque :</p><pre><code>&lt;div tiddler="AnotherExampleStyleSheet" modifier="JeremyRuston" modified="200508181432" created="200508181432" tags="examples"&gt;Voici un fichier tiddler à l'ancienne, sans balise &amp;lt;pre&amp;gt; embarquée. \nVoyez comme le corps du tiddler est &amp;quot;codé en HTML&amp;quot; et les sauts de ligne échappés par \\n&lt;/div&gt;</code></pre><p><em>Le <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ContentType.html">ContentType</a> <code>application/x-tiddler-html-div</code> est utilisé en interne pour ces fichiers</em></p><h2 class="">Fichiers JSON de type TiddlyWeb</h2><p>Ces fichiers sont des tableaux de hachages sans fioritures contenant des champs sous la forme name:value. À présent seuls ces champs standards sont traités : <code>title</code>, <code>text</code>, <code>created</code>, <code>creator</code>, <code>modified</code>, <code>modifier</code>, <code>type</code> et <code>tags</code>.</p><p><em>Le <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ContentType.html">ContentType</a> <code>application/json</code> est utilisé en interne pour ces fichiers</em></p><h2 class="">Fichiers <em>TiddlyWiki</em> HTML</h2><p>Les fichiers <em>TiddlyWiki</em> HTML contiennent une collection de tiddlers encodés au format <code>&lt;DIV&gt;</code>.</p><p>Pour qu'un fichier HTML soit importable comme un fichier TW non crypté, il faut au minimum qu'il contienne un <code>&lt;div id="storeArea"&gt;</code> juste avant les DIVs des tiddlers, eux-mêmes suivis immédiatement par un <code>&lt;/div&gt;</code>. Par exemple :</p><pre><code>&lt;div id="storeArea"&gt;
+&lt;div created="20130302085406905" modified="20130302084548184" tags="Exemples" title="Un titre de tiddler"&gt;
+&lt;pre&gt;Texte d'un tiddler encodé en HTML
+&lt;/pre&gt;
+&lt;/div&gt;
+&lt;div created="20140315085406905" modified="20140321084548184" tags="Un Deux [[Trois avec espace]]" title="Un autre titre" champperso="valeur du champ"&gt;
+&lt;pre&gt;Texte de ce tiddler
+&lt;/pre&gt;
+&lt;/div&gt;</code></pre></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

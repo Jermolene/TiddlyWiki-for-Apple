@@ -1,0 +1,72 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>StateMechanism: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Mechanisms" data-tags="Mechanisms" data-tiddler-title="StateMechanism" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+StateMechanism
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2021년 11월 27일 오전 3:39</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:#9fa3cb;
+fill:#333333;
+color:#333333;">
+ Mechanisms
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="StateMechanism.html">StateMechanism</a> in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> is at the heart of how complex user interfaces can be built from <a class="tc-tiddlylink tc-tiddlylink-resolves" href="WikiText.html">WikiText</a>.</p><p>In the browser, the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> display is produced by dynamically rendering the tiddler <a class="tc-tiddlylink tc-tiddlylink-shadow" href="%2524%253A%252Fcore%252Fui%252FPageTemplate.html">$:/core/ui/PageTemplate</a>. Through various transclusions and other widgets it renders the entire user interface. The dynamic rendering is accomplished by a mechanism called "binding": any changes to the tiddlers in the store are dynamically reflected in the browser display.</p><p>The stack of templates that make up the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> display are complex but we'll focus on the line that displays the main story column:</p><pre><code>&lt;$list filter="[list[$:/StoryList]]" history="$:/HistoryList" template="$:/core/ui/ViewTemplate" editTemplate="$:/core/ui/EditTemplate" storyview={{$:/view}} /&gt;</code></pre><p>Breaking down the attributes applied to the list widget:</p><ul><li><strong>filter</strong>: selects the list of tiddlers in the <code>list</code> field of the tiddler <a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2524%253A%252FStoryList.html">$:/StoryList</a>. If a tiddler is added or removed from that list then it is automatically reflected in the displayed list</li><li><strong>history</strong>: references the tiddler to be used to store the history stack (see the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="HistoryMechanism.html">HistoryMechanism</a>)</li><li><strong>template</strong>: identifies a template tiddler to be used for rendering each tiddler in the list</li><li><strong>editTemplate</strong>: identifies a different template tiddler to be used for rendering tiddlers that are in <a class="tc-tiddlylink tc-tiddlylink-resolves" href="DraftMechanism.html">draft mode</a></li><li><strong>storyview</strong>: specifies the story view to be used (eg classic, or zoomin)</li></ul><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="%2524%253A%252FStoryList.html">$:/StoryList</a> tiddler is an example of a <a class="tc-tiddlylink tc-tiddlylink-missing" href="StateTiddler.html">StateTiddler</a>: a tiddler that is used to hold the state of the user interface. Changes to the user interface are made indirectly, by changing the underlying state tiddlers, and letting <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> ripple the changes through the user interface.</p><p>Note how this approach makes the <strong>open</strong> tab in the sidebar very easy to implement: it is just another list widget referencing the same state tiddler, but with a different template:</p><pre><code>&lt;$list filter="[list[$:/StoryList]]" history="$:/HistoryList" storyview="pop"&gt;
+&lt;$button message="tm-close-tiddler" class="tc-btn-invisible tc-btn-mini"&gt;&amp;times;&lt;/$button&gt; &lt;$link/&gt;
+&lt;/$list&gt;</code></pre><p>Now consider the implementation of the info panel within the tiddler template. We want to be able to toggle the info panel open and closed, which means that we must track its current state in a tiddler.</p><p>However, we can't track the state in a tiddler called, say, <a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252FInfoPanelState.html">$:/InfoPanelState</a> because every tiddler would share the same state; changing the value of the tiddler would affect all tiddlers displayed in the story.</p><p>The solution is to dynamically generate a unique title for each state tiddler that we need. We need to ensure that the same state tiddler title is generated each time a user interface element is rendered. To do that, we append together tokens representing each of the stack of transclusions that led to the current rendering location. Then that string of symbols is hashed to a simple numeric value.</p><p>The process of generating a state tiddler title is encapsulated in the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="qualify%2520Macro.html"><code class="doc-var">qualify</code></a> macro.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

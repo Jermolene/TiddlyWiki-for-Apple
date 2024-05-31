@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Procedure Definitions: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText tc-tagged-Procedures" data-tags="WikiText Procedures" data-tiddler-title="Procedure Definitions" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Procedure Definitions</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 21 septembre 2023 à 19h03</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Procedures"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Procedures</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="WikiText"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">WikiTexte</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h2 class="">Introduction</h2><p>This tiddler describes the different ways in which <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Procedures.html">Procedures</a> can be defined.</p><h2 class="">Procedure Definition Pragma</h2><p>Procedures are created using the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Pragma%253A%2520%255Cprocedure.html">Pragma: \procedure</a> at the start of a tiddler. The definitions are available in the rest of the tiddler that defines them, plus any tiddlers that it transcludes.</p><pre><code>\procedure my-procedure(param)
+This is the procedure text (param=&lt;&lt;param&gt;&gt;)
+\end</code></pre><p>Note that the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Pragma%253A%2520%255Cwhitespace.html">Pragma: \whitespace</a> setting is inherited from the parsing context in which the procedure definition occurs. That means that a tiddler containing multiple procedure definitions only needs a single whitespace pragma at the top of the tiddler, and the setting will be automatically inherited by the procedure definitions without needing the pragma to be repeated.</p><h2 class="">Procedure Definition with Set Widget</h2><p>Procedures are implemented as a special kind of <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variables.html">variable</a> and so internally are actually defined with a <a class="tc-tiddlylink tc-tiddlylink-resolves" href="SetWidget.html"><code class="doc-widget">$set</code></a> widget.</p><pre><code>&lt;$set name="my-procedure" value="This is the procedure text"&gt;
+...
+&lt;/$set&gt;</code></pre><dl class="doc-note"><dt>Note</dt><dd>that it is not currently possible to specify parameters when defining a procedure with the  <a class="tc-tiddlylink tc-tiddlylink-resolves" href="SetWidget.html"><code class="doc-widget">$set</code></a> widget.</dd></dl><h2 class="">Importing Procedure Definitions</h2><p>The <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Pragma%253A%2520%255Cimport.html">Pragma: \import</a> or <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ImportVariablesWidget.html"><code class="doc-widget">$importvariables</code></a> widget can be used to copy procedure definitions from another tiddler.</p><h2 class=""><code>$:/tags/Global</code> Tag</h2><p>Global procedures can be defined using the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="SystemTag%253A%2520%2524%253A%252Ftags%252FGlobal.html">SystemTag: $:/tags/Global</a>.</p><p>The tag <a class="tc-tiddlylink tc-tiddlylink-resolves" href="SystemTag%253A%2520%2524%253A%252Ftags%252FGlobal%252FView.html">SystemTag: $:/tags/Global/View</a> is used to define procedures that should only be available within the main view template and the preview panel.</p><p>The tag <a class="tc-tiddlylink tc-tiddlylink-resolves" href="SystemTag%253A%2520%2524%253A%252Ftags%252FGlobal%252FView%252FBody.html">SystemTag: $:/tags/Global/View/Body</a> is used to define procedures that should only be available within the main view template body and the preview panel.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

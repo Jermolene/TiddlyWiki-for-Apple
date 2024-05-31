@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Intersection Filter Run Prefix (Examples): TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Filter%20Syntax tc-tagged-Filter%20Run%20Prefix%20Examples tc-tagged-Intersection%20Filter%20Run%20Prefix" data-tags="[[Filter Syntax]] [[Filter Run Prefix Examples]] [[Intersection Filter Run Prefix]]" data-tiddler-title="Intersection Filter Run Prefix (Examples)" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Intersection Filter Run Prefix (Examples)</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 28 novembre 2021 à 23h33</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Filter Run Prefix Examples"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Filter Run Prefix Examples</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="Filter Syntax"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Syntaxe d'un filtre</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span><span class="tc-tag-list-item" data-tag-title="Intersection Filter Run Prefix"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Intersection Filter Run Prefix</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p><div class="doc-example">
+<code>A B C D :intersection[enlist[C D E F]]</code>
+
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p><p><div class="doc-example">
+<code>A B C D :intersection[enlist[A B C D]]</code>
+
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p><p><div class="doc-example">
+<code>A B C D :intersection[enlist[E F G H]]</code>
+
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p><p><div class="doc-example">
+<code>:intersection[enlist[A B C D]]</code>
+<dd>→ Using intersection in the first filter run is of little use. The result will always be empty.</dd>
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p><h2 class="">Difference between <code>+</code> and <code>:intersection</code></h2><p>The <code>+</code> prefix should be thought of as an "AND" in formal logic, e.g. "give me all titles that satisfy condition A <strong>and</strong> condition B". But it's not suitable for all cases; if condition B uses a filter operator that replaces its input, then it will be difficult to use the <code>+</code> prefix. For example, if you wanted to find out what tags two tiddlers have in common, you might try to write a filter expression like:</p><ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="tags%2520Operator.html"><code>[[field Operator]tags[]] +[[compare Operator]tags[]]</code></a></li></ul><p>But that won't work, because the second filter run will end up throwing away its input and replacing it with an input consisting of the single title <code>[[compare Operator]]</code>. So the result you'd get from that filter expression would be just the tags of the <code>compare Operator</code> tiddler.</p><p>For cases like this, the <code>:intersection</code> prefix is what you need. It takes the filter output so far, <em>sets it aside</em>, and starts the next filter run with all tiddler titles as input. Then once the latest filter run has completed, it takes the latest output, compares it to the set-aside output, and produces a new output that contains only titles that appeared in both the set-aside output and the latest output. So to get only the tags that the <code>field Operator</code> and <code>compare Operator</code> tiddlers have in common, you would write a filter expression like this:</p><ul><li><a class="tc-tiddlylink tc-tiddlylink-resolves" href="tags%2520Operator.html"><code>[[field Operator]tags[]] :intersection[[compare Operator]tags[]]</code></a></li></ul><p>The following examples use the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="field%2520Operator.html">field Operator</a> and <a class="tc-tiddlylink tc-tiddlylink-resolves" href="compare%2520Operator.html">compare Operator</a> tiddlers and their respective tags.</p><p><div class="doc-example">
+<code>[[field Operator]tags[]]</code>
+
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p><p><div class="doc-example">
+<code>[[compare Operator]tags[]]</code>
+
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p><p><div class="doc-example">
+<code>[[field Operator]tags[]] +[[compare Operator]tags[]]</code>
+<dd>→ The "field Operator" tiddler's tags are lost, so only the "compare Operator" tiddler's tags are returned</dd>
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p><p><div class="doc-example">
+<code>[[field Operator]tags[]] :intersection[[compare Operator]tags[]]</code>
+<dd>→ Returns the tags that both tiddlers have in common</dd>
+
+<span class=" tc-reveal">
+	<dl>
+	<dd><button class="">Essayez</button></dd>
+	</dl>
+</span>
+<span class=" tc-reveal" hidden="true"></span>
+</div></p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

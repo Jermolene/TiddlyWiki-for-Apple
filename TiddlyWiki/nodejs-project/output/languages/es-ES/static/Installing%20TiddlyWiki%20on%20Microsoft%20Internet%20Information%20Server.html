@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Internet Information Services: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Saving tc-tagged-TiddlyWiki%20on%20Node.js tc-tagged-Windows" data-tags="Saving [[TiddlyWiki on Node.js]] Windows" data-tiddler-title="Installing TiddlyWiki on Microsoft Internet Information Server" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:#F06292;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Installing TiddlyWiki on Microsoft Internet Information Server
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 7 mayo 2020 a las 11:58</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Guardar en TiddlyWiki
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ TiddlyWiki en Node.js
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Windows
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Microsoft's <a class="tc-tiddlylink-external" href="https://en.wikipedia.org/wiki/Internet_Information_Services" rel="noopener noreferrer" target="_blank">Internet Information Server</a> (IIS) is the built-in web server for Windows. It can be useful to host <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> within IIS in order to take advantage of IIS features like URL rewriting, static file hosting and automatic restarts after a crash.</p><h1 class="">1. Enable IIS</h1><ol><li>In Windows, access the Control Panel and click <strong>Add or Remove Programs</strong></li><li>In the Add or Remove Programs window, click <strong>Add/Remove Windows Components</strong>.</li><li>Select the <strong>Internet Information Services (IIS)</strong> check box</li><li>Click <strong>Next</strong>, then click <strong>Finish</strong></li></ol><h1 class="">2. Install the required tools</h1><ol><li>Install the IIS module HttpPlatformHandler from <a class="tc-tiddlylink-external" href="https://www.iis.net/downloads/microsoft/httpplatformhandler" rel="noopener noreferrer" target="_blank">https://www.iis.net/downloads/microsoft/httpplatformhandler</a></li><li>Install <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Node.js.html">Node.js</a> from <a class="tc-tiddlylink-external" href="https://nodejs.org/" rel="noopener noreferrer" target="_blank">https://nodejs.org/</a></li><li>Install Git from <a class="tc-tiddlylink-external" href="https://git-scm.com/" rel="noopener noreferrer" target="_blank">https://git-scm.com/</a><ul><li><em>optional; only required when using the latest <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> release pulled directly from GitHub – see below</em></li></ul></li></ol><h1 class="">3. Install <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> and setup a new wiki</h1><ol><li>Create a convenient directory for the wiki (e.g. <code>C:\MyStuff</code>)</li><li>Within it, create a file called <code>C:\MyStuff\package.json</code> with the content:<blockquote><div><pre><code>{
+    "name": "MyStuff",
+    "description": "A description of this wiki",
+    "dependencies": {
+        "sax": "1.2.4",
+        "tiddlywiki": "*"
+    }
+}</code></pre> <button class="tc-btn-invisible" title="Copia este texto al portapapeles"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copiar a portapapeles</button></div></blockquote></li><li>Also create a file called <code>C:\MyStuff\web.config</code> with the content:<blockquote><div><pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;configuration&gt;
+    &lt;system.webServer&gt;
+        &lt;handlers&gt;
+            &lt;add 
+                name="httpplatformhandler"
+                path="*"
+                verb="*"
+                modules="httpPlatformHandler"
+                resourceType="Unspecified"
+                requireAccess="Script" /&gt;
+        &lt;/handlers&gt;
+        &lt;httpPlatform 
+           stdoutLogEnabled="true"
+           stdoutLogFile=".\node.log"
+           startupTimeLimit="20"
+           processPath="C:\Program Files\nodejs\node.exe"
+           arguments=".\node_modules\tiddlywiki\tiddlywiki.js ./wiki --listen port=PORT path-prefix=/MyApp"&gt;
+            &lt;environmentVariables&gt;
+                &lt;environmentVariable name="PORT" value="%HTTP_PLATFORM_PORT%" /&gt;
+                &lt;environmentVariable name="NODE_ENV" value="Production" /&gt;
+            &lt;/environmentVariables&gt;            
+        &lt;/httpPlatform&gt;
+    &lt;/system.webServer&gt;
+&lt;/configuration&gt;
+</code></pre> <button class="tc-btn-invisible" title="Copia este texto al portapapeles"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copiar a portapapeles</button></div></blockquote></li><li>Create a subdirectory called "wiki" (i.e. <code>C:\MyStuff\wiki</code>)</li><li>Create a file called <code>C:\MyStuff\wiki\tiddlywiki.info</code> with the content:<blockquote><div><pre><code>{
+	"description": "My wiki",
+	"plugins": [
+		"tiddlywiki/tiddlyweb",
+		"tiddlywiki/filesystem"
+	],
+	"themes": [
+		"tiddlywiki/vanilla",
+		"tiddlywiki/snowwhite"
+	]
+}
+</code></pre> <button class="tc-btn-invisible" title="Copia este texto al portapapeles"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copiar a portapapeles</button></div></blockquote></li><li>Create a subdirectory called "tiddlers" (i.e. <code>C:\MyStuff\wiki\tiddlers</code>)</li><li>Within it, create a file called <code>C:\MyStuff\wiki\tiddlers\config-tiddlyweb-host.tid</code> with the content:<blockquote><div><pre><code>title: $:/config/tiddlyweb/host
+text: $protocol$//$host$/MyApp/
+</code></pre> <button class="tc-btn-invisible" title="Copia este texto al portapapeles"><svg class="tc-image-copy-clipboard tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><g fill-rule="evenodd"><rect height="8" rx="4" width="33" x="40" y="40"></rect><rect height="8" rx="4" width="17" x="40" y="82"></rect><rect height="8" rx="4" width="17" x="40" y="54"></rect><rect height="8" rx="4" width="33" x="40" y="96"></rect><rect height="8" rx="4" width="12" x="40" y="68"></rect><path d="M40 16H24c-4.419 0-8 3.59-8 8a8.031 8.031 0 000 .01v95.98a8.03 8.03 0 000 .01c0 4.41 3.581 8 8 8h80a7.975 7.975 0 005.652-2.34 7.958 7.958 0 002.348-5.652v-16.016c0-4.414-3.582-7.992-8-7.992-4.41 0-8 3.578-8 7.992V112H32V32h64v8.008C96 44.422 99.582 48 104 48c4.41 0 8-3.578 8-7.992V23.992a7.963 7.963 0 00-2.343-5.651A7.995 7.995 0 00104.001 16H88c0-4.41-3.585-8-8.007-8H48.007C43.588 8 40 11.582 40 16zm4-1.004A4.001 4.001 0 0148 11h32c2.21 0 4 1.797 4 3.996v4.008A4.001 4.001 0 0180 23H48c-2.21 0-4-1.797-4-3.996v-4.008z"></path><rect height="16" rx="8" width="66" x="62" y="64"></rect><path d="M84.657 82.343l-16-16v11.314l16-16a8 8 0 10-11.314-11.314l-16 16a8 8 0 000 11.314l16 16a8 8 0 1011.314-11.314z"></path></g></svg> copiar a portapapeles</button></div></blockquote><ul><li>(See <a class="tc-tiddlylink-external" href="https://docs.microsoft.com/en-us/iis/extensions/httpplatformhandler/httpplatformhandler-configuration-reference" rel="noopener noreferrer" target="_blank">the documentation</a> for details of the configuration fields for HttpPlatformHandler</li></ul></li><li>Execute the command <code>npm install</code> within the <code>C:/MyStuff</code> directory</li></ol><h1 class="">4. Setup the application in IIS</h1><ul><li>In Windows, run the IIS Manager application (use the start menu to run <code>inetmgr.exe</code>)</li><li>Locate the server in the <strong>Connections</strong> column on the left, and click the disclosure triangle to show its content</li><li>Open the <strong>Sites</strong> folder</li><li>Right click on the <strong>Default Web Site</strong> entry, and select <strong>Add application..</strong> from the menu</li><li>Enter the following information in the dialogue box:<ol><li><strong>Alias</strong>: <code>MyApp</code></li><li><strong>Physical path</strong>: <code>C:\MyStuff</code></li></ol></li><li>Click <strong>OK</strong></li></ul><h1 class="">5. Test the application</h1><p>Test the app by visiting <a class="tc-tiddlylink-external" href="http://localhost/MyApp/" rel="noopener noreferrer" target="_blank">http://localhost/MyApp/</a> in a browser.</p><h1 class="">Notes</h1><ul><li>If you require authentication, specify a username and password in the <code>--listen</code> command in <code>web.config</code>. For example:<ul><li><code>arguments=".\node_modules\tiddlywiki\tiddlywiki.js ./wiki-server --listen username=joe &amp;quot;password=bloggs&amp;quot; port=PORT path-prefix=/MyApp"&gt;</code></li><li>Take note of the need to use double quotes around non-alphanumeric passwords, and to HTML encode them into <code>&amp;quot;</code></li></ul></li><li>If you change the settings in the <code>web.config</code> file, or modify the app code, then you'll need to restart the server using the IIS manager application</li></ul></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>fields: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Widgets" data-tags="Widgets" data-tiddler-title="FieldsWidget" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">FieldsWidget</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 20 février 2015 à 16h12</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="Widgets"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">Widgets</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>The fields widget renders each field of a specified tiddler through a simple text template. A list of fields to exclude can be provided. It is used internally by <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki5.html">TiddlyWiki5</a>, notably by the <a class="tc-tiddlylink tc-tiddlylink-missing" href="FileSavingMechanism.html">FileSavingMechanism</a>.</p><h2 class="">Template Handling</h2><p>The provided template is rendered with the following special substitutions:</p><table><tbody><tr class="evenRow"><th align="left">Symbol</th><th align="left">Substitution</th></tr><tr class="oddRow"><td align="left">$name$</td><td align="left">Field name</td></tr><tr class="evenRow"><td align="left">$value$</td><td align="left">Field value</td></tr><tr class="oddRow"><td align="left">$encoded_value$</td><td align="left">HTML encoded form of field value</td></tr></tbody></table><h1 class="">Content and Attributes</h1><p>The content of the <code>&lt;$fields&gt;</code> widget is ignored.</p><table><tbody><tr class="evenRow"><th align="left">Attribute</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">tiddler</td><td align="left">Title of the tiddler from which the fields are to be displayed (defaults to the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Current%2520Tiddler.html">current tiddler</a>)</td></tr><tr class="evenRow"><td align="left">template</td><td align="left">Text of the template (see above)</td></tr><tr class="oddRow"><td align="left">exclude</td><td align="left">Lists of fields to be excluded (defaults to "text")</td></tr><tr class="evenRow"><td align="left">include</td><td align="left">Lists of fields to be included, if the field exists. This parameter takes precedence over "exclude"</td></tr><tr class="oddRow"><td align="left">sort</td><td align="left">Sorts the fields by name (defaults to "yes"). Set to "no", if "include" order should be retained!</td></tr><tr class="evenRow"><td align="left">sortReverse</td><td>Reverses the sort order</td></tr><tr class="oddRow"><td align="left">stripTitlePrefix</td><td align="left">If set to "yes" then curly bracketed prefixes are removed from titles (for example <code>{prefix}HelloThere</code> converts to <code>HelloThere</code>)</td></tr></tbody></table><p>The <code>stripTitlePrefix</code> attribute is used when building <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki.html">TiddlyWiki</a> Classic; see <code>editions/tw2</code> in the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki5.html">TiddlyWiki5</a> repo.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

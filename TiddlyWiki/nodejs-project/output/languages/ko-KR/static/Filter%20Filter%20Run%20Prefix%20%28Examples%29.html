@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Filter Filter Run Prefix (Examples): 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Filter%20Syntax tc-tagged-Filter%20Run%20Prefix%20Examples tc-tagged-Filter%20Filter%20Run%20Prefix" data-tags="[[Filter Syntax]] [[Filter Run Prefix Examples]] [[Filter Filter Run Prefix]]" data-tiddler-title="Filter Filter Run Prefix (Examples)" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Filter Filter Run Prefix (Examples)
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 2021년 12월 4일 오후 3:48</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Filter Filter Run Prefix
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Filter Run Prefix Examples
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Filter Syntax
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[HelloThere]] :filter[get[text]length[]compare:integer:gteq[1000]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[HelloThere]] :filter[get[text]length[]compare:integer:lteq[2000]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[HelloThere]] :filter[get[text]length[]compare:integer:gteq[1000]] :filter[get[text]length[]compare:integer:lteq[2000]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[Features]] :filter[links[]!is[shadow]is[missing]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>A B C D E F :filter[&lt;index&gt;remainder[2]compare:integer:eq[0]]</code><dd>→ Return every other element of the input list</dd><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[shopping]] :filter[{!!quantity}compare:integer:gt[4]] :map[addprefix[ ]addprefix{!!quantity}]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><p><div class="doc-example"><span class=" tc-reveal"><code>[tag[shopping]] :filter[{!!quantity}compare:integer:lteq[4]] :map[addprefix[ ]addprefix{!!quantity}]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></p><h2 class="">Comparison between <code>:filter</code> and <code>:and</code>/<code>+</code> filter run prefixes</h2><p>The functionality of the <code class="doc-operator">:filter</code> filter run prefix has some overlap with the <code class="doc-operator">:and</code> prefix (alias <code class="doc-operator">+</code>). Notice the filter expressions above all have the following two properties:</p><ol><li>The start of the filter expression transforms the input titles (i.e. <code>get[text]length[]</code>, <code>links[]</code>, <code>&lt;index&gt;remainder[2]</code>, <code>{!!quantity}</code>.</li><li>The end of the filter expression only sends input items to the output if they meet some condition (i.e. <code>compare</code>, <code>is</code>).</li></ol><p>The purpose of the <code class="doc-operator">:filter</code> prefix is to return the original input titles despite property #1 causing those input titles to be transformed. That way, the "meet some condition" check can be performed on something other than the original input. If some filter expression does not require property #1, then the <code class="doc-operator">:and</code> prefix can be used instead.</p><table><tbody><tr class="evenRow"><td align="center"><code class="doc-operator">:filter</code></td><td align="center"><code class="doc-operator">:and</code></td></tr><tr class="oddRow"><td valign="top"><div class="doc-example"><span class=" tc-reveal"><code>[tag[HelloThere]] :filter[get[text]length[]compare:integer:gteq[1000]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></td><td valign="top"><div class="doc-example"><span class=" tc-reveal"><code>[tag[HelloThere]] :and[get[text]length[]compare:integer:gteq[1000]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></td></tr><tr class="evenRow"><td valign="top"><div class="doc-example"><span class=" tc-reveal"><code>[tag[Features]] :filter[links[]!is[shadow]is[missing]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></td><td valign="top"><div class="doc-example"><span class=" tc-reveal"><code>[tag[Features]] :and[links[]!is[shadow]is[missing]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></td></tr><tr class="oddRow"><th colspan="2">results are the same</th></tr><tr class="evenRow"><td valign="top"><div class="doc-example"><span class=" tc-reveal"><code>cat can bat bug :filter[suffix[at]minlength[3]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></td><td valign="top"><div class="doc-example"><span class=" tc-reveal"><code>cat can bat bug :and[suffix[at]minlength[3]]</code><dl><dd><button class="">Try it</button></dd></dl></span><span class=" tc-reveal" hidden="true"></span></div></td></tr></tbody></table></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

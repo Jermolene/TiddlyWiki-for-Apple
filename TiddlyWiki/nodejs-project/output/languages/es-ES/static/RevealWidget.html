@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>reveal: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Widgets" data-tags="Widgets" data-tiddler-title="RevealWidget" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+RevealWidget
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 21 noviembre 2020 a las 10:09</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Widgets
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>The reveal widget hides or shows its content depending upon the value of a <a class="tc-tiddlylink tc-tiddlylink-missing" href="StateTiddlers.html">state tiddler</a>. The type of the widget determines the condition for the content being displayed:</p><ul><li>type=<strong>match</strong>: the content is displayed if the state tiddler matches the text attribute value</li><li>type=<strong>nomatch</strong>: the content is displayed if the state tiddler doesn't match the text attribute value</li><li>type=<strong>popup</strong>: the content is displayed as a popup as described in the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="PopupMechanism.html">PopupMechanism</a></li><li>type=<strong>lt</strong>: the content is displayed if the state tiddler contains an integer with a value <strong>less than</strong> the text attribute value</li><li>type=<strong>gt</strong>: the content is displayed if the state tiddler contains an integer with a value <strong>greater than</strong> the text attribute value</li><li>type=<strong>lteq</strong>: the content is displayed if the state tiddler contains an integer with a value <strong>less than or equal to</strong> the text attribute value</li><li>type=<strong>gteq</strong>: the content is displayed if the state tiddler contains an integer with a value <strong>greater than or equal to</strong> the text attribute value</li></ul><h1 class="">Content and Attributes</h1><p>The content of the <code>&lt;$reveal&gt;</code> widget is displayed according to the rules given above.</p><table><tbody><tr class="evenRow"><th align="left">Attribute</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">state</td><td align="left">A <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TextReference.html">TextReference</a> containing the state</td></tr><tr class="evenRow"><td align="left">stateTitle</td><td align="left">A title containing the state, <strong>without</strong> <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TextReference.html">TextReference</a>. Gets preferred over the <code class="doc-attr">state</code> attribute</td></tr><tr class="oddRow"><td align="left">stateField</td><td align="left">A <strong>field name</strong> which is used to look for the state, if the attribute <code class="doc-attr">stateTitle</code> is present</td></tr><tr class="evenRow"><td align="left">stateIndex</td><td align="left">An <strong>index</strong> which is used to look for the state, if the attribute <code class="doc-attr">stateTitle</code> is present</td></tr><tr class="oddRow"><td align="left">tag</td><td align="left">Overrides the default HTML element tag (<code>&lt;div&gt;</code> in block mode or <code>&lt;span&gt;</code> in inline mode)</td></tr><tr class="evenRow"><td align="left">type</td><td align="left">The type of matching performed: <strong>match</strong>, <strong>nomatch</strong>, <strong>popup</strong>, <strong>lt</strong>, <strong>gt</strong>, <strong>lteq</strong> or <strong>gteq</strong></td></tr><tr class="oddRow"><td align="left">text</td><td align="left">The text to match when the type is <strong>match</strong>, <strong>nomatch</strong>, <strong>lt</strong>, <strong>gt</strong>, <strong>lteq</strong> or <strong>gteq</strong></td></tr><tr class="evenRow"><td align="left">class</td><td>An optional CSS class name to be assigned to the HTML element<br>» Set to <code>tc-popup-keep</code> to make a popup "sticky", so it won't close when you click inside of it</td></tr><tr class="oddRow"><td align="left">style</td><td align="left">An optional CSS style attribute to be assigned to the HTML element</td></tr><tr class="evenRow"><td align="left">position</td><td align="left">The position used for the popup when the type is <strong>popup</strong>. Can be <strong>left</strong>, <strong>above</strong>, <strong>aboveleft</strong>, <strong>aboveright</strong>, <strong>right</strong>, <strong>belowleft</strong>, <strong>belowright</strong> or <strong>below</strong></td></tr><tr class="oddRow"><td align="left">positionAllowNegative</td><td align="left">Set to "yes" to prevent computed popup positions from being clamped to be above zero</td></tr><tr class="evenRow"><td align="left">default</td><td align="left">Default value to use when the state tiddler is missing</td></tr><tr class="oddRow"><td align="left">animate</td><td align="left">Set to "yes" to animate opening and closure (defaults to "no"; requires "retain" to be set to "yes")</td></tr><tr class="evenRow"><td align="left">retain</td><td align="left">Set to "yes" to force the content to be retained even when hidden (defaults to "no")</td></tr><tr class="oddRow"><td>updatePopupPosition</td><td><a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.1.23.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.1.23</a>Set to "yes" to update the popup position when the state tiddler is updated (defaults to "no")</td></tr></tbody></table><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-tip tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z" fill-rule="evenodd"></path></svg></div> <a class="tc-tiddlylink tc-tiddlylink-resolves doc-from-version" href="Release%25205.1.18.html"><svg class="tc-image-warning tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M57.072 11c3.079-5.333 10.777-5.333 13.856 0l55.426 96c3.079 5.333-.77 12-6.928 12H8.574c-6.158 0-10.007-6.667-6.928-12l55.426-96zM64 37c-4.418 0-8 3.582-8 7.994v28.012C56 77.421 59.59 81 64 81c4.418 0 8-3.582 8-7.994V44.994C72 40.579 68.41 37 64 37zm0 67a8 8 0 100-16 8 8 0 000 16z" fill-rule="evenodd"></path></svg> New in: 5.1.18</a> <code class="doc-attr">stateTitle</code>, <code class="doc-attr">stateField</code> and <code class="doc-attr">stateIndex</code> attributes allow specifying Tiddler states <strong>directly</strong>, without interpreting them as <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TextReference.html">TextReferences</a>.
+This is useful for edge-cases where titles may contain characters that are used to denote Tiddler fields or indices (<code>!!</code>, <code>##</code>)</div></p><p><div class="doc-icon-block"><div class="doc-block-icon"><svg class="tc-image-tip tc-image-button" height="22pt" viewBox="0 0 128 128" width="22pt"><path d="M64 128.242c35.346 0 64-28.654 64-64 0-35.346-28.654-64-64-64-35.346 0-64 28.654-64 64 0 35.346 28.654 64 64 64zm11.936-36.789c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349C54.33 94.05 58.824 95.82 64 95.82c5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.456c-.624 4.129-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zm0 4.492c-.624 4.13-5.73 7.349-11.936 7.349-6.206 0-11.312-3.22-11.936-7.349 2.266 2.597 6.76 4.366 11.936 4.366 5.175 0 9.67-1.769 11.936-4.366zM64.3 24.242c11.618 0 23.699 7.82 23.699 24.2S75.92 71.754 75.92 83.576c0 5.873-5.868 9.26-11.92 9.26s-12.027-3.006-12.027-9.26C51.973 71.147 40 65.47 40 48.442s12.683-24.2 24.301-24.2z" fill-rule="evenodd"></path></svg></div> Retaining the content when hidden can give poor performance since the hidden content requires refresh processing even though it is not displayed. On the other hand, the content can be revealed much more quickly. Note that setting <strong>animate="yes"</strong> will also require <strong>retain="yes"</strong></div></p><h1 class="">Examples</h1><h2 class="">Simple content reveal</h2><p>Here's a simple example of showing and hiding content with buttons:</p><div class="doc-example"><pre><code>&lt;$button set="$:/state/SampleReveal1" setTo="show"&gt;Show me&lt;/$button&gt;
+&lt;$button set="$:/state/SampleReveal1" setTo="hide"&gt;Hide me&lt;/$button&gt;
+
+&lt;$reveal type="match" state="$:/state/SampleReveal1" text="show"&gt;
+
+! This is the revealed content
+And this is some text
+
+&lt;/$reveal&gt;</code></pre><p>Este es su aspecto:</p><p><button class="">Show me</button>
+<button class="">Hide me</button></p><div class=" tc-reveal" hidden="true"></div></div><h2 class="">Accordion or Slider</h2><p>An "accordion" or "slider" is a button that can be used to toggle the display of associated content.</p><div class="doc-example"><pre><code>&lt;$reveal type="nomatch" state="$:/state/SampleReveal2" text="show"&gt;
+
+&lt;$button set="$:/state/SampleReveal2" setTo="show"&gt;Show me&lt;/$button&gt;
+
+&lt;/$reveal&gt;
+&lt;$reveal type="match" state="$:/state/SampleReveal2" text="show"&gt;
+
+&lt;$button set="$:/state/SampleReveal2" setTo="hide"&gt;Hide me&lt;/$button&gt;
+
+! This is the revealed content
+And this is some text
+
+&lt;/$reveal&gt;</code></pre><p>Este es su aspecto:</p><div class=" tc-reveal"><p><button class="">Show me</button></p></div><div class=" tc-reveal" hidden="true"></div></div><h2 class="">Popup</h2><p>Here is a simple example of a popup built with the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="RevealWidget.html">RevealWidget</a>:</p><div class="doc-example"><pre><code>&lt;$button popup="$:/SamplePopupState"&gt;Pop me up!&lt;/$button&gt;
+
+&lt;$reveal type="popup" state="$:/SamplePopupState"&gt;
+&lt;div class="tc-drop-down"&gt;
+
+! This is the popup
+And this is some text
+
+&lt;/div&gt;
+&lt;/$reveal&gt;</code></pre><p>Este es su aspecto:</p><p><button aria-expanded="false" class="">Pop me up!</button></p><p><span class=" tc-reveal" hidden="true"></span>
+</p></div><h2 class="">How to use text references with field content</h2><p>Here is a simple example how to use text references with field content to control the  <a class="tc-tiddlylink tc-tiddlylink-resolves" href="RevealWidget.html">RevealWidget</a>. If the field <code>jeremy</code> is populated with text <code>tiddlywiki</code>, a message will be displayed.</p><div class="doc-example"><pre><code>&lt;$reveal type="match" state="!!jeremy" text="tiddlywiki"&gt;
+~TiddlyWiki!
+&lt;/$reveal&gt;</code></pre><p>Este es su aspecto:</p><p><span class=" tc-reveal">
+TiddlyWiki!
+</span>
+</p></div></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

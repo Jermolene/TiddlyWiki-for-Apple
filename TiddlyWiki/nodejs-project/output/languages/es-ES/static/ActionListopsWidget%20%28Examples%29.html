@@ -1,0 +1,178 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>ActionListopsWidget (Examples): TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-ActionListopsWidget" data-tags="ActionListopsWidget" data-tiddler-title="ActionListopsWidget (Examples)" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+ActionListopsWidget (Examples)
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 5 agosto 2023 a las 11:36</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ ActionListopsWidget
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>In this example we shall populate and then clear a list in an ordinary field (myfield) of this tiddler (the default).</p><div class="doc-example"><pre><code>&lt;$button&gt;
+&lt;$action-listops $field="myfield" $filter="efg hlm pqr"/&gt;
+Populate 'myfield'
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $field="myfield" $subfilter="abc xyz"/&gt;
+Append More Items
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $field="myfield" $subfilter="-abc -hlm"/&gt;
+Remove Items
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $field="myfield" $filter="[[]]"/&gt;
+Clear 'myfield'
+&lt;/$button&gt;
+
+&lt;$list filter="[list[!!myfield]]"&gt;
+
+&lt;/$list&gt;</code></pre><p>Este es su aspecto:</p><p><button class="">
+
+Populate 'myfield'
+</button>
+<button class="">
+
+Append More Items
+</button>
+<button class="">
+
+Remove Items
+</button>
+<button class="">
+
+Clear 'myfield'
+</button></p></div><hr><p>In this example we shall append and remove items from a list in an ordinary field (myfield) of this tiddler (the default) and sort the resultant list. We shall then remove some of the appended items and sort the resulting list in reverse order.</p><div class="doc-example"><pre><code>&lt;$button&gt;
+&lt;$action-listops $field="myfield" $subfilter="-efg ijk xyz [[this is a title]] +[sort[]]"/&gt;
+Mangle List
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $field="myfield" $subfilter="-xyz -[[this is a title]] +[!sort[]]"/&gt;
+Unmangle List
+&lt;/$button&gt;
+
+&lt;$list filter="[list[!!myfield]]"&gt;
+
+&lt;/$list&gt;</code></pre><p>Este es su aspecto:</p><p><button class="">
+
+Mangle List
+</button>
+<button class="">
+
+Unmangle List
+</button></p></div><hr><p>The following example toggles the tag <code class="doc-value">Examples</code> for the current tiddler.</p><div class="doc-example"><pre><code>&lt;$button&gt;
+&lt;$action-listops $tags="+[toggle[Examples]]"/&gt;
+Toggle 'Examples' tag
+&lt;/$button&gt;
+</code></pre><p>Este es su aspecto:</p><p><button class="">
+
+Toggle 'Examples' tag
+</button></p></div><hr><p>In this example we shall append a few tags to the 'tags' field of this tiddler (the default). We shall then remove some of the appended tags. </p><div class="doc-example"><pre><code>&lt;$button&gt;
+&lt;$action-listops $tags="+[append{Days of the Week!!short}] $:/tag1 $:/tag2 $:/tag3"/&gt;
+Populate 'tags'
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $tags="+[!remove:2{!!tags}]"/&gt;
+Remove Last Two Tags
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $tags="+[!prefix[$:/]]"/&gt;
+Remove System Tags
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $tags="-Mon -Tue"/&gt;
+Remove Mon and Tue
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $tags="+[prefix[$:/]] ActionWidgets Widgets"/&gt;
+Remove User Tags
+&lt;/$button&gt;
+&lt;$button&gt;
+&lt;$action-listops $tags="+[[]] ActionWidgets Widgets"/&gt;
+Clear Tags
+&lt;/$button&gt;
+
+&lt;$list filter="[list[!!tags]]"&gt;
+
+&lt;/$list&gt;</code></pre><p>Este es su aspecto:</p><p><button class="">
+
+Populate 'tags'
+</button>
+<button class="">
+
+Remove Last Two Tags
+</button>
+<button class="">
+
+Remove System Tags
+</button>
+<button class="">
+
+Remove Mon and Tue
+</button>
+<button class="">
+
+Remove User Tags
+</button>
+<button class="">
+
+Clear Tags
+</button></p><div><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ActionListopsWidget.html">ActionListopsWidget</a></div></div></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

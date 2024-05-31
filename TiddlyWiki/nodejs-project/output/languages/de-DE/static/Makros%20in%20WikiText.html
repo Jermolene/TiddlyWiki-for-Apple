@@ -1,0 +1,38 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Makros: Mein TiddlyWiki — ein persönliches nicht-lineares Web-Notizbuch
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">Diese Seite ist Teil der "reinen" HTML Version von TiddlyWiki auf <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/de-DE" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/de-DE</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-WikiText" data-tags="WikiText" data-tiddler-title="Makros in WikiText" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="mehr" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Weitere Aktionen"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="Bearbeiten" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Bearbeite diesen Tiddler"></button><button aria-label="Schließen" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Schließe diesen Tiddler"></button></span><span><h2 class="tc-title">Makros in WikiText</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-resolves" href="ChrisK.html">ChrisK</a> 7. März 2023 um 08:01</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="WikiText"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">WikiText</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div><div class="tc-tiddler-body tc-reveal"><h2 class="">Makros definieren</h2><h3 class="">Für die Ungeduldigen</h3><p>Makros sind Text Bausteine, die an beliebiger Stelle aufgerufen / eingefügt werden können. Eine Makro Definition kann zum Beispiel so aussehen und <strong>muss</strong> am Anfang eines Tiddlers eingefügt werden:</p><pre><code>\define meinErstesMakro(name:"Bugs Bunny",adresse:"Rabbit Hole Hill")
+Hallo, Ich bin $name$ und lebe in $adresse$
+\end</code></pre><p>Der Aufruf erfolgt mit:</p><pre><code>Es erzeugt folgenden Text: ''&lt;&lt;meinErstesMakro&gt;&gt;''</code></pre><p>Es erzeugt folgenden Text: <strong>Hallo, Ich bin Bugs Bunny und lebe in Rabbit Hole Hill</strong></p><hr><h3 class="">Was genau passiert hier?</h3><p>Die erste Zeile der Definition startet mit: <code>\define</code> und enthält:</p><ul><li>Den Makro Namen: <code>meinErstesMakro</code></li><li>Die Parameter Namen: <code>name</code> und <code>adresse</code></li><li>Die Standard Werte: <code>Bugs Bunny</code> und <code>Rabbit Hole Hill</code></li></ul><p>Parameter sollten immer sinnvolle Standard Werte haben, da es die Verwendung erleichtert. </p><p>Die letzte Zeile des Makros ist <code>\end</code> und markiert das Ende eines Makros :)</p><p>Der Bereich zwischen <code>\define</code> und <code>\end</code> wird als Makro Code bezeichnet. In diesem Bereich können die Makro Parameter mit <code>$name$</code> bzw <code>$adresse$</code> als Platzhalter verwendet werden. </p><p>Wie im Beispiel ersichtlich: <code>Hallo, Ich bin $name$ und lebe in $adresse$</code></p><hr><h3 class="">Einzeilige Makros</h3><p>Für einzeilige Makros kann die <code>\end</code> Markierung entfallen!</p><pre><code>\define meinZweitesMakro(name:"Bugs Bunny") Hallo, Ich bin $name$</code></pre><h3 class="">Makro Regeln</h3><ul><li>Makro Definitionen müssen am Anfang des Tiddlers eingefügt werden.</li><li>Makros sind nur in dem Tiddler sichtbar der sie definiert.</li><li>Tiddler die mit Transklusion eingefügt werden können definierte Makros sehen, jedoch nicht selber mitbringen!</li></ul><h3 class="">Globale Makros</h3><ul><li>Globale Makros können in Tiddlern definiert werden, die mit dem System Tag: <a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Ftags%252FMacro.html">$:/tags/Macro</a> getaggt sind. Diese Makros sind in jedem Tiddler sichtbar.</li><li><a class="tc-tiddlylink tc-tiddlylink-missing" href="JavaScript%2520Macros.html">JavaScript Macros</a> sind global sichtbar und haben Zugriff auf die TW Kern Funktionen. </li><li>Makros können mit dem ImportVariablesWidget importiert werden. (Für geübte Anwender)</li></ul><h2 class="">Makros verwenden</h2><pre><code>&lt;&lt;meinErstesMakro&gt;&gt;
+&lt;&lt;meinErstesMakro "Donald Duck"&gt;&gt;
+&lt;&lt;meinErstesMakro "Mickey Mouse" "Mouse House"&gt;&gt;</code></pre><p>Dargestellt als:</p><blockquote class="tc-quote"><p>Hallo, Ich bin Bugs Bunny und lebe in Rabbit Hole Hill</p><p>Hallo, Ich bin Donald Duck und lebe in Rabbit Hole Hill</p><p>Hallo, Ich bin Mickey Mouse und lebe in Mouse House</p></blockquote><p>Wie wir sehen können, werden die Parameter in der Reihenfolge übernommen, in der sie definiert wurden: <code>name</code>, <code>adresse</code>. Da Makros jedoch viele Parameter haben können und es passieren kann, dass wir nur den Zweiten ändern möchten können Parameter auch benannt übergeben werden.</p><pre><code>&lt;&lt;meinZweitesMakro adresse:"Dufftown"&gt;&gt;</code></pre><p>Hallo, Ich bin Mario und würde gerne mal wieder nach Dufftown fahren:)</p><h2 class="">Mehrzeilige Parameter beim Aufruf</h2><p>Makros können mit mehrzeiligen Parametern aufgerufen werden, wenn sie in Anführungsstriche gesetzt werden:</p><pre><code>&lt;&lt;meinErstesMakro "Mickey Mouse" "Mouse House,
+Mouse Lane,
+Rodentville,
+Ratland."&gt;&gt;</code></pre><p>Wenn Sie 3 doppelte Anführungszeichen verwenden, dann können die Parameter einfache Anführungszeichen enthalten:</p><pre><code>&lt;&lt;meinErstesMakro "Mickey Mouse" """Mouse House,
+"Mouse" Lane,
+Rodentville,
+Ratland."""&gt;&gt;</code></pre></div>
+</div></p>
+</section>
+</body>
+</html>
+

@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Modificación del diseño de tiddlers y página: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Customise%20TiddlyWiki" data-tags="[[Customise TiddlyWiki]]" data-tiddler-title="Page and tiddler layout customisation" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+Modificación del diseño de tiddlers y de la página
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 28 abril 2016 a las 7:25</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Cómo modificar TiddlyWiki
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p>Algo que muchos usuarios desconocen es hasta qué punto pueden customizar TIddlyWiki simplemente añadiendo o quitando etiquetas de sistema de tiddlers ocultos clave o de sus propios tiddlers.</p><ul><li>Puedes añadir o quitar funciones por defecto en tiddlers, tanto en modo de visionado como en modo de edición (digamos que encuentras que el subtítulo de tiddler distrae o que quieres añadir un recordatorio para cuando se editen tiddlers)</li><li>También puedes añadir o quitar funciones por defecto en el diseño general de la página (quizá necesites un reloj en la barra lateral, o sustituir uno de los botones de control por otro que hayas hecho tú)</li><li>O puedes reorganizar el orden en que se muestran (quizá prefieres mostrar las etiquetas por encima del título, o que el subtítulo de la página aparezca por debajo de los botones)</li></ul><p>Una vez sepas qué es lo que quieres hacer, te parecerá que todas estas cosas son bastante fáciles.</p><h1 class="">Añadir tiddlers a medida a la interfaz de usuario</h1><p>Puedes crear el tiddler que quieras y asignarle la etiqueta de sistema apropiada para que aparezca en tal o cual sitio. Por ejemplo, si creas un tiddler llamado "Recordatorio" con el texto "Esto es un recordatorio" y la etiqueta <em class="doc-em">$:/tags/EditTemplate</em>, las palabras "Esto es un recordatorio" aparecerán en todos los tiddlers que abras para edición.</p><p>Al crear tiddlers para que se muestren dentro de otros tiddlers o para que formen parte del diseño de página, necesitarás con toda probabilidad reorganizar el diseño para que tus tiddlers se muestren exactamente donde quieres que aparezcan. Para hacerlo, edita el tiddler oculto apropiado con el prefijo <em class="doc-em">$:/tags</em> e incluye el título de tu tiddler en el lugar adecuado del campo <code class="doc-field">list</code>. Por ejemplo, si quieres que la frase "Esto es un recordatorio" del ejemplo anterior aparezca por encima del editor de etiquetas en modo de edición, edita el tiddler <code class="doc-tiddler">$:/tags/EditTemplate</code> e inserta <code>[[Recordatorio]]</code> en el campo <code class="doc-field">list</code>, justo antes de <code class="doc-tiddler">$:/core/ui/EditTemplate/tags</code></p><h1 class="">Crear nuevos botones en la barra de tiddler y los controles de página</h1><p>Digamos que tienes un tiddler llamado <code class="doc-tiddler">Plantilla Recetas</code> y quieres un botón que cree nuevas recetas a partir de él. Para hacerlo tendrás que hacer lo siguiente:</p><ol><li>Primero, necesitarás una imagen para el botón. Si ninguna de las imágenes del sistema (tiddlers ocultos con el prefijo y la etiqueta <code class="doc-tag">$:/core/images</code>), necesitarás crear o buscar una imagen SVG para ello (por ejemplo una de <a class="tc-tiddlylink-external" href="http://flaticon.com" rel="noopener noreferrer" target="_blank">http://flaticon.com</a>).<ul><li>En cualquier caso, arrástrala a tu página para <a class="tc-tiddlylink tc-tiddlylink-resolves" href="ImportTiddlers.html">importarla</a>, edita convenientemente el tiddler y ajusta sus dimensiones a 22px x 22px</li></ul></li><li>Necesitarás crear un tiddler que contenga el botón.  Créalo, dale título y añade el código para habilitar el botón:<ul><li><code>\define newHereButtonTags()
+[[$(currentTiddler)$]]
+\end
+\define newHereButton()
+&lt;$button class=&lt;&lt;tv-config-toolbar-class&gt;&gt;&gt;
+&lt;$action-sendmessage
+  $message="tm-new-tiddler"
+$param="TÍTULO DE LA PLANTILLA QUE QUIERES QUE ABRA"
+title="New tiddler"
+  tags=&lt;&lt;newHereButtonTags&gt;&gt; /&gt;
+&lt;$list filter="[&lt;tv-config-toolbar-icons&gt;match[yes]]"&gt;
+{{NOMBRE DE LA IMAGEN DEL BOTÓN}}
+&lt;/$list&gt;
+&lt;$list filter="[&lt;tv-config-toolbar-text&gt;match[yes]]"&gt;
+&lt;span class="tc-btn-text"&gt;&lt;$text text="NOMBRE DEL BOTÓN PARA MOSTRAR EN PANTALLA"/&gt;&lt;/span&gt;
+&lt;/$list&gt;
+&lt;/$button&gt;
+\end
+
+&lt;&lt;newHereButton&gt;&gt;
+</code></li><li>Asígnale la etiqueta <code class="doc-tag">$:/tags/ViewToolbar]]</code></li></ul></li><li>Hay que crear un tiddler que le diga a TiddlyWIki si el botón será o no visible en la barra. Llamémosle por ejemplo &lt;&lt;.tid "$:/config/ViewToolbarButtons/Visibility/Receta""&gt;&gt;. Escribe <code>show</code> en el cuerpo y guárdalo.</li><li>Habrá que posicionar el botón adecuadamente. Abre el tiddler <code class="doc-tiddler">$:/tags/ViewToolbar</code> e inserta el nombre de tu botón en el lugar adecuado del campo <code class="doc-field">list</code>.</li></ol><h1 class="">Eliminar tiddlers ocultos de la interfaz de usuario</h1><p>En la subpestaña <span class="doc-tab">Ocultos</span> de la pestaña <span class="doc-tab">Más</span> en la barra lateral, verás la lista de todos los tiddlers ocultos. En ella verás algunos con el prefijo <code class="doc-place">$:/core/ui/</code>. Estos son los que definen la interfaz de usuario y llevan <a class="tc-tiddlylink tc-tiddlylink-resolves" href="SystemTags.html">etiquetas de sistema</a>. Añadir o eliminar estas etiquetas modifica el diseño, tanto de los tiddlers, como de la página entera.</p><p>Por ejemplo: <code class="doc-tiddler">$:/core/ui/SideBar/More</code> es el tiddler que define la pestaña <span class="doc-tab">Más</span>. Si le quitas la etiqueta, quitarás dicha pestaña de la barra lateral y si se la vuelves a asignar, volverás a mostrarla.</p><p>Puedes aplicar el mismo procedimiento para cualquier tiddler de la interfaz que lleve el prefijo <code class="doc-tiddler">$:/core/ui/</code>. Por ejemplo, quitar la etiqueta de sistema al tiddler <code class="doc-tiddler">$:/core/ui/ViewTemplate/subtitle</code> eliminará el subtítulo de todos los tiddlers.</p><p>Si modificas un tiddler oculto de esta manera, sobreescribirás el valor predefinido. Para revertirlo a su origen, simplemente borra el tiddler modificado para restaurar el tiddler oculto.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

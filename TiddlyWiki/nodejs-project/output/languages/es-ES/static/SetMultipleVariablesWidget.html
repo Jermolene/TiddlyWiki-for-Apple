@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>setmultiplevariables: TiddlyWiki — Cuaderno de notas personal no-lineal en la web</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Widgets" data-tags="Widgets" data-tiddler-title="SetMultipleVariablesWidget" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="Más" class="tc-btn-invisible" title="Otras acciones"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Editar" class="tc-btn-invisible" title="Permite editar este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="Cerrar" class="tc-btn-invisible" title="Cierra este tiddler"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+SetMultipleVariablesWidget
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 23 octubre 2021 a las 17:24</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:;
+fill:#333333;
+color:#333333;">
+ Widgets
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><h1 class="">Introduction</h1><p>The setmultiplevariables widget assigns values to multiple <a class="tc-tiddlylink tc-tiddlylink-resolves" href="Variables.html">variables</a> where the names and values of the variables are specified as separate filter.</p><h1 class="">Content and Attributes</h1><p>The content of the <code>&lt;$setmultiplevariables&gt;</code> widget is the scope for the value assigned to the variable.</p><table><tbody><tr class="evenRow"><th align="left">Attribute</th><th align="left">Description</th></tr><tr class="oddRow"><td align="left">$names</td><td align="left">Filter evaluating to the names of a list of variables to assign</td></tr><tr class="evenRow"><td align="left">$values</td><td align="left">Filter evaluating to the values corresponding to the list of names specified in <code>$names</code></td></tr></tbody></table><h1 class="">Examples</h1><p>Here is an example of a convoluted way to display the values of the fields of the tiddler "<a class="tc-tiddlylink tc-tiddlylink-resolves" href="HelloThere.html">HelloThere</a>":</p><div class="doc-example"><pre><code>&lt;$setmultiplevariables $names="[[HelloThere]fields[]addprefix[demo-]]" $values="[[HelloThere]fields[]] :map[[HelloThere]get&lt;currentTiddler&gt;]"&gt;
+&lt;ol&gt;
+&lt;$list filter="[variables[]prefix[demo-]sort[]]"&gt;
+&lt;li&gt;
+''&lt;$text text={{{ [&lt;currentTiddler&gt;removeprefix[demo-]] }}}/&gt;'': &lt;$text text={{{ [&lt;currentTiddler&gt;getvariable[]] }}}/&gt;
+&lt;/li&gt;
+&lt;/$list&gt;
+&lt;/ol&gt;
+&lt;/$setmultiplevariables&gt;</code></pre><p>Este es su aspecto:</p><p>
+<ol>
+
+<li>
+<strong>caption</strong>: ¡Hola!
+</li>
+
+<li>
+<strong>created</strong>: 20130822170200000
+</li>
+
+<li>
+<strong>es-title</strong>: ¡Hola! ¿Qué tal?
+</li>
+
+<li>
+<strong>list</strong>: [[A Gentle Guide to TiddlyWiki]] [[Discover TiddlyWiki]] [[Some of the things you can do with TiddlyWiki]] [[Ten reasons to switch to TiddlyWiki]] Examples [[What happened to the original TiddlyWiki?]]
+</li>
+
+<li>
+<strong>modified</strong>: 20160605052349288
+</li>
+
+<li>
+<strong>tags</strong>: TableOfContents
+</li>
+
+<li>
+<strong>text</strong>: ''¿Nunca has tenido la sensación de que no te cabe en la cabeza todo lo que tienes que recordar?''
+
+BIenvenido a TiddlyWiki, un bloc de notas [[no lineal|Philosophy of Tiddlers]] único para [[capturar|Creating and editing tiddlers]], [[organizar|Structuring TiddlyWiki]] y [[compartir|Sharing your tiddlers with others]] información compleja.
+
+Úsalo para mantener tu [[lista de tareas|TaskManagementExample]], para desarrollar un [[ensayo o novela|"TiddlyWiki for Scholars" by Alberto Molina]], o incluso para organizar tu boda. Toma nota de todo cuanto te pase por la cabeza o construye una web flexible y ágil, que satisfaga tus necesidades.
+
+&lt;div style="font-size:0.7em;text-align:center;margin-top:2em;margin-bottom:2em;"&gt;
+&lt;&lt;list-thumbnails filter:"[tag[HelloThumbnail]]" width:"168" height:"95"&gt;&gt;
+&lt;/div&gt;
+
+Al revés que los servicios online convencionales, TiddlyWiki te deja escoger dónde quieres guardar tus datos, garantizándote que, por más que pase el tiempo, podrás seguir usando en el futuro las notas que tomes hoy.
+
+&lt;div style="font-size:0.7em;text-align:center;margin-top:3em;margin-bottom:3em;"&gt;
+&lt;a href="http://groups.google.com/group/TiddlyWiki" class="tc-btn-big-green" style="background-color:#FF8C19;" target="_blank" rel="noopener noreferrer"&gt;
+{{$:/core/images/mail}} ~TiddlyWiki en Google Groups
+&lt;/a&gt;
+&lt;a href="https://www.youtube.com/c/JeremyRuston" class="tc-btn-big-green" style="background-color:#e52d27;" target="_blank" rel="noopener noreferrer"&gt;
+{{$:/core/images/video}} ~TiddlyWiki en ~YouTube
+&lt;/a&gt;
+&lt;a href="https://twitter.com/TiddlyWiki" class="tc-btn-big-green" style="background-color:#5E9FCA;" target="_blank" rel="noopener noreferrer"&gt;
+{{$:/core/images/twitter}} @~TiddlyWiki en Twitter
+&lt;/a&gt;
+&lt;a href="https://github.com/Jermolene/TiddlyWiki5" class="tc-btn-big-green" style="background-color:#444;" target="_blank" rel="noopener noreferrer"&gt;
+{{$:/core/images/github}} ~TiddlyWiki en ~GitHub
+&lt;/a&gt;
+&lt;/div&gt;
+
+</li>
+
+<li>
+<strong>title</strong>: HelloThere
+</li>
+
+<li>
+<strong>type</strong>: text/vnd.tiddlywiki
+</li>
+
+</ol>
+
+</p></div></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

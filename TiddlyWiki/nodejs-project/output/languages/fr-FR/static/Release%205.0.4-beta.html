@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>5.0.4-beta: TiddlyWiki — un carnet de notes web personnel et non linéaire
+</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">This page is part of a static HTML representation of the TiddlyWiki at <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/</a></div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-BetaReleaseNotes" data-tags="BetaReleaseNotes" data-tiddler-title="Release 5.0.4-beta" role="article"><div class="tc-tiddler-title"><div class="tc-titlebar"><span class="tc-tiddler-controls"><button aria-expanded="false" aria-label="plus" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fmore-tiddler-actions" title="Actions supplémentaires"></button><div class=" tc-reveal" hidden="true"></div><button aria-label="éditer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fedit" title="Édite ce tiddler"></button><button aria-label="fermer" class="tc-btn-invisible tc-btn-%24%3A%2Fcore%2Fui%2FButtons%2Fclose" title="Ferme ce tiddler"></button></span><span><h2 class="tc-title">Release 5.0.4-beta</h2></span></div><div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div></div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> 21 décembre 2013 à 20h55</div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item" data-tag-title="BetaReleaseNotes"><span aria-expanded="false" class="tc-tag-label tc-btn-invisible" draggable="true" style="background-color:;
+fill:#333333;
+color:#333333;">BetaReleaseNotes</span><span class="tc-drop-down tc-reveal" hidden="true"></span></span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p><em><a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/compare/v5.0.3-beta...v5.0.4-beta" rel="noopener noreferrer" target="_blank">See GitHub for detailed change history of this release</a></em></p><h2 class="">Improvements</h2><ul><li>Switched to using an HTML5 placeholder for the default text of a new tiddler</li><li>Refactored stylesheet handling so that theme tweaks are now applied immediately, and some ordering issues have been resolved</li><li>Several improvements for running <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWiki%2520on%2520Node.js.html">TiddlyWiki on Node.js</a>:<ul><li>The <code>tiddlywiki.info</code> file in the root of <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWikiFolders.html">wiki folder</a> file is now optional, falling back to a default configuration suitable for serverside use (<a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/0ec2224757dd07f009246ec9ea97cd859d077e72" rel="noopener noreferrer" target="_blank">commit</a>)</li><li>The file system plugin now automatically creates the <code>tiddlers</code> subfolder in the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="TiddlyWikiFolders.html">wiki folder</a></li></ul></li><li>Added <a class="tc-tiddlylink tc-tiddlylink-missing" href="Using%2520favicons.html">favicon.ico support</a></li><li>Added <a class="tc-tiddlylink tc-tiddlylink-resolves" href="SaveTiddlerCommand.html">SaveTiddlerCommand</a></li></ul><h2 class="">Bug Fixes</h2><ul><li>Fixed problem with tiddlers sometimes wrongly opening at the top of the story (<a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/b50eb8da302431cdfa7c37ac9ef1414a33d00292" rel="noopener noreferrer" target="_blank">commit</a>)</li><li>Fixed problem with refreshing <a class="tc-tiddlylink tc-tiddlylink-resolves" href="RadioWidget.html">RadioWidget</a></li><li>Fixed problem with the dragger image being visible in some circumstances</li><li>Fixed drag and drop support on <a class="tc-tiddlylink tc-tiddlylink-missing" href="InternetExplorer.html">InternetExplorer</a>, contributed by <a class="tc-tiddlylink tc-tiddlylink-missing" href="DavidJade.html">DavidJade</a> (@davidjade on <a class="tc-tiddlylink tc-tiddlylink-resolves" href="GitHub.html">GitHub</a>)</li><li>Fixed crash on modifying page template (<a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/a5f33d875b1339b08838203a4885f8a3a7d10353" rel="noopener noreferrer" target="_blank">commit</a>)</li><li>Updated fullscreen plugin to latest version of the API (<a class="tc-tiddlylink-external" href="https://github.com/Jermolene/TiddlyWiki5/commit/638c8b207033f8cb01ac9efdca104d282fd4cffe" rel="noopener noreferrer" target="_blank">commit</a>)</li><li>Improved handling of double square brackets within tags (thanks to <a class="tc-tiddlylink tc-tiddlylink-missing" href="StephanHradek.html">StephanHradek</a>)</li></ul><p>This release includes minor bug fixes and documentation updates.
+</p></div>
+
+</div></p>
+</section>
+</body>
+</html>
+

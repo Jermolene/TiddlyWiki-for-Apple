@@ -1,0 +1,76 @@
+<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="generator" content="TiddlyWiki" />
+<meta name="tiddlywiki-version" content="5.3.2-prerelease" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="format-detection" content="telephone=no">
+<link id="faviconLink" rel="shortcut icon" href="favicon.ico">
+<link rel="stylesheet" href="static.css">
+<title>Keyboard Shortcut Descriptor: 티들리위키 — 줄 없는 개인 웹 공책</title>
+</head>
+<body class="tc-body">
+<p><div class="tc-static-alert"><div class="tc-static-alert-inner">이 문서는 <a class="tc-tiddlylink-external" href="https://tiddlywiki.com/languages/ko-KR/" rel="noopener noreferrer" target="_blank">https://tiddlywiki.com/languages/ko-KR/</a>에서 티들리위키의 정적 HTML 표현의 일부입니다</div></div>
+</p>
+<section class="tc-story-river tc-static-story-river">
+<p><div class="tc-tiddler-frame tc-tiddler-view-frame tc-tiddler-exists  tc-tagged-Definitions" data-tags="Definitions" data-tiddler-title="Keyboard Shortcut Descriptor" role="article"><div class="tc-tiddler-title">
+<div class="tc-titlebar">
+<span class="tc-tiddler-controls">
+<span class=" tc-reveal"><button aria-expanded="false" aria-label="더 보기" class="tc-btn-invisible" title="더 많은 동작을 봅니다"></button><div class=" tc-reveal" hidden="true"></div></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="편집" class="tc-btn-invisible" title="이 티들러를 편집합니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal"><button aria-label="닫기" class="tc-btn-invisible" title="이 티들러를 닫습니다"></button></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span><span class=" tc-reveal" hidden="true"></span>
+</span>
+
+<span>
+
+<span class="tc-tiddler-title-icon" style="fill:;">
+
+</span>
+
+
+
+<h2 class="tc-title">
+
+Keyboard Shortcut Descriptor
+
+</h2>
+
+</span>
+
+</div>
+
+<div class="tc-tiddler-info tc-popup-handle tc-reveal" hidden="true"></div>
+</div><div class="tc-reveal"></div><div class=" tc-reveal"><div class="tc-subtitle"><a class="tc-tiddlylink tc-tiddlylink-missing" href=".html"></a> </div></div><div class=" tc-reveal"><div class="tc-tags-wrapper"><span class="tc-tag-list-item">
+
+
+<button aria-expanded="false" class="tc-btn-invisible tc-tag-label" style="background-color:#7bb95d;
+fill:#333333;
+color:#333333;">
+ Definitions
+</button>
+<span class=" tc-reveal" hidden="true"></span>
+
+
+</span></div></div>
+
+
+
+
+
+
+<div class="tc-tiddler-body tc-reveal"><p><code>Keyboard Shortcut Descriptors</code> are used by the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="KeyboardWidget.html">KeyboardWidget</a> and within Tiddlers tagged <span class="tc-tag-list-item" data-tag-title="$:/tags/KeyboardShortcut"><span class="tc-tag-label tc-btn-invisible" style="background-color:;
+fill:#333333;
+color:#333333;">$:/tags/KeyboardShortcut</span></span> to link actions with a keyboard combination</p><p>A <code>Keyboard Shortcut Descriptor</code> has the following format:</p><pre><code>	ctrl+enter
+	ctrl+shift+alt+A
+	alt-shift-T
+	alt-Space</code></pre><p>It can have multiple Key combinations:</p><pre><code>ctrl+enter alt+shift+A ctrl+alt+9 alt-Space ctrl-Backspace</code></pre><p>There are <strong>two ways</strong> Keyboard Shortcut Descriptors can be used:</p><ul><li>directly<ul><li>passing the attribute <code>key="ctrl-enter"</code> to the <a class="tc-tiddlylink tc-tiddlylink-resolves" href="KeyboardWidget.html">KeyboardWidget</a></li><li>setting <code>ctrl-enter</code> as the <strong>value</strong> of the <code>key</code> <strong>field</strong> in a Tiddler tagged <span class="tc-tag-list-item" data-tag-title="$:/tags/KeyboardShortcut"><span class="tc-tag-label tc-btn-invisible" style="background-color:;
+fill:#333333;
+color:#333333;">$:/tags/KeyboardShortcut</span></span></li></ul></li><li>with a <strong>reference</strong> to a configuration Tiddler<ul><li>A <strong>configuration Tiddler</strong> for Keyboard Shortcuts follows some naming rules:<ul><li>The title starts with <code>$:/config/</code></li><li>Followed by either the string <code>shortcuts</code> or one of the following <strong>platform descriptors</strong>:<ul><li><code class="doc-tiddler">shortcuts-linux</code></li><li><code class="doc-tiddler">shortcuts-not-linux</code></li><li><code class="doc-tiddler">shortcuts-mac</code></li><li><code class="doc-tiddler">shortcuts-not-mac</code></li><li><code class="doc-tiddler">shortcuts-windows</code></li><li><code class="doc-tiddler">shortcuts-not-windows</code></li></ul></li><li>The title ends with another <code>/</code> followed by a suffix that can be chosen freely<ul><li>This suffix is the <strong>identifier</strong> for the <code>Keyboard Shortcut Descriptor</code> (A)</li></ul></li></ul></li><li>The <strong>reference</strong> to the configuration Tiddler is made of <code>((</code> + the <strong>identifier</strong> (A) + <code>))</code><ul><li>Example: <code>((my-shortcut))</code> is the <strong>reference</strong> to these configuration Tiddlers:<ul><li><code class="doc-tiddler"><a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fconfig%252Fshortcuts%252Fmy-shortcut.html">$:/config/shortcuts/my-shortcut</a></code></li><li><code class="doc-tiddler"><a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fconfig%252Fshortcuts-linux%252Fmy-shortcut.html">$:/config/shortcuts-linux/my-shortcut</a></code></li><li><code class="doc-tiddler"><a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fconfig%252Fshortcuts-not-linux%252Fmy-shortcut.html">$:/config/shortcuts-not-linux/my-shortcut</a></code></li><li><code class="doc-tiddler"><a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fconfig%252Fshortcuts-mac%252Fmy-shortcut.html">$:/config/shortcuts-mac/my-shortcut</a></code></li><li><code class="doc-tiddler"><a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fconfig%252Fshortcuts-not-mac%252Fmy-shortcut.html">$:/config/shortcuts-not-mac/my-shortcut</a></code></li><li><code class="doc-tiddler"><a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fconfig%252Fshortcuts-windows%252Fmy-shortcut.html">$:/config/shortcuts-windows/my-shortcut</a></code></li><li><code class="doc-tiddler"><a class="tc-tiddlylink tc-tiddlylink-missing" href="%2524%253A%252Fconfig%252Fshortcuts-not-windows%252Fmy-shortcut.html">$:/config/shortcuts-not-windows/my-shortcut</a></code></li></ul></li></ul></li><li>Finally, the referenced configuration Tiddler stores the Keyboard Shortcut Descriptor in its <strong>text</strong> field</li></ul></li></ul></div>
+
+</div></p>
+</section>
+</body>
+</html>
+
