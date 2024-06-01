@@ -57,7 +57,8 @@ struct TiddlyWikiApp: App {
                 srcPath!,
                 documentsURL.path,
                 "--version",
-                "--listen"
+                "--listen",
+                "host=0.0.0.0"
             ])
         }
     }
