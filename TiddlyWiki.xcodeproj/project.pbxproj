@@ -10,6 +10,7 @@
 		1514D5DF2C0A76ED0037D462 /* nodejs-project in Resources */ = {isa = PBXBuildFile; fileRef = 1514D5DE2C0A76ED0037D462 /* nodejs-project */; };
 		1514D5E52C0A78680037D462 /* NodeMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1514D5E42C0A78680037D462 /* NodeMobile.xcframework */; };
 		1514D5E62C0A78680037D462 /* NodeMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1514D5E42C0A78680037D462 /* NodeMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1514D5E82C0B35EB0037D462 /* NodeRunner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1514D5E72C0B35EB0037D462 /* NodeRunner.swift */; };
 		151E517A2BED1CD700FBEAED /* TiddlyWikiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */; };
 		151E517C2BED1CD700FBEAED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E517B2BED1CD700FBEAED /* ContentView.swift */; };
 		151E517E2BED1CD700FBEAED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 151E517D2BED1CD700FBEAED /* Assets.xcassets */; };
@@ -18,7 +19,6 @@
 		151E51952BED1CD800FBEAED /* TiddlyWikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */; };
 		151E51972BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */; };
 		151E51A62BED205500FBEAED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51A52BED205500FBEAED /* WebView.swift */; };
-		15690D9A2C0A74AA00D18821 /* nodejs_ios.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15690D992C0A74AA00D18821 /* nodejs_ios.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +55,7 @@
 /* Begin PBXFileReference section */
 		1514D5DE2C0A76ED0037D462 /* nodejs-project */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "nodejs-project"; sourceTree = "<group>"; };
 		1514D5E42C0A78680037D462 /* NodeMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NodeMobile.xcframework; path = TiddlyWiki/NodeMobile.xcframework; sourceTree = "<group>"; };
+		1514D5E72C0B35EB0037D462 /* NodeRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeRunner.swift; sourceTree = "<group>"; };
 		151E51762BED1CD700FBEAED /* TiddlyWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiddlyWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiApp.swift; sourceTree = "<group>"; };
 		151E517B2BED1CD700FBEAED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -66,7 +67,6 @@
 		151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITests.swift; sourceTree = "<group>"; };
 		151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		151E51A52BED205500FBEAED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		15690D992C0A74AA00D18821 /* nodejs_ios.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = nodejs_ios.swift; path = "../../../../Library/Developer/Xcode/DerivedData/Example-ghjkgbycctkrkkgpcbybabxmucer/SourcePackages/checkouts/nodejs-ios/Sources/nodejs-ios/nodejs_ios.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,10 +122,10 @@
 				1514D5DE2C0A76ED0037D462 /* nodejs-project */,
 				151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */,
 				151E517B2BED1CD700FBEAED /* ContentView.swift */,
-				15690D992C0A74AA00D18821 /* nodejs_ios.swift */,
 				151E51A52BED205500FBEAED /* WebView.swift */,
 				151E517D2BED1CD700FBEAED /* Assets.xcassets */,
 				151E517F2BED1CD700FBEAED /* Preview Content */,
+				1514D5E72C0B35EB0037D462 /* NodeRunner.swift */,
 			);
 			path = TiddlyWiki;
 			sourceTree = "<group>";
@@ -299,8 +299,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1514D5E82C0B35EB0037D462 /* NodeRunner.swift in Sources */,
 				151E517C2BED1CD700FBEAED /* ContentView.swift in Sources */,
-				15690D9A2C0A74AA00D18821 /* nodejs_ios.swift in Sources */,
 				151E51A62BED205500FBEAED /* WebView.swift in Sources */,
 				151E517A2BED1CD700FBEAED /* TiddlyWikiApp.swift in Sources */,
 			);
