@@ -56,6 +56,7 @@
 		1514D5DE2C0A76ED0037D462 /* nodejs-project */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "nodejs-project"; sourceTree = "<group>"; };
 		1514D5E42C0A78680037D462 /* NodeMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NodeMobile.xcframework; path = TiddlyWiki/NodeMobile.xcframework; sourceTree = "<group>"; };
 		1514D5E72C0B35EB0037D462 /* NodeRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeRunner.swift; sourceTree = "<group>"; };
+		1514D5EC2C0F2D1D0037D462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		151E51762BED1CD700FBEAED /* TiddlyWiki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TiddlyWiki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiApp.swift; sourceTree = "<group>"; };
 		151E517B2BED1CD700FBEAED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -119,6 +120,7 @@
 		151E51782BED1CD700FBEAED /* TiddlyWiki */ = {
 			isa = PBXGroup;
 			children = (
+				1514D5EC2C0F2D1D0037D462 /* Info.plist */,
 				1514D5DE2C0A76ED0037D462 /* nodejs-project */,
 				151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */,
 				151E517B2BED1CD700FBEAED /* ContentView.swift */,
@@ -469,12 +471,14 @@
 				DEVELOPMENT_TEAM = 63UAU765DX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TiddlyWiki/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -500,12 +504,14 @@
 				DEVELOPMENT_TEAM = 63UAU765DX;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TiddlyWiki/Info.plist;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportsDocumentBrowser = NO;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
