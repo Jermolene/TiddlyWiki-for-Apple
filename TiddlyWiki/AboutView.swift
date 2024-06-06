@@ -13,11 +13,11 @@ struct AboutView: View {
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                Text("This is the child view with some dummy text.")
-                    .multilineTextAlignment(.leading)
+                RTFView(filename: "About")
                     .padding()
                 Spacer()
             }
+            .frame(maxWidth: .infinity, alignment: .leading)
             .navigationTitle("About TiddlyWiki")
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
