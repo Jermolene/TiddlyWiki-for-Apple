@@ -9,26 +9,44 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var reloadTrigger = false
-
+    @State var showAboutView = false
+    
     var body: some View {
-        VStack {
-            HStack {
-                Text("Welcome to TiddlyWiki")
-                Button(action: {
-                    // Toggle the reload trigger to refresh the WebView
-                    DispatchQueue.main.async {
-                        reloadTrigger.toggle()
-                    }
-                }) {
-                    Label("Refresh", systemImage: "arrow.clockwise")
-                        .padding()
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(8)
-                }
-                
+        NavigationStack {
+            VStack {
+                WebView(url: URL(string: "http://localhost:8080")!, reloadTrigger: $reloadTrigger)
+                    .ignoresSafeArea()
             }
-            WebView(url: URL(string: "http://localhost:8080")!, reloadTrigger: $reloadTrigger)
+            .toolbar {
+                ToolbarItemGroup(placement: .navigationBarLeading) {
+                    Text("TiddlyWiki")
+                }
+                ToolbarItemGroup(placement: .navigationBarTrailing) {
+                    Button(action: {
+                        // Toggle the reload trigger to refresh the WebView
+                        DispatchQueue.main.async {
+                            reloadTrigger.toggle()
+                        }
+                    }) {
+                        Image(systemName: "arrow.clockwise")
+                    }
+                    
+                    Menu {
+                        Button("Help", systemImage: "questionmark") {
+                        }
+                        Button("Credits", systemImage: "star") {
+                        }
+                        Button("About", systemImage: "info") {
+                            showAboutView = true
+                        }
+                    } label: {
+                        Image(systemName: "ellipsis.circle")
+                    }
+                }
+            }
+            .sheet(isPresented: $showAboutView) {
+                AboutView(showAboutView: $showAboutView)
+            }
         }
     }
 }

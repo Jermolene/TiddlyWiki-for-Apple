@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150160892C11BCB500C537A7 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150160882C11BCB500C537A7 /* AboutView.swift */; };
 		1514D5DF2C0A76ED0037D462 /* nodejs-project in Resources */ = {isa = PBXBuildFile; fileRef = 1514D5DE2C0A76ED0037D462 /* nodejs-project */; };
 		1514D5E52C0A78680037D462 /* NodeMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1514D5E42C0A78680037D462 /* NodeMobile.xcframework */; };
 		1514D5E62C0A78680037D462 /* NodeMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1514D5E42C0A78680037D462 /* NodeMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -53,6 +54,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		150160882C11BCB500C537A7 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		1514D5DE2C0A76ED0037D462 /* nodejs-project */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "nodejs-project"; sourceTree = "<group>"; };
 		1514D5E42C0A78680037D462 /* NodeMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NodeMobile.xcframework; path = TiddlyWiki/NodeMobile.xcframework; sourceTree = "<group>"; };
 		1514D5E72C0B35EB0037D462 /* NodeRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeRunner.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				1514D5DE2C0A76ED0037D462 /* nodejs-project */,
 				151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */,
 				151E517B2BED1CD700FBEAED /* ContentView.swift */,
+				150160882C11BCB500C537A7 /* AboutView.swift */,
 				151E51A52BED205500FBEAED /* WebView.swift */,
 				151E517D2BED1CD700FBEAED /* Assets.xcassets */,
 				151E517F2BED1CD700FBEAED /* Preview Content */,
@@ -304,6 +307,7 @@
 				1514D5E82C0B35EB0037D462 /* NodeRunner.swift in Sources */,
 				151E517C2BED1CD700FBEAED /* ContentView.swift in Sources */,
 				151E51A62BED205500FBEAED /* WebView.swift in Sources */,
+				150160892C11BCB500C537A7 /* AboutView.swift in Sources */,
 				151E517A2BED1CD700FBEAED /* TiddlyWikiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
