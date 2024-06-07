@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		150160892C11BCB500C537A7 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150160882C11BCB500C537A7 /* AboutView.swift */; };
+		150160892C11BCB500C537A7 /* DocumentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 150160882C11BCB500C537A7 /* DocumentView.swift */; };
 		1514D5DF2C0A76ED0037D462 /* nodejs-project in Resources */ = {isa = PBXBuildFile; fileRef = 1514D5DE2C0A76ED0037D462 /* nodejs-project */; };
 		1514D5E52C0A78680037D462 /* NodeMobile.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1514D5E42C0A78680037D462 /* NodeMobile.xcframework */; };
 		1514D5E62C0A78680037D462 /* NodeMobile.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1514D5E42C0A78680037D462 /* NodeMobile.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -20,7 +20,9 @@
 		151E51952BED1CD800FBEAED /* TiddlyWikiUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */; };
 		151E51972BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */; };
 		151E51A62BED205500FBEAED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51A52BED205500FBEAED /* WebView.swift */; };
-		15AABFA92C12212600CB20E9 /* About.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 15AABFA82C12212600CB20E9 /* About.rtf */; };
+		1579C4A52C138054005EF45A /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1579C4A42C138054005EF45A /* Credits.rtf */; };
+		1579C4A72C138270005EF45A /* Help.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1579C4A62C138270005EF45A /* Help.rtf */; };
+		1579C4A92C1382A8005EF45A /* About.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 1579C4A82C1382A8005EF45A /* About.rtf */; };
 		15AABFAB2C12218000CB20E9 /* RTFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AABFAA2C12218000CB20E9 /* RTFView.swift */; };
 		15BFC58A2C12588B0093C88D /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFC5892C12588B0093C88D /* SafariView.swift */; };
 /* End PBXBuildFile section */
@@ -57,7 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		150160882C11BCB500C537A7 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		150160882C11BCB500C537A7 /* DocumentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentView.swift; sourceTree = "<group>"; };
 		1514D5DE2C0A76ED0037D462 /* nodejs-project */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "nodejs-project"; sourceTree = "<group>"; };
 		1514D5E42C0A78680037D462 /* NodeMobile.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = NodeMobile.xcframework; path = TiddlyWiki/NodeMobile.xcframework; sourceTree = "<group>"; };
 		1514D5E72C0B35EB0037D462 /* NodeRunner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NodeRunner.swift; sourceTree = "<group>"; };
@@ -73,7 +75,9 @@
 		151E51942BED1CD800FBEAED /* TiddlyWikiUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITests.swift; sourceTree = "<group>"; };
 		151E51962BED1CD800FBEAED /* TiddlyWikiUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TiddlyWikiUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		151E51A52BED205500FBEAED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
-		15AABFA82C12212600CB20E9 /* About.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = About.rtf; path = Docs/About.rtf; sourceTree = "<group>"; };
+		1579C4A42C138054005EF45A /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		1579C4A62C138270005EF45A /* Help.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Help.rtf; sourceTree = "<group>"; };
+		1579C4A82C1382A8005EF45A /* About.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = About.rtf; path = TiddlyWiki/About.rtf; sourceTree = "<group>"; };
 		15AABFAA2C12218000CB20E9 /* RTFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTFView.swift; sourceTree = "<group>"; };
 		15BFC5892C12588B0093C88D /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +111,7 @@
 		151E516D2BED1CD700FBEAED = {
 			isa = PBXGroup;
 			children = (
+				1579C4A82C1382A8005EF45A /* About.rtf */,
 				151E51782BED1CD700FBEAED /* TiddlyWiki */,
 				151E51892BED1CD800FBEAED /* TiddlyWikiTests */,
 				151E51932BED1CD800FBEAED /* TiddlyWikiUITests */,
@@ -132,8 +137,9 @@
 				1514D5DE2C0A76ED0037D462 /* nodejs-project */,
 				151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */,
 				151E517B2BED1CD700FBEAED /* ContentView.swift */,
-				150160882C11BCB500C537A7 /* AboutView.swift */,
-				15AABFA82C12212600CB20E9 /* About.rtf */,
+				150160882C11BCB500C537A7 /* DocumentView.swift */,
+				1579C4A42C138054005EF45A /* Credits.rtf */,
+				1579C4A62C138270005EF45A /* Help.rtf */,
 				15AABFAA2C12218000CB20E9 /* RTFView.swift */,
 				151E51A52BED205500FBEAED /* WebView.swift */,
 				15BFC5892C12588B0093C88D /* SafariView.swift */,
@@ -286,10 +292,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1579C4A92C1382A8005EF45A /* About.rtf in Resources */,
+				1579C4A52C138054005EF45A /* Credits.rtf in Resources */,
 				1514D5DF2C0A76ED0037D462 /* nodejs-project in Resources */,
 				151E51812BED1CD700FBEAED /* Preview Assets.xcassets in Resources */,
-				15AABFA92C12212600CB20E9 /* About.rtf in Resources */,
 				151E517E2BED1CD700FBEAED /* Assets.xcassets in Resources */,
+				1579C4A72C138270005EF45A /* Help.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,7 +326,7 @@
 				151E517C2BED1CD700FBEAED /* ContentView.swift in Sources */,
 				151E51A62BED205500FBEAED /* WebView.swift in Sources */,
 				15AABFAB2C12218000CB20E9 /* RTFView.swift in Sources */,
-				150160892C11BCB500C537A7 /* AboutView.swift in Sources */,
+				150160892C11BCB500C537A7 /* DocumentView.swift in Sources */,
 				151E517A2BED1CD700FBEAED /* TiddlyWikiApp.swift in Sources */,
 				15BFC58A2C12588B0093C88D /* SafariView.swift in Sources */,
 			);

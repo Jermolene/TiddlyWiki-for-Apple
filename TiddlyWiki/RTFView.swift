@@ -9,8 +9,6 @@ import SwiftUI
 
 struct RTFView: UIViewRepresentable {
     var filename: String
-    
-    
 
     func makeUIView(context: Context) -> UITextView {
         let textView = UITextView()

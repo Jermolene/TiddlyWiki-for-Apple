@@ -1,5 +1,5 @@
 //
-//  AboutView.swift
+//  DocumentView.swift
 //  TiddlyWiki
 //
 //  Created by Jeremy Ruston on 06/06/2024.
@@ -7,22 +7,23 @@
 
 import SwiftUI
 
-struct AboutView: View {
-    @Binding var showAboutView: Bool
+struct DocumentView: View {
+    @Binding var showDocumentView: Bool
+    @Binding var filename: String
     
     var body: some View {
         NavigationStack {
             VStack(alignment: .leading) {
-                RTFView(filename: "About")
+                RTFView(filename: filename)
                     .padding()
                 Spacer()
             }
             .frame(maxWidth: .infinity, alignment: .leading)
-            .navigationTitle("About TiddlyWiki")
+            .navigationTitle(filename)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
                     Button("Done") {
-                        showAboutView = false
+                        showDocumentView = false
                     }
                 }
             }
@@ -31,8 +32,7 @@ struct AboutView: View {
 }
 
 #Preview {
-    
     NavigationStack {
-        ContentView(showAboutView: true)
+        DocumentView(showDocumentView: .constant(true), filename: .constant("About"))
     }
 }

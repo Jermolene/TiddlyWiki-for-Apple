@@ -9,11 +9,11 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var reloadTrigger = false
-    @State var showAboutView = false
+    @State private var showDocumentView = false
     @State private var showSafari = false
     @State private var safariURL: URL?
-    
-    
+    @State private var documentFilename: String = ""
+
     var body: some View {
         NavigationStack {
             VStack {
@@ -33,14 +33,19 @@ struct ContentView: View {
                     }) {
                         Image(systemName: "arrow.clockwise")
                     }
-                    
+
                     Menu {
                         Button("Help", systemImage: "questionmark") {
+                            documentFilename = "Help"
+                            showDocumentView = true
                         }
                         Button("Credits", systemImage: "star") {
+                            documentFilename = "Credits"
+                            showDocumentView = true
                         }
                         Button("About", systemImage: "info") {
-                            showAboutView = true
+                            documentFilename = "About"
+                            showDocumentView = true
                         }
                     } label: {
                         Image(systemName: "ellipsis.circle")
@@ -50,8 +55,8 @@ struct ContentView: View {
             .fullScreenCover(isPresented: $showSafari) {
                 SafariView(url: $safariURL)
             }
-            .sheet(isPresented: $showAboutView) {
-                AboutView(showAboutView: $showAboutView)
+            .sheet(isPresented: $showDocumentView) {
+                DocumentView(showDocumentView: $showDocumentView, filename: $documentFilename)
             }
         }
     }
