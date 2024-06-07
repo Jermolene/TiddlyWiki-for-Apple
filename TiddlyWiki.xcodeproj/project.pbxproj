@@ -22,6 +22,7 @@
 		151E51A62BED205500FBEAED /* WebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151E51A52BED205500FBEAED /* WebView.swift */; };
 		15AABFA92C12212600CB20E9 /* About.rtf in Resources */ = {isa = PBXBuildFile; fileRef = 15AABFA82C12212600CB20E9 /* About.rtf */; };
 		15AABFAB2C12218000CB20E9 /* RTFView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15AABFAA2C12218000CB20E9 /* RTFView.swift */; };
+		15BFC58A2C12588B0093C88D /* SafariView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BFC5892C12588B0093C88D /* SafariView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +75,7 @@
 		151E51A52BED205500FBEAED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		15AABFA82C12212600CB20E9 /* About.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = About.rtf; path = Docs/About.rtf; sourceTree = "<group>"; };
 		15AABFAA2C12218000CB20E9 /* RTFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTFView.swift; sourceTree = "<group>"; };
+		15BFC5892C12588B0093C88D /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				15AABFA82C12212600CB20E9 /* About.rtf */,
 				15AABFAA2C12218000CB20E9 /* RTFView.swift */,
 				151E51A52BED205500FBEAED /* WebView.swift */,
+				15BFC5892C12588B0093C88D /* SafariView.swift */,
 				151E517D2BED1CD700FBEAED /* Assets.xcassets */,
 				151E517F2BED1CD700FBEAED /* Preview Content */,
 				1514D5E72C0B35EB0037D462 /* NodeRunner.swift */,
@@ -317,6 +320,7 @@
 				15AABFAB2C12218000CB20E9 /* RTFView.swift in Sources */,
 				150160892C11BCB500C537A7 /* AboutView.swift in Sources */,
 				151E517A2BED1CD700FBEAED /* TiddlyWikiApp.swift in Sources */,
+				15BFC58A2C12588B0093C88D /* SafariView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,11 +10,14 @@ import SwiftUI
 struct ContentView: View {
     @State private var reloadTrigger = false
     @State var showAboutView = false
+    @State private var showSafari = false
+    @State private var safariURL: URL?
+    
     
     var body: some View {
         NavigationStack {
             VStack {
-                WebView(url: URL(string: "http://localhost:8080")!, reloadTrigger: $reloadTrigger)
+                WebView(url: URL(string: "http://localhost:8080")!, reloadTrigger: $reloadTrigger, showSafari: $showSafari, safariURL: $safariURL)
                     .ignoresSafeArea()
             }
             .toolbar {
@@ -43,6 +46,9 @@ struct ContentView: View {
                         Image(systemName: "ellipsis.circle")
                     }
                 }
+            }
+            .fullScreenCover(isPresented: $showSafari) {
+                SafariView(url: $safariURL)
             }
             .sheet(isPresented: $showAboutView) {
                 AboutView(showAboutView: $showAboutView)
