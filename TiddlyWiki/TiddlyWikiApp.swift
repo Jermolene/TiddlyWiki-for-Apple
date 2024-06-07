@@ -42,15 +42,11 @@ struct TiddlyWikiApp: App {
         // Print the contents of tiddlywiki.info to the console
         do {
             let fileContents = try String(contentsOf: userFileURL, encoding: .utf8)
-            print("Contents of tiddlywiki.info:")
-            print(fileContents)
         } catch {
             print("Unable to read tiddlywiki.info: \(error)")
         }
         // Kick off Node.js
         let srcPath = Bundle.main.path(forResource: "nodejs-project/tiddlywiki", ofType: "js")
-        print("srcPath is",srcPath!)
-        print("userFilePath is",userFileURL.path)
         nodeQueue.async {
             NodeRunner.startEngine(arguments: [
                 "node",
