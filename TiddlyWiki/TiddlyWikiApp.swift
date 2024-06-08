@@ -39,12 +39,6 @@ struct TiddlyWikiApp: App {
                 fatalError("Bundled tiddlywiki.info not found")
             }
         }
-        // Print the contents of tiddlywiki.info to the console
-        do {
-            let fileContents = try String(contentsOf: userFileURL, encoding: .utf8)
-        } catch {
-            print("Unable to read tiddlywiki.info: \(error)")
-        }
         // Kick off Node.js
         let srcPath = Bundle.main.path(forResource: "nodejs-project/tiddlywiki", ofType: "js")
         nodeQueue.async {
