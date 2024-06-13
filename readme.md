@@ -2,6 +2,8 @@
 
 This SwiftUI app uses [nodejs-mobile](https://github.com/nodejs-mobile/nodejs-mobile) to offer TiddlyWiki on Node.js with an embedded webview.
 
+![IMG_0136](https://github.com/Jermolene/TiddlyWiki-for-Apple/assets/174761/189b348c-fa27-4e50-9c86-7c7154a03381)
+
 # Progress
 
 * [x] Basic integration with Node.js
