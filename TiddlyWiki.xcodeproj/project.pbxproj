@@ -77,7 +77,7 @@
 		151E51A52BED205500FBEAED /* WebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebView.swift; sourceTree = "<group>"; };
 		1579C4A42C138054005EF45A /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		1579C4A62C138270005EF45A /* Help.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Help.rtf; sourceTree = "<group>"; };
-		1579C4A82C1382A8005EF45A /* About.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; name = About.rtf; path = TiddlyWiki/About.rtf; sourceTree = "<group>"; };
+		1579C4A82C1382A8005EF45A /* About.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = About.rtf; sourceTree = "<group>"; };
 		15AABFAA2C12218000CB20E9 /* RTFView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RTFView.swift; sourceTree = "<group>"; };
 		15BFC5892C12588B0093C88D /* SafariView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -111,7 +111,6 @@
 		151E516D2BED1CD700FBEAED = {
 			isa = PBXGroup;
 			children = (
-				1579C4A82C1382A8005EF45A /* About.rtf */,
 				151E51782BED1CD700FBEAED /* TiddlyWiki */,
 				151E51892BED1CD800FBEAED /* TiddlyWikiTests */,
 				151E51932BED1CD800FBEAED /* TiddlyWikiUITests */,
@@ -133,19 +132,20 @@
 		151E51782BED1CD700FBEAED /* TiddlyWiki */ = {
 			isa = PBXGroup;
 			children = (
-				1514D5EC2C0F2D1D0037D462 /* Info.plist */,
 				1514D5DE2C0A76ED0037D462 /* nodejs-project */,
-				151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */,
-				151E517B2BED1CD700FBEAED /* ContentView.swift */,
-				150160882C11BCB500C537A7 /* DocumentView.swift */,
+				1514D5EC2C0F2D1D0037D462 /* Info.plist */,
+				1579C4A82C1382A8005EF45A /* About.rtf */,
 				1579C4A42C138054005EF45A /* Credits.rtf */,
 				1579C4A62C138270005EF45A /* Help.rtf */,
+				151E517B2BED1CD700FBEAED /* ContentView.swift */,
+				150160882C11BCB500C537A7 /* DocumentView.swift */,
+				1514D5E72C0B35EB0037D462 /* NodeRunner.swift */,
 				15AABFAA2C12218000CB20E9 /* RTFView.swift */,
-				151E51A52BED205500FBEAED /* WebView.swift */,
 				15BFC5892C12588B0093C88D /* SafariView.swift */,
+				151E51792BED1CD700FBEAED /* TiddlyWikiApp.swift */,
+				151E51A52BED205500FBEAED /* WebView.swift */,
 				151E517D2BED1CD700FBEAED /* Assets.xcassets */,
 				151E517F2BED1CD700FBEAED /* Preview Content */,
-				1514D5E72C0B35EB0037D462 /* NodeRunner.swift */,
 			);
 			path = TiddlyWiki;
 			sourceTree = "<group>";
