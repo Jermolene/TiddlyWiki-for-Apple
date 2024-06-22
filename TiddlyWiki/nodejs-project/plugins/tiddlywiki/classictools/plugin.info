@@ -1,7 +1,0 @@
-{
-	"title": "$:/plugins/tiddlywiki/classictools",
-	"name": "Classic Tools",
-	"description": "TiddlyWiki Classic tools",
-	"list": "readme",
-	"stability": "STABILITY_2_STABLE"
-}

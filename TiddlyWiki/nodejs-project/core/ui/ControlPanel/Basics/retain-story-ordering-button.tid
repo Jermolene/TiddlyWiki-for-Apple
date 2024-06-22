@@ -1,3 +1,0 @@
-title: $:/snippets/retain-story-ordering-button
-
-<$button set="$:/DefaultTiddlers" setTo={{$:/config/ControlPanel/Basics/DefaultTiddlers/RetainStory}} ><<currentTiddler>></$button>

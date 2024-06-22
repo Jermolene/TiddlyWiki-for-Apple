@@ -1,6 +1,0 @@
-title: $:/core/ui/SideBarLists
-
-<$transclude tiddler="$:/core/ui/SideBarSegments/search"/>
-
-<$transclude tiddler="$:/core/ui/SideBarSegments/tabs"/>
-

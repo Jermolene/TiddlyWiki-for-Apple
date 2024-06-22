@@ -1,9 +1,0 @@
-title: $:/core/templates/html-div-skinny-tiddler
-
-<!--
-
-This template is a variant of $:/core/templates/html-div-tiddler used for saving skinny tiddlers (with no text field)
-
--->`<div`<$fields template=' $name$="$encoded_value$"'></$fields>`>
-<pre></pre>
-</div>`

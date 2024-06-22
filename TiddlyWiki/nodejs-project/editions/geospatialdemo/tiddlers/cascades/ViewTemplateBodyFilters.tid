@@ -1,6 +1,0 @@
-title: $:/plugins/geospatial/demo/ViewTemplateBodyFilters
-tags: $:/tags/ViewTemplateBodyFilter
-list-before: $:/config/ViewTemplateBodyFilters/stylesheet
-
-[tag[$:/tags/GeoFeature]then[ui/geofeature]]
-[tag[$:/tags/GeoMarker]then[ui/geomarker]]

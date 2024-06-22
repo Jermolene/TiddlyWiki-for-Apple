@@ -1,7 +1,0 @@
-title: $:/core/wiki/title
-
-\whitespace trim
-{{$:/SiteTitle}}
-<$list filter="[{$:/SiteSubtitle}trim[]minlength[1]]" variable="ignore">
-&#32;---&#32;{{$:/SiteSubtitle}}
-</$list>

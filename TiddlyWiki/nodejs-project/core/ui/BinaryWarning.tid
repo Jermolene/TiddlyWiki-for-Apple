@@ -1,4 +1,0 @@
-title: $:/core/ui/BinaryWarning
-
-\define lingo-base() $:/language/BinaryWarning/
-<<lingo Prompt>>

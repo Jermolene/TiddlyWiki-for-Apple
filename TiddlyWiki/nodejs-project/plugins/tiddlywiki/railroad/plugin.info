@@ -1,8 +1,0 @@
-{
-	"title": "$:/plugins/tiddlywiki/railroad",
-	"name": "Railroad",
-	"description": "Railroad diagram generator",
-	"author": "Astrid Elocson",
-	"list": "readme usage syntax example",
-	"stability": "STABILITY_2_STABLE"
-}

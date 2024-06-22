@@ -1,3 +1,0 @@
-title: $:/plugins/tiddlywiki/jszip/readme
-
-This plugin provides primitives for working with Zip files. It also makes the [[JSZip|https://stuk.github.io/jszip/]] library available for use by other plugins.

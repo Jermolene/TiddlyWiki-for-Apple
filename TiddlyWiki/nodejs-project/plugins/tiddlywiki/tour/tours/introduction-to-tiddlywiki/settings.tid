@@ -1,4 +1,0 @@
-title: $:/plugins/tiddlywiki/tour/introduction-to-tiddlywiki/settings
-
-Customise name used for ~TiddlyWiki: <$edit tiddler="$:/config/Tours/IntroductionToTiddlyWiki/ProductName" tag="input"/>
-

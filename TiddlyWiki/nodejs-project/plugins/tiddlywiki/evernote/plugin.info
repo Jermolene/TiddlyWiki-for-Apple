@@ -1,7 +1,0 @@
-{
-	"title": "$:/plugins/tiddlywiki/evernote",
-	"name": "Evernote",
-	"description": "Evernote migration tools",
-	"list": "readme docs",
-	"stability": "STABILITY_2_STABLE"
-}

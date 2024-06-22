@@ -1,4 +1,0 @@
-title: $:/plugins/tiddlywiki/dynannotate/examples
-
-<<tabs "[all[tiddlers+shadows]tag[$:/tags/dynannotateExamples]!has[draft.of]]" "$:/plugins/tiddlywiki/dynannotate/examples/snippets">>
-

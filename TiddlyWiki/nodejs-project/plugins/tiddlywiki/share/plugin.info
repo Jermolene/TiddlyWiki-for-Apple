@@ -1,7 +1,0 @@
-{
-	"title": "$:/plugins/tiddlywiki/share",
-	"name": "Share",
-	"description": "Sharing tiddlers via URLs",
-	"list": "readme wizard settings",
-	"stability": "STABILITY_2_STABLE"
-}

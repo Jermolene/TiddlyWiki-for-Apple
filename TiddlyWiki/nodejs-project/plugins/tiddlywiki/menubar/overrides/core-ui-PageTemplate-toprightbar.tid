@@ -1,3 +1,0 @@
-title: $:/core/ui/PageTemplate/toprightbar
-
-<!-- The menubar plugin overrides this tiddler to remove the core top right menu. The menu items that it would include are instead included in the menubar -->

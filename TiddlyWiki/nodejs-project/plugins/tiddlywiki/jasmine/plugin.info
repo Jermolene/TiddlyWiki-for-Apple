@@ -1,7 +1,0 @@
-{
-	"title": "$:/plugins/tiddlywiki/jasmine",
-	"name": "Jasmine",
-	"description": "Jasmine testing framework",
-	"list": "readme",
-	"stability": "STABILITY_2_STABLE"
-}

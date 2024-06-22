@@ -1,4 +1,0 @@
-title: $:/plugins/tiddlywiki/share/above-story
-tags: $:/tags/AboveStory
-
-<$transclude tiddler="$:/plugins/tiddlywiki/share/wizard" mode="block"/>

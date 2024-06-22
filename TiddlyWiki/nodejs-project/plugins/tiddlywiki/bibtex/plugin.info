@@ -1,8 +1,0 @@
-{
-	"title": "$:/plugins/tiddlywiki/bibtex",
-	"name": "BibTeX",
-	"description": "BibTeX importer",
-	"author": "Henrik Muehe and Mikola Lysenko",
-	"list": "readme license",
-	"stability": "STABILITY_2_STABLE"
-}

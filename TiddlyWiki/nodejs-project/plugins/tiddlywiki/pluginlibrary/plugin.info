@@ -1,7 +1,0 @@
-{
-	"title": "$:/plugins/tiddlywiki/pluginlibrary",
-	"name": "Plugin Library",
-	"description": "Plugin library builder",
-	"list": "readme",
-	"stability": "STABILITY_2_STABLE"
-}
