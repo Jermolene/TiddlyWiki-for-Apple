@@ -29,7 +29,7 @@ struct TiddlyWikiApp: App {
         let userFileURL = documentsURL.appendingPathComponent("tiddlywiki.info")
         // Copy the bundled tiddlywiki.info to the Documents directory if it doesn't already exist
         if !FileManager.default.fileExists(atPath: userFileURL.path) {
-            if let bundledFileURL = Bundle.main.url(forResource: "tiddlywiki", withExtension: "info", subdirectory: "nodejs-project/editions/server") {
+            if let bundledFileURL = Bundle.main.url(forResource: "tiddlywiki", withExtension: "info", subdirectory: "nodejs-project/editions/multiwikiserver") {
                 do {
                     try FileManager.default.copyItem(at: bundledFileURL, to: userFileURL)
                 } catch {
@@ -47,7 +47,7 @@ struct TiddlyWikiApp: App {
                 srcPath!,
                 documentsURL.path,
                 "--version",
-                "--listen",
+                "--mws-listen",
                 "host=0.0.0.0"
             ])
         }
