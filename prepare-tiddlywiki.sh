@@ -1,6 +1,6 @@
 #!/bin/bash
 
-# This script downloads and prepares TiddlyWiki 5 for inclusion in the app
+# This script downloads and prepares TiddlyWiki 5 for inclusion in the app by compiling native modules
 
 # 1. Download the TiddlyWiki5 branch "multi-wiki-support" into the folder ./nodejs-project
 # 2. Build better-sqlite3 for ios-arm64 in ./TiddlyWiki/nodejs-project/node_modules/better-sqlite3
